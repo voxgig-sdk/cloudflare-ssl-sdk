@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_ct_alerting_subscription_response": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE00": {
+        "emails": [],
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE01": {
+        "emails": [],
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE02": {
+        "emails": [],
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CT_ALERTING_SUBSCRIPTION_RESPONSE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_ct_alerting_subscription_response": {
+      "tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01": {
+        "emails": [],
+        "enabled": false,
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/ct/alerting": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/ct/alerting": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

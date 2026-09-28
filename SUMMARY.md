@@ -6,7 +6,7 @@ Cloudflare SSL/TLS: certificates, custom certificates, keyless SSL, origin CA, c
 
 This guide introduces the API, the client libraries, and the companion tools in this repository. Start with the API capabilities, choose a client for your application, and use the linked reference when you need exact request and response details.
 
-The selected API surface contains 54 entities and 87 HTTP routes. There are 6 SDK targets and 2 companion tools.
+The selected API surface contains 57 entities and 92 HTTP routes. There are 6 SDK targets and 2 companion tools.
 
 An entity groups related API operations. An operation can have several routes with different inputs or authentication requirements. The SDK exposes the entity and its operations using the conventions of the selected language.
 
@@ -264,6 +264,17 @@ Key fields to recognise:
 - `csr`: The Certificate Signing Request (CSR). Must be newline-encoded.
 - `validity_days`: The number of days the Client Certificate will be valid after the issued_on date.
 
+### [TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse](docs/api/tls_certificates_and_hostnames_ct_alerting_subscription_response.html)
+
+Results: Get CT Alerting Subscription response.; Update CT Alerting Subscription response.
+
+SDK operations: `load`, `update`.
+
+Key fields to recognise:
+
+- `emails`: Email addresses that receive CT alert notifications for the zone. A maximum of 100 addresses may be configured. Each address must be a valid RFC 5322 email address and must not contain a comma.
+- `enabled`: Whether CT alerting is enabled for the zone.
+
 ### [TlsCertificatesAndHostnamesCustomCsrResponseCollection](docs/api/tls_certificates_and_hostnames_custom_csr_response_collection.html)
 
 Results: List Custom CSRs response.
@@ -368,6 +379,12 @@ Key fields to recognise:
 
 - `certificate`: The root CA certificate in PEM format. Only root CA certificates are accepted; intermediate and leaf certificates are not supported.
 
+### [TlsCertificatesAndHostnamesDcvDelegation](docs/api/tls_certificates_and_hostnames_dcv_delegation.html)
+
+Results: Retrieve the DCV Delegation unique identifier response.
+
+SDK operations: `load`.
+
 ### [TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack](docs/api/tls_certificates_and_hostnames_delete_advanced_certificate_pack.html)
 
 Results: Delete Advanced Certificate Manager Certificate Pack response.
@@ -415,6 +432,16 @@ SDK operations: `load`.
 Results: List Hostname Associations response.
 
 SDK operations: `list`.
+
+### [TlsCertificatesAndHostnamesHostnameAssociation](docs/api/tls_certificates_and_hostnames_hostname_association.html)
+
+Results: List Hostname Associations Response.; Replace Hostname Associations Response.
+
+SDK operations: `load`, `update`.
+
+Key fields to recognise:
+
+- `mtls_certificate_id`: The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint.
 
 ### [TlsCertificatesAndHostnamesKeylessResponseCollection](docs/api/tls_certificates_and_hostnames_keyless_response_collection.html)
 
@@ -553,6 +580,8 @@ Use this map to locate a capability. Consult the entity reference before supplyi
 | [TlsCertificatesAndHostnamesClientCertificateResponseSingle](docs/api/tls_certificates_and_hostnames_client_certificate_response_single.html) | `load` | `GET /zones/{zone_id}/client_certificates/{client_certificate_id}` | Required |
 | [TlsCertificatesAndHostnamesClientCertificateResponseSingle](docs/api/tls_certificates_and_hostnames_client_certificate_response_single.html) | `remove` | `DELETE /zones/{zone_id}/client_certificates/{client_certificate_id}` | Required |
 | [TlsCertificatesAndHostnamesClientCertificateResponseSingle](docs/api/tls_certificates_and_hostnames_client_certificate_response_single.html) | `update` | `PATCH /zones/{zone_id}/client_certificates/{client_certificate_id}` | Required |
+| [TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse](docs/api/tls_certificates_and_hostnames_ct_alerting_subscription_response.html) | `load` | `GET /zones/{zone_id}/ct/alerting` | Required |
+| [TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse](docs/api/tls_certificates_and_hostnames_ct_alerting_subscription_response.html) | `update` | `PATCH /zones/{zone_id}/ct/alerting` | Required |
 | [TlsCertificatesAndHostnamesCustomCsrResponseCollection](docs/api/tls_certificates_and_hostnames_custom_csr_response_collection.html) | `list` | `GET /zones/{zone_id}/custom_csrs` | Required |
 | [TlsCertificatesAndHostnamesCustomCsrResponseCollection2](docs/api/tls_certificates_and_hostnames_custom_csr_response_collection_2.html) | `list` | `GET /accounts/{account_id}/custom_csrs` | Required |
 | [TlsCertificatesAndHostnamesCustomCsrResponseIdOnly](docs/api/tls_certificates_and_hostnames_custom_csr_response_id_only.html) | `remove` | `DELETE /accounts/{account_id}/custom_csrs/{custom_csr_id}` | Required |
@@ -570,6 +599,7 @@ Use this map to locate a capability. Consult the entity reference before supplyi
 | [TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly](docs/api/tls_certificates_and_hostnames_custom_trust_store_response_id_only.html) | `remove` | `DELETE /zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}` | Required |
 | [TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle](docs/api/tls_certificates_and_hostnames_custom_trust_store_response_single.html) | `create` | `POST /zones/{zone_id}/acm/custom_trust_store` | Required |
 | [TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle](docs/api/tls_certificates_and_hostnames_custom_trust_store_response_single.html) | `load` | `GET /zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}` | Required |
+| [TlsCertificatesAndHostnamesDcvDelegation](docs/api/tls_certificates_and_hostnames_dcv_delegation.html) | `load` | `GET /zones/{zone_id}/dcv_delegation/uuid` | Required |
 | [TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack](docs/api/tls_certificates_and_hostnames_delete_advanced_certificate_pack.html) | `remove` | `DELETE /zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}` | Required |
 | [TlsCertificatesAndHostnamesEnabled](docs/api/tls_certificates_and_hostnames_enabled.html) | `load` | `GET /zones/{zone_id}/origin_tls_client_auth/settings` | Required |
 | [TlsCertificatesAndHostnamesEnabled](docs/api/tls_certificates_and_hostnames_enabled.html) | `update` | `PUT /zones/{zone_id}/origin_tls_client_auth/settings` | Required |
@@ -579,6 +609,8 @@ Use this map to locate a capability. Consult the entity reference before supplyi
 | [TlsCertificatesAndHostnamesHostnameAopResponseCollection](docs/api/tls_certificates_and_hostnames_hostname_aop_response_collection.html) | `update` | `PUT /zones/{zone_id}/origin_tls_client_auth/hostnames` | Required |
 | [TlsCertificatesAndHostnamesHostnameAopSingle](docs/api/tls_certificates_and_hostnames_hostname_aop_single.html) | `load` | `GET /zones/{zone_id}/origin_tls_client_auth/hostnames/{hostname}` | Required |
 | [TlsCertificatesAndHostnamesHostnameAssocResponseCollection](docs/api/tls_certificates_and_hostnames_hostname_assoc_response_collection.html) | `list` | `GET /zones/{zone_id}/origin_tls_client_auth/hostnames` | Required |
+| [TlsCertificatesAndHostnamesHostnameAssociation](docs/api/tls_certificates_and_hostnames_hostname_association.html) | `load` | `GET /zones/{zone_id}/certificate_authorities/hostname_associations` | Required |
+| [TlsCertificatesAndHostnamesHostnameAssociation](docs/api/tls_certificates_and_hostnames_hostname_association.html) | `update` | `PUT /zones/{zone_id}/certificate_authorities/hostname_associations` | Required |
 | [TlsCertificatesAndHostnamesKeylessResponseCollection](docs/api/tls_certificates_and_hostnames_keyless_response_collection.html) | `list` | `GET /zones/{zone_id}/keyless_certificates` | Required |
 | [TlsCertificatesAndHostnamesKeylessResponseSingle](docs/api/tls_certificates_and_hostnames_keyless_response_single.html) | `create` | `POST /zones/{zone_id}/keyless_certificates` | Required |
 | [TlsCertificatesAndHostnamesKeylessResponseSingle](docs/api/tls_certificates_and_hostnames_keyless_response_single.html) | `load` | `GET /zones/{zone_id}/keyless_certificates/{keyless_certificate_id}` | Required |
@@ -644,7 +676,7 @@ Use the MCP server to expose supported API operations to an MCP client.
 Repository directory: `go-mcp/`. Not published. Build from the go-mcp directory.
 
 - `cloudflare-ssl_list`: List records for an entity. Supported entities: `cache_auto_origin_tls_kex`, `recommendation`, `ssl_automatic_mode`, `tls_certificates_and_hostnames_association_response_collection`, `tls_certificates_and_hostnames_certificate_pack_response_collection`, `tls_certificates_and_hostnames_certificate_response_collection`, `tls_certificates_and_hostnames_certificate_response_collection_3`, `tls_certificates_and_hostnames_certificate_response_collection_4`, `tls_certificates_and_hostnames_certificate_response_collection_5`, `tls_certificates_and_hostnames_certificate_response_single_2`, `tls_certificates_and_hostnames_client_certificate_response`, `tls_certificates_and_hostnames_custom_csr_response_collection`, `tls_certificates_and_hostnames_custom_csr_response_collection_2`, `tls_certificates_and_hostnames_custom_hostname_quota`, `tls_certificates_and_hostnames_custom_hostname_response_collection`, `tls_certificates_and_hostnames_custom_trust_store_response`, `tls_certificates_and_hostnames_hostname_assoc_response_collection`, `tls_certificates_and_hostnames_keyless_response_collection`, `tls_certificates_and_hostnames_ssl_verification_response_collection`.
-- `cloudflare-ssl_load`: Load one record for an entity. Supported entities: `origin_tl`, `tls_certificates_and_hostnames_certificate_pack_quota`, `tls_certificates_and_hostnames_certificate_pack_response_single`, `tls_certificates_and_hostnames_certificate_response_single`, `tls_certificates_and_hostnames_certificate_response_single_2`, `tls_certificates_and_hostnames_certificate_response_single_3`, `tls_certificates_and_hostnames_certificate_response_single_4`, `tls_certificates_and_hostnames_certificate_response_single_5`, `tls_certificates_and_hostnames_client_certificate_response_single`, `tls_certificates_and_hostnames_custom_csr_response_single`, `tls_certificates_and_hostnames_custom_csr_response_single_2`, `tls_certificates_and_hostnames_custom_hostname_response_single`, `tls_certificates_and_hostnames_custom_trust_store_response_single`, `tls_certificates_and_hostnames_enabled`, `tls_certificates_and_hostnames_fallback_origin`, `tls_certificates_and_hostnames_hostname_aop_single`, `tls_certificates_and_hostnames_keyless_response_single`, `tls_certificates_and_hostnames_per_hostname_setting`, `tls_certificates_and_hostnames_per_hostname_settings_response`, `tls_certificates_and_hostnames_ssl_universal_setting`, `tls_certificates_and_hostnames_total_tls_setting`.
+- `cloudflare-ssl_load`: Load one record for an entity. Supported entities: `origin_tl`, `tls_certificates_and_hostnames_certificate_pack_quota`, `tls_certificates_and_hostnames_certificate_pack_response_single`, `tls_certificates_and_hostnames_certificate_response_single`, `tls_certificates_and_hostnames_certificate_response_single_2`, `tls_certificates_and_hostnames_certificate_response_single_3`, `tls_certificates_and_hostnames_certificate_response_single_4`, `tls_certificates_and_hostnames_certificate_response_single_5`, `tls_certificates_and_hostnames_client_certificate_response_single`, `tls_certificates_and_hostnames_ct_alerting_subscription_response`, `tls_certificates_and_hostnames_custom_csr_response_single`, `tls_certificates_and_hostnames_custom_csr_response_single_2`, `tls_certificates_and_hostnames_custom_hostname_response_single`, `tls_certificates_and_hostnames_custom_trust_store_response_single`, `tls_certificates_and_hostnames_dcv_delegation`, `tls_certificates_and_hostnames_enabled`, `tls_certificates_and_hostnames_fallback_origin`, `tls_certificates_and_hostnames_hostname_aop_single`, `tls_certificates_and_hostnames_hostname_association`, `tls_certificates_and_hostnames_keyless_response_single`, `tls_certificates_and_hostnames_per_hostname_setting`, `tls_certificates_and_hostnames_per_hostname_settings_response`, `tls_certificates_and_hostnames_ssl_universal_setting`, `tls_certificates_and_hostnames_total_tls_setting`.
 
 ## Operational features
 

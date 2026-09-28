@@ -827,6 +827,24 @@ class CloudflareSslSDK
     }
 
 
+    private $_tls_certificates_and_hostnames_ct_alerting_subscription_response = null;
+
+    // Canonical facade: $client->TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->tls_certificates_and_hostnames_ct_alerting_subscription_response()
+    // resolves here too.
+    public function TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse($data = null)
+    {
+        require_once __DIR__ . '/entity/tls_certificates_and_hostnames_ct_alerting_subscription_response_entity.php';
+        if ($data === null) {
+            if ($this->_tls_certificates_and_hostnames_ct_alerting_subscription_response === null) {
+                $this->_tls_certificates_and_hostnames_ct_alerting_subscription_response = new TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity($this, null);
+            }
+            return $this->_tls_certificates_and_hostnames_ct_alerting_subscription_response;
+        }
+        return new TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity($this, $data);
+    }
+
+
     private $_tls_certificates_and_hostnames_custom_csr_response_collection = null;
 
     // Canonical facade: $client->TlsCertificatesAndHostnamesCustomCsrResponseCollection()->list() / ->load(["id" => ...]).
@@ -1025,6 +1043,24 @@ class CloudflareSslSDK
     }
 
 
+    private $_tls_certificates_and_hostnames_dcv_delegation = null;
+
+    // Canonical facade: $client->TlsCertificatesAndHostnamesDcvDelegation()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->tls_certificates_and_hostnames_dcv_delegation()
+    // resolves here too.
+    public function TlsCertificatesAndHostnamesDcvDelegation($data = null)
+    {
+        require_once __DIR__ . '/entity/tls_certificates_and_hostnames_dcv_delegation_entity.php';
+        if ($data === null) {
+            if ($this->_tls_certificates_and_hostnames_dcv_delegation === null) {
+                $this->_tls_certificates_and_hostnames_dcv_delegation = new TlsCertificatesAndHostnamesDcvDelegationEntity($this, null);
+            }
+            return $this->_tls_certificates_and_hostnames_dcv_delegation;
+        }
+        return new TlsCertificatesAndHostnamesDcvDelegationEntity($this, $data);
+    }
+
+
     private $_tls_certificates_and_hostnames_delete_advanced_certificate_pack = null;
 
     // Canonical facade: $client->TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack()->list() / ->load(["id" => ...]).
@@ -1130,6 +1166,24 @@ class CloudflareSslSDK
             return $this->_tls_certificates_and_hostnames_hostname_assoc_response_collection;
         }
         return new TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity($this, $data);
+    }
+
+
+    private $_tls_certificates_and_hostnames_hostname_association = null;
+
+    // Canonical facade: $client->TlsCertificatesAndHostnamesHostnameAssociation()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->tls_certificates_and_hostnames_hostname_association()
+    // resolves here too.
+    public function TlsCertificatesAndHostnamesHostnameAssociation($data = null)
+    {
+        require_once __DIR__ . '/entity/tls_certificates_and_hostnames_hostname_association_entity.php';
+        if ($data === null) {
+            if ($this->_tls_certificates_and_hostnames_hostname_association === null) {
+                $this->_tls_certificates_and_hostnames_hostname_association = new TlsCertificatesAndHostnamesHostnameAssociationEntity($this, null);
+            }
+            return $this->_tls_certificates_and_hostnames_hostname_association;
+        }
+        return new TlsCertificatesAndHostnamesHostnameAssociationEntity($this, $data);
     }
 
 

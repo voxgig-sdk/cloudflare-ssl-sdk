@@ -376,6 +376,20 @@
 ---@field client_certificate_id string
 ---@field zone_id string
 
+---@class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse
+---@field emails? table
+---@field enabled boolean
+---@field result? table
+
+---@class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch
+---@field zone_id string
+
+---@class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData
+---@field zone_id string
+---@field emails? table
+---@field enabled? boolean
+---@field result? table
+
 ---@class TlsCertificatesAndHostnamesCustomCsrResponseCollection
 ---@field result? table
 
@@ -562,6 +576,12 @@
 ---@field certificate string
 ---@field result table
 
+---@class TlsCertificatesAndHostnamesDcvDelegation
+---@field result? table
+
+---@class TlsCertificatesAndHostnamesDcvDelegationLoadMatch
+---@field zone_id string
+
 ---@class TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack
 ---@field id? string
 
@@ -619,6 +639,21 @@
 ---@field page? number
 ---@field per_page? number
 ---@field status? string
+
+---@class TlsCertificatesAndHostnamesHostnameAssociation
+---@field hostnames? table
+---@field mtls_certificate_id? string
+---@field result? table
+
+---@class TlsCertificatesAndHostnamesHostnameAssociationLoadMatch
+---@field zone_id string
+---@field mtls_certificate_id? string
+
+---@class TlsCertificatesAndHostnamesHostnameAssociationUpdateData
+---@field zone_id string
+---@field hostnames? table
+---@field mtls_certificate_id? string
+---@field result? table
 
 ---@class TlsCertificatesAndHostnamesKeylessResponseCollection
 ---@field result? table

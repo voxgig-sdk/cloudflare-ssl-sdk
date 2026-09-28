@@ -29,6 +29,7 @@ const TlsCertificatesAndHostnamesCertificateResponseSinglePostEntity_1 = require
 const TlsCertificatesAndHostnamesCertificateRevokeEntity_1 = require("./entity/TlsCertificatesAndHostnamesCertificateRevokeEntity");
 const TlsCertificatesAndHostnamesClientCertificateResponseEntity_1 = require("./entity/TlsCertificatesAndHostnamesClientCertificateResponseEntity");
 const TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity_1 = require("./entity/TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity");
+const TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity_1 = require("./entity/TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity");
 const TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity_1 = require("./entity/TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity");
 const TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity_1 = require("./entity/TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity");
 const TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity_1 = require("./entity/TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity");
@@ -40,12 +41,14 @@ const TlsCertificatesAndHostnamesCustomHostnameResponseSingleEntity_1 = require(
 const TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity_1 = require("./entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity");
 const TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity_1 = require("./entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity");
 const TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity_1 = require("./entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity");
+const TlsCertificatesAndHostnamesDcvDelegationEntity_1 = require("./entity/TlsCertificatesAndHostnamesDcvDelegationEntity");
 const TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity_1 = require("./entity/TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity");
 const TlsCertificatesAndHostnamesEnabledEntity_1 = require("./entity/TlsCertificatesAndHostnamesEnabledEntity");
 const TlsCertificatesAndHostnamesFallbackOriginEntity_1 = require("./entity/TlsCertificatesAndHostnamesFallbackOriginEntity");
 const TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity_1 = require("./entity/TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity");
 const TlsCertificatesAndHostnamesHostnameAopSingleEntity_1 = require("./entity/TlsCertificatesAndHostnamesHostnameAopSingleEntity");
 const TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity_1 = require("./entity/TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity");
+const TlsCertificatesAndHostnamesHostnameAssociationEntity_1 = require("./entity/TlsCertificatesAndHostnamesHostnameAssociationEntity");
 const TlsCertificatesAndHostnamesKeylessResponseCollectionEntity_1 = require("./entity/TlsCertificatesAndHostnamesKeylessResponseCollectionEntity");
 const TlsCertificatesAndHostnamesKeylessResponseSingleEntity_1 = require("./entity/TlsCertificatesAndHostnamesKeylessResponseSingleEntity");
 const TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity_1 = require("./entity/TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity");
@@ -452,6 +455,13 @@ class CloudflareSslSDK {
         const self = this;
         return new TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity_1.TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity(self, entopts);
     }
+    // Entity access: `client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().list()` / `client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({ id })`.
+    // The argument is the entity OPTIONS object (passed to the entity
+    // constructor as entopts), not initial entity data.
+    TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(entopts) {
+        const self = this;
+        return new TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity_1.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity(self, entopts);
+    }
     // Entity access: `client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().list()` / `client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().load({ id })`.
     // The argument is the entity OPTIONS object (passed to the entity
     // constructor as entopts), not initial entity data.
@@ -529,6 +539,13 @@ class CloudflareSslSDK {
         const self = this;
         return new TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity_1.TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity(self, entopts);
     }
+    // Entity access: `client.TlsCertificatesAndHostnamesDcvDelegation().list()` / `client.TlsCertificatesAndHostnamesDcvDelegation().load({ id })`.
+    // The argument is the entity OPTIONS object (passed to the entity
+    // constructor as entopts), not initial entity data.
+    TlsCertificatesAndHostnamesDcvDelegation(entopts) {
+        const self = this;
+        return new TlsCertificatesAndHostnamesDcvDelegationEntity_1.TlsCertificatesAndHostnamesDcvDelegationEntity(self, entopts);
+    }
     // Entity access: `client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().list()` / `client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().load({ id })`.
     // The argument is the entity OPTIONS object (passed to the entity
     // constructor as entopts), not initial entity data.
@@ -570,6 +587,13 @@ class CloudflareSslSDK {
     TlsCertificatesAndHostnamesHostnameAssocResponseCollection(entopts) {
         const self = this;
         return new TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity_1.TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity(self, entopts);
+    }
+    // Entity access: `client.TlsCertificatesAndHostnamesHostnameAssociation().list()` / `client.TlsCertificatesAndHostnamesHostnameAssociation().load({ id })`.
+    // The argument is the entity OPTIONS object (passed to the entity
+    // constructor as entopts), not initial entity data.
+    TlsCertificatesAndHostnamesHostnameAssociation(entopts) {
+        const self = this;
+        return new TlsCertificatesAndHostnamesHostnameAssociationEntity_1.TlsCertificatesAndHostnamesHostnameAssociationEntity(self, entopts);
     }
     // Entity access: `client.TlsCertificatesAndHostnamesKeylessResponseCollection().list()` / `client.TlsCertificatesAndHostnamesKeylessResponseCollection().load({ id })`.
     // The argument is the entity OPTIONS object (passed to the entity

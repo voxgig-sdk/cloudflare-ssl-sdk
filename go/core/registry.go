@@ -60,6 +60,8 @@ var NewTlsCertificatesAndHostnamesClientCertificateResponseEntityFunc func(clien
 
 var NewTlsCertificatesAndHostnamesClientCertificateResponseSingleEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
+var NewTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
+
 var NewTlsCertificatesAndHostnamesCustomCsrResponseCollectionEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
 var NewTlsCertificatesAndHostnamesCustomCsrResponseCollection2EntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
@@ -82,6 +84,8 @@ var NewTlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntityFunc func(
 
 var NewTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
+var NewTlsCertificatesAndHostnamesDcvDelegationEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
+
 var NewTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
 var NewTlsCertificatesAndHostnamesEnabledEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
@@ -93,6 +97,8 @@ var NewTlsCertificatesAndHostnamesHostnameAopResponseCollectionEntityFunc func(c
 var NewTlsCertificatesAndHostnamesHostnameAopSingleEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
 var NewTlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
+
+var NewTlsCertificatesAndHostnamesHostnameAssociationEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 
 var NewTlsCertificatesAndHostnamesKeylessResponseCollectionEntityFunc func(client *CloudflareSslSDK, entopts map[string]any) CloudflareSslEntity
 

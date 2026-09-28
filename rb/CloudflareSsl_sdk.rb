@@ -478,6 +478,13 @@ class CloudflareSslSDK
   end
 
 
+  # Canonical facade: client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse.list / client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse.load({ "id" => ... })
+  def TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data = nil)
+    require_relative 'entity/tls_certificates_and_hostnames_ct_alerting_subscription_response_entity'
+    TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity.new(self, data)
+  end
+
+
   # Canonical facade: client.TlsCertificatesAndHostnamesCustomCsrResponseCollection.list / client.TlsCertificatesAndHostnamesCustomCsrResponseCollection.load({ "id" => ... })
   def TlsCertificatesAndHostnamesCustomCsrResponseCollection(data = nil)
     require_relative 'entity/tls_certificates_and_hostnames_custom_csr_response_collection_entity'
@@ -555,6 +562,13 @@ class CloudflareSslSDK
   end
 
 
+  # Canonical facade: client.TlsCertificatesAndHostnamesDcvDelegation.list / client.TlsCertificatesAndHostnamesDcvDelegation.load({ "id" => ... })
+  def TlsCertificatesAndHostnamesDcvDelegation(data = nil)
+    require_relative 'entity/tls_certificates_and_hostnames_dcv_delegation_entity'
+    TlsCertificatesAndHostnamesDcvDelegationEntity.new(self, data)
+  end
+
+
   # Canonical facade: client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack.list / client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack.load({ "id" => ... })
   def TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data = nil)
     require_relative 'entity/tls_certificates_and_hostnames_delete_advanced_certificate_pack_entity'
@@ -594,6 +608,13 @@ class CloudflareSslSDK
   def TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data = nil)
     require_relative 'entity/tls_certificates_and_hostnames_hostname_assoc_response_collection_entity'
     TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity.new(self, data)
+  end
+
+
+  # Canonical facade: client.TlsCertificatesAndHostnamesHostnameAssociation.list / client.TlsCertificatesAndHostnamesHostnameAssociation.load({ "id" => ... })
+  def TlsCertificatesAndHostnamesHostnameAssociation(data = nil)
+    require_relative 'entity/tls_certificates_and_hostnames_hostname_association_entity'
+    TlsCertificatesAndHostnamesHostnameAssociationEntity.new(self, data)
   end
 
 

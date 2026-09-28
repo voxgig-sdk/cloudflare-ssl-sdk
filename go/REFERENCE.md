@@ -156,6 +156,10 @@ Create a new `TlsCertificatesAndHostnamesClientCertificateResponse` entity insta
 
 Create a new `TlsCertificatesAndHostnamesClientCertificateResponseSingle` entity instance. Pass `nil` for no initial data.
 
+#### `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data map[string]any) CloudflareSslEntity`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse` entity instance. Pass `nil` for no initial data.
+
 #### `TlsCertificatesAndHostnamesCustomCsrResponseCollection(data map[string]any) CloudflareSslEntity`
 
 Create a new `TlsCertificatesAndHostnamesCustomCsrResponseCollection` entity instance. Pass `nil` for no initial data.
@@ -200,6 +204,10 @@ Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly` entity 
 
 Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle` entity instance. Pass `nil` for no initial data.
 
+#### `TlsCertificatesAndHostnamesDcvDelegation(data map[string]any) CloudflareSslEntity`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegation` entity instance. Pass `nil` for no initial data.
+
 #### `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data map[string]any) CloudflareSslEntity`
 
 Create a new `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack` entity instance. Pass `nil` for no initial data.
@@ -223,6 +231,10 @@ Create a new `TlsCertificatesAndHostnamesHostnameAopSingle` entity instance. Pas
 #### `TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data map[string]any) CloudflareSslEntity`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollection` entity instance. Pass `nil` for no initial data.
+
+#### `TlsCertificatesAndHostnamesHostnameAssociation(data map[string]any) CloudflareSslEntity`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociation` entity instance. Pass `nil` for no initial data.
 
 #### `TlsCertificatesAndHostnamesKeylessResponseCollection(data map[string]any) CloudflareSslEntity`
 
@@ -2015,6 +2027,74 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+
+```go
+tlsCertificatesAndHostnamesCtAlertingSubscriptionResponse := client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil)
+fmt.Println(tlsCertificatesAndHostnamesCtAlertingSubscriptionResponse.GetName()) // "tls_certificates_and_hostnames_ct_alerting_subscription_response"
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `emails` | `[]any` | No | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `bool` | Yes | Whether CT alerting is enabled for the zone. |
+| `result` | `map[string]any` | No |  |
+
+### Operations
+
+#### `Load(reqmatch, ctrl map[string]any) (any, error)`
+
+Load a single entity matching the given criteria.
+
+```go
+result, err := client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil).Load(map[string]any{"zone_id": "zone_id"}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
+```
+
+#### `Update(reqdata, ctrl map[string]any) (any, error)`
+
+Update an existing entity. The data must include the entity `id`.
+
+```go
+result, err := client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil).Update(map[string]any{
+    "zone_id": "zone_id",
+    // Fields to update
+}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
+```
+
+### Common Methods
+
+#### `Data(args ...any) any`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `Match(args ...any) any`
+
+Get or set the entity match criteria. Works the same as `Data()`.
+
+#### `Make() Entity`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance with the same client and
+options.
+
+#### `GetName() string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
 
 ```go
@@ -2690,6 +2770,57 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesDcvDelegationEntity
+
+```go
+tlsCertificatesAndHostnamesDcvDelegation := client.TlsCertificatesAndHostnamesDcvDelegation(nil)
+fmt.Println(tlsCertificatesAndHostnamesDcvDelegation.GetName()) // "tls_certificates_and_hostnames_dcv_delegation"
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `result` | `map[string]any` | No |  |
+
+### Operations
+
+#### `Load(reqmatch, ctrl map[string]any) (any, error)`
+
+Load a single entity matching the given criteria.
+
+```go
+result, err := client.TlsCertificatesAndHostnamesDcvDelegation(nil).Load(map[string]any{"zone_id": "zone_id"}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
+```
+
+### Common Methods
+
+#### `Data(args ...any) any`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `Match(args ...any) any`
+
+Get or set the entity match criteria. Works the same as `Data()`.
+
+#### `Make() Entity`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance with the same client and
+options.
+
+#### `GetName() string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
 
 ```go
@@ -3035,6 +3166,74 @@ Get or set the entity match criteria. Works the same as `Data()`.
 #### `Make() Entity`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance with the same client and
+options.
+
+#### `GetName() string`
+
+Return the entity name.
+
+
+---
+
+## TlsCertificatesAndHostnamesHostnameAssociationEntity
+
+```go
+tlsCertificatesAndHostnamesHostnameAssociation := client.TlsCertificatesAndHostnamesHostnameAssociation(nil)
+fmt.Println(tlsCertificatesAndHostnamesHostnameAssociation.GetName()) // "tls_certificates_and_hostnames_hostname_association"
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `hostnames` | `[]any` | No |  |
+| `mtls_certificate_id` | `string` | No | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `map[string]any` | No |  |
+
+### Operations
+
+#### `Load(reqmatch, ctrl map[string]any) (any, error)`
+
+Load a single entity matching the given criteria.
+
+```go
+result, err := client.TlsCertificatesAndHostnamesHostnameAssociation(nil).Load(map[string]any{"zone_id": "zone_id"}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
+```
+
+#### `Update(reqdata, ctrl map[string]any) (any, error)`
+
+Update an existing entity. The data must include the entity `id`.
+
+```go
+result, err := client.TlsCertificatesAndHostnamesHostnameAssociation(nil).Update(map[string]any{
+    "zone_id": "zone_id",
+    // Fields to update
+}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
+```
+
+### Common Methods
+
+#### `Data(args ...any) any`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `Match(args ...any) any`
+
+Get or set the entity match criteria. Works the same as `Data()`.
+
+#### `Make() Entity`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance with the same client and
 options.
 
 #### `GetName() string`

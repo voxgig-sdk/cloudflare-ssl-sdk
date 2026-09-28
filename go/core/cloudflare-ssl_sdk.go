@@ -542,6 +542,14 @@ func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesClientCertificateRespons
 }
 
 
+// TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse returns a TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse entity bound to this client.
+// Idiomatic usage: client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil).List(nil, nil) or
+// client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil).Load(map[string]any{"id": ...}, nil).
+func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data map[string]any) CloudflareSslEntity {
+	return NewTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntityFunc(sdk, data)
+}
+
+
 // TlsCertificatesAndHostnamesCustomCsrResponseCollection returns a TlsCertificatesAndHostnamesCustomCsrResponseCollection entity bound to this client.
 // Idiomatic usage: client.TlsCertificatesAndHostnamesCustomCsrResponseCollection(nil).List(nil, nil) or
 // client.TlsCertificatesAndHostnamesCustomCsrResponseCollection(nil).Load(map[string]any{"id": ...}, nil).
@@ -630,6 +638,14 @@ func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesCustomTrustStoreResponse
 }
 
 
+// TlsCertificatesAndHostnamesDcvDelegation returns a TlsCertificatesAndHostnamesDcvDelegation entity bound to this client.
+// Idiomatic usage: client.TlsCertificatesAndHostnamesDcvDelegation(nil).List(nil, nil) or
+// client.TlsCertificatesAndHostnamesDcvDelegation(nil).Load(map[string]any{"id": ...}, nil).
+func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesDcvDelegation(data map[string]any) CloudflareSslEntity {
+	return NewTlsCertificatesAndHostnamesDcvDelegationEntityFunc(sdk, data)
+}
+
+
 // TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack returns a TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack entity bound to this client.
 // Idiomatic usage: client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(nil).List(nil, nil) or
 // client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(nil).Load(map[string]any{"id": ...}, nil).
@@ -675,6 +691,14 @@ func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesHostnameAopSingle(data m
 // client.TlsCertificatesAndHostnamesHostnameAssocResponseCollection(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data map[string]any) CloudflareSslEntity {
 	return NewTlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntityFunc(sdk, data)
+}
+
+
+// TlsCertificatesAndHostnamesHostnameAssociation returns a TlsCertificatesAndHostnamesHostnameAssociation entity bound to this client.
+// Idiomatic usage: client.TlsCertificatesAndHostnamesHostnameAssociation(nil).List(nil, nil) or
+// client.TlsCertificatesAndHostnamesHostnameAssociation(nil).Load(map[string]any{"id": ...}, nil).
+func (sdk *CloudflareSslSDK) TlsCertificatesAndHostnamesHostnameAssociation(data map[string]any) CloudflareSslEntity {
+	return NewTlsCertificatesAndHostnamesHostnameAssociationEntityFunc(sdk, data)
 }
 
 

@@ -1270,6 +1270,53 @@ TlsCertificatesAndHostnamesClientCertificateResponseSingleRemoveMatch = Struct.n
   keyword_init: true
 )
 
+# TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse entity data model.
+#
+# @!attribute [rw] emails
+#   @return [Array, nil]
+#
+# @!attribute [rw] enabled
+#   @return [Boolean]
+#
+# @!attribute [rw] result
+#   @return [Hash, nil]
+TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse = Struct.new(
+  :emails,
+  :enabled,
+  :result,
+  keyword_init: true
+)
+
+# Request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse#load.
+#
+# @!attribute [rw] zone_id
+#   @return [String]
+TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch = Struct.new(
+  :zone_id,
+  keyword_init: true
+)
+
+# Request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse#update.
+#
+# @!attribute [rw] zone_id
+#   @return [String]
+#
+# @!attribute [rw] emails
+#   @return [Array, nil]
+#
+# @!attribute [rw] enabled
+#   @return [Boolean, nil]
+#
+# @!attribute [rw] result
+#   @return [Hash, nil]
+TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData = Struct.new(
+  :zone_id,
+  :emails,
+  :enabled,
+  :result,
+  keyword_init: true
+)
+
 # TlsCertificatesAndHostnamesCustomCsrResponseCollection entity data model.
 #
 # @!attribute [rw] result
@@ -1931,6 +1978,24 @@ TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleCreateData = Struct.new
   keyword_init: true
 )
 
+# TlsCertificatesAndHostnamesDcvDelegation entity data model.
+#
+# @!attribute [rw] result
+#   @return [Hash, nil]
+TlsCertificatesAndHostnamesDcvDelegation = Struct.new(
+  :result,
+  keyword_init: true
+)
+
+# Request payload for TlsCertificatesAndHostnamesDcvDelegation#load.
+#
+# @!attribute [rw] zone_id
+#   @return [String]
+TlsCertificatesAndHostnamesDcvDelegationLoadMatch = Struct.new(
+  :zone_id,
+  keyword_init: true
+)
+
 # TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack entity data model.
 #
 # @!attribute [rw] id
@@ -2115,6 +2180,57 @@ TlsCertificatesAndHostnamesHostnameAssocResponseCollectionListMatch = Struct.new
   :page,
   :per_page,
   :status,
+  keyword_init: true
+)
+
+# TlsCertificatesAndHostnamesHostnameAssociation entity data model.
+#
+# @!attribute [rw] hostnames
+#   @return [Array, nil]
+#
+# @!attribute [rw] mtls_certificate_id
+#   @return [String, nil]
+#
+# @!attribute [rw] result
+#   @return [Hash, nil]
+TlsCertificatesAndHostnamesHostnameAssociation = Struct.new(
+  :hostnames,
+  :mtls_certificate_id,
+  :result,
+  keyword_init: true
+)
+
+# Request payload for TlsCertificatesAndHostnamesHostnameAssociation#load.
+#
+# @!attribute [rw] zone_id
+#   @return [String]
+#
+# @!attribute [rw] mtls_certificate_id
+#   @return [String, nil]
+TlsCertificatesAndHostnamesHostnameAssociationLoadMatch = Struct.new(
+  :zone_id,
+  :mtls_certificate_id,
+  keyword_init: true
+)
+
+# Request payload for TlsCertificatesAndHostnamesHostnameAssociation#update.
+#
+# @!attribute [rw] zone_id
+#   @return [String]
+#
+# @!attribute [rw] hostnames
+#   @return [Array, nil]
+#
+# @!attribute [rw] mtls_certificate_id
+#   @return [String, nil]
+#
+# @!attribute [rw] result
+#   @return [Hash, nil]
+TlsCertificatesAndHostnamesHostnameAssociationUpdateData = Struct.new(
+  :zone_id,
+  :hostnames,
+  :mtls_certificate_id,
+  :result,
   keyword_init: true
 )
 

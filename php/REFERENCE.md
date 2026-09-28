@@ -150,6 +150,10 @@ Create a new `TlsCertificatesAndHostnamesClientCertificateResponseEntity` instan
 
 Create a new `TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity` instance. Pass `null` for no initial data.
 
+#### `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse($data = null)`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance. Pass `null` for no initial data.
+
 #### `TlsCertificatesAndHostnamesCustomCsrResponseCollection($data = null)`
 
 Create a new `TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity` instance. Pass `null` for no initial data.
@@ -194,6 +198,10 @@ Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity` i
 
 Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity` instance. Pass `null` for no initial data.
 
+#### `TlsCertificatesAndHostnamesDcvDelegation($data = null)`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance. Pass `null` for no initial data.
+
 #### `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack($data = null)`
 
 Create a new `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity` instance. Pass `null` for no initial data.
@@ -217,6 +225,10 @@ Create a new `TlsCertificatesAndHostnamesHostnameAopSingleEntity` instance. Pass
 #### `TlsCertificatesAndHostnamesHostnameAssocResponseCollection($data = null)`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance. Pass `null` for no initial data.
+
+#### `TlsCertificatesAndHostnamesHostnameAssociation($data = null)`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance. Pass `null` for no initial data.
 
 #### `TlsCertificatesAndHostnamesKeylessResponseCollection($data = null)`
 
@@ -1965,6 +1977,71 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+
+```php
+$tls_certificates_and_hostnames_ct_alerting_subscription_response = $client->TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse();
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `emails` | `array` | No | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `bool` | Yes | Whether CT alerting is enabled for the zone. |
+| `result` | `array` | No |  |
+
+### Operations
+
+#### `load(array $reqmatch, ?array $ctrl = null): mixed`
+
+Load a single entity matching the given criteria. Throws on error.
+
+```php
+$result = $client->TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()->load(["zone_id" => "zone_id"]);
+```
+
+#### `update(array $reqdata, ?array $ctrl = null): mixed`
+
+Update an existing entity. The data must include the entity `id`. Throws on error.
+
+```php
+$result = $client->TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()->update([
+  "zone_id" => "zone_id",
+  // Fields to update
+]);
+```
+
+### Common Methods
+
+#### `data_get(): array`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set($data): void`
+
+Set the entity data.
+
+#### `match_get(): array`
+
+Get the entity match criteria.
+
+#### `match_set($match): void`
+
+Set the entity match criteria.
+
+#### `make(): TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance with the same client and
+options.
+
+#### `get_name(): string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
 
 ```php
@@ -2631,6 +2708,58 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesDcvDelegationEntity
+
+```php
+$tls_certificates_and_hostnames_dcv_delegation = $client->TlsCertificatesAndHostnamesDcvDelegation();
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `result` | `array` | No |  |
+
+### Operations
+
+#### `load(array $reqmatch, ?array $ctrl = null): mixed`
+
+Load a single entity matching the given criteria. Throws on error.
+
+```php
+$result = $client->TlsCertificatesAndHostnamesDcvDelegation()->load(["zone_id" => "zone_id"]);
+```
+
+### Common Methods
+
+#### `data_get(): array`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set($data): void`
+
+Set the entity data.
+
+#### `match_get(): array`
+
+Get the entity match criteria.
+
+#### `match_set($match): void`
+
+Set the entity match criteria.
+
+#### `make(): TlsCertificatesAndHostnamesDcvDelegationEntity`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance with the same client and
+options.
+
+#### `get_name(): string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
 
 ```php
@@ -2970,6 +3099,71 @@ Set the entity match criteria.
 #### `make(): TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance with the same client and
+options.
+
+#### `get_name(): string`
+
+Return the entity name.
+
+
+---
+
+## TlsCertificatesAndHostnamesHostnameAssociationEntity
+
+```php
+$tls_certificates_and_hostnames_hostname_association = $client->TlsCertificatesAndHostnamesHostnameAssociation();
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `hostnames` | `array` | No |  |
+| `mtls_certificate_id` | `string` | No | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `array` | No |  |
+
+### Operations
+
+#### `load(array $reqmatch, ?array $ctrl = null): mixed`
+
+Load a single entity matching the given criteria. Throws on error.
+
+```php
+$result = $client->TlsCertificatesAndHostnamesHostnameAssociation()->load(["zone_id" => "zone_id"]);
+```
+
+#### `update(array $reqdata, ?array $ctrl = null): mixed`
+
+Update an existing entity. The data must include the entity `id`. Throws on error.
+
+```php
+$result = $client->TlsCertificatesAndHostnamesHostnameAssociation()->update([
+  "zone_id" => "zone_id",
+  // Fields to update
+]);
+```
+
+### Common Methods
+
+#### `data_get(): array`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set($data): void`
+
+Set the entity data.
+
+#### `match_get(): array`
+
+Get the entity match criteria.
+
+#### `match_set($match): void`
+
+Set the entity match criteria.
+
+#### `make(): TlsCertificatesAndHostnamesHostnameAssociationEntity`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance with the same client and
 options.
 
 #### `get_name(): string`

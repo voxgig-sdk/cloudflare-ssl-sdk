@@ -131,6 +131,8 @@ func entityFor(client *sdk.CloudflareSslSDK, name string) (sdk.CloudflareSslEnti
 		return client.TlsCertificatesAndHostnamesClientCertificateResponse(nil), nil
 	case "tls_certificates_and_hostnames_client_certificate_response_single":
 		return client.TlsCertificatesAndHostnamesClientCertificateResponseSingle(nil), nil
+	case "tls_certificates_and_hostnames_ct_alerting_subscription_response":
+		return client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil), nil
 	case "tls_certificates_and_hostnames_custom_csr_response_collection":
 		return client.TlsCertificatesAndHostnamesCustomCsrResponseCollection(nil), nil
 	case "tls_certificates_and_hostnames_custom_csr_response_collection_2":
@@ -153,6 +155,8 @@ func entityFor(client *sdk.CloudflareSslSDK, name string) (sdk.CloudflareSslEnti
 		return client.TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly(nil), nil
 	case "tls_certificates_and_hostnames_custom_trust_store_response_single":
 		return client.TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle(nil), nil
+	case "tls_certificates_and_hostnames_dcv_delegation":
+		return client.TlsCertificatesAndHostnamesDcvDelegation(nil), nil
 	case "tls_certificates_and_hostnames_delete_advanced_certificate_pack":
 		return client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(nil), nil
 	case "tls_certificates_and_hostnames_enabled":
@@ -165,6 +169,8 @@ func entityFor(client *sdk.CloudflareSslSDK, name string) (sdk.CloudflareSslEnti
 		return client.TlsCertificatesAndHostnamesHostnameAopSingle(nil), nil
 	case "tls_certificates_and_hostnames_hostname_assoc_response_collection":
 		return client.TlsCertificatesAndHostnamesHostnameAssocResponseCollection(nil), nil
+	case "tls_certificates_and_hostnames_hostname_association":
+		return client.TlsCertificatesAndHostnamesHostnameAssociation(nil), nil
 	case "tls_certificates_and_hostnames_keyless_response_collection":
 		return client.TlsCertificatesAndHostnamesKeylessResponseCollection(nil), nil
 	case "tls_certificates_and_hostnames_keyless_response_single":

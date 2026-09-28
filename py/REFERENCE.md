@@ -150,6 +150,10 @@ Create a new `TlsCertificatesAndHostnamesClientCertificateResponseEntity` instan
 
 Create a new `TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity` instance. Pass `None` for no initial data.
 
+#### `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data=None)`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance. Pass `None` for no initial data.
+
 #### `TlsCertificatesAndHostnamesCustomCsrResponseCollection(data=None)`
 
 Create a new `TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity` instance. Pass `None` for no initial data.
@@ -194,6 +198,10 @@ Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity` i
 
 Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity` instance. Pass `None` for no initial data.
 
+#### `TlsCertificatesAndHostnamesDcvDelegation(data=None)`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance. Pass `None` for no initial data.
+
 #### `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data=None)`
 
 Create a new `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity` instance. Pass `None` for no initial data.
@@ -217,6 +225,10 @@ Create a new `TlsCertificatesAndHostnamesHostnameAopSingleEntity` instance. Pass
 #### `TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data=None)`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance. Pass `None` for no initial data.
+
+#### `TlsCertificatesAndHostnamesHostnameAssociation(data=None)`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance. Pass `None` for no initial data.
 
 #### `TlsCertificatesAndHostnamesKeylessResponseCollection(data=None)`
 
@@ -1955,6 +1967,70 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+
+```python
+tls_certificates_and_hostnames_ct_alerting_subscription_response = client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `emails` | `list` | No | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `bool` | Yes | Whether CT alerting is enabled for the zone. |
+| `result` | `dict` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl=None) -> dict`
+
+Load a single entity matching the given criteria. Returns the entity data and raises on error.
+
+```python
+result = client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({"zone_id": "zone_id"})
+```
+
+#### `update(reqdata, ctrl=None) -> dict`
+
+Update an existing entity. The data must include the entity `id`. Returns the updated entity data and raises on error.
+
+```python
+result = client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().update({
+    "zone_id": "zone_id",
+    # Fields to update
+})
+```
+
+### Common Methods
+
+#### `data_get() -> dict`
+
+Get the entity data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> dict`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance with the same options.
+
+#### `get_name() -> str`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
 
 ```python
@@ -2620,6 +2696,57 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesDcvDelegationEntity
+
+```python
+tls_certificates_and_hostnames_dcv_delegation = client.TlsCertificatesAndHostnamesDcvDelegation()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `result` | `dict` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl=None) -> dict`
+
+Load a single entity matching the given criteria. Returns the entity data and raises on error.
+
+```python
+result = client.TlsCertificatesAndHostnamesDcvDelegation().load({"zone_id": "zone_id"})
+```
+
+### Common Methods
+
+#### `data_get() -> dict`
+
+Get the entity data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> dict`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance with the same options.
+
+#### `get_name() -> str`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
 
 ```python
@@ -2956,6 +3083,70 @@ Set the entity match criteria.
 #### `make() -> Entity`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance with the same options.
+
+#### `get_name() -> str`
+
+Return the entity name.
+
+
+---
+
+## TlsCertificatesAndHostnamesHostnameAssociationEntity
+
+```python
+tls_certificates_and_hostnames_hostname_association = client.TlsCertificatesAndHostnamesHostnameAssociation()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `hostnames` | `list` | No |  |
+| `mtls_certificate_id` | `str` | No | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `dict` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl=None) -> dict`
+
+Load a single entity matching the given criteria. Returns the entity data and raises on error.
+
+```python
+result = client.TlsCertificatesAndHostnamesHostnameAssociation().load({"zone_id": "zone_id"})
+```
+
+#### `update(reqdata, ctrl=None) -> dict`
+
+Update an existing entity. The data must include the entity `id`. Returns the updated entity data and raises on error.
+
+```python
+result = client.TlsCertificatesAndHostnamesHostnameAssociation().update({
+    "zone_id": "zone_id",
+    # Fields to update
+})
+```
+
+### Common Methods
+
+#### `data_get() -> dict`
+
+Get the entity data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> dict`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance with the same options.
 
 #### `get_name() -> str`
 

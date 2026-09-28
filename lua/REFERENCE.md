@@ -149,6 +149,10 @@ Create a new `TlsCertificatesAndHostnamesClientCertificateResponse` entity insta
 
 Create a new `TlsCertificatesAndHostnamesClientCertificateResponseSingle` entity instance. Pass `nil` for no initial data.
 
+#### `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data)`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse` entity instance. Pass `nil` for no initial data.
+
 #### `TlsCertificatesAndHostnamesCustomCsrResponseCollection(data)`
 
 Create a new `TlsCertificatesAndHostnamesCustomCsrResponseCollection` entity instance. Pass `nil` for no initial data.
@@ -193,6 +197,10 @@ Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly` entity 
 
 Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle` entity instance. Pass `nil` for no initial data.
 
+#### `TlsCertificatesAndHostnamesDcvDelegation(data)`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegation` entity instance. Pass `nil` for no initial data.
+
 #### `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data)`
 
 Create a new `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack` entity instance. Pass `nil` for no initial data.
@@ -216,6 +224,10 @@ Create a new `TlsCertificatesAndHostnamesHostnameAopSingle` entity instance. Pas
 #### `TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data)`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollection` entity instance. Pass `nil` for no initial data.
+
+#### `TlsCertificatesAndHostnamesHostnameAssociation(data)`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociation` entity instance. Pass `nil` for no initial data.
 
 #### `TlsCertificatesAndHostnamesKeylessResponseCollection(data)`
 
@@ -1963,6 +1975,71 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+
+```lua
+local tls_certificates_and_hostnames_ct_alerting_subscription_response = client:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(nil)
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `emails` | `table` | No | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `boolean` | Yes | Whether CT alerting is enabled for the zone. |
+| `result` | `table` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl) -> any, err`
+
+Load a single entity matching the given criteria.
+
+```lua
+local result, err = client:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse():load({ zone_id = "zone_id" })
+```
+
+#### `update(reqdata, ctrl) -> any, err`
+
+Update an existing entity. The data must include the entity `id`.
+
+```lua
+local result, err = client:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse():update({
+  zone_id = "zone_id",
+  -- Fields to update
+})
+```
+
+### Common Methods
+
+#### `data_get() -> table`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> table`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance with the same client and
+options.
+
+#### `get_name() -> string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
 
 ```lua
@@ -2629,6 +2706,58 @@ Return the entity name.
 
 ---
 
+## TlsCertificatesAndHostnamesDcvDelegationEntity
+
+```lua
+local tls_certificates_and_hostnames_dcv_delegation = client:TlsCertificatesAndHostnamesDcvDelegation(nil)
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `result` | `table` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl) -> any, err`
+
+Load a single entity matching the given criteria.
+
+```lua
+local result, err = client:TlsCertificatesAndHostnamesDcvDelegation():load({ zone_id = "zone_id" })
+```
+
+### Common Methods
+
+#### `data_get() -> table`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> table`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance with the same client and
+options.
+
+#### `get_name() -> string`
+
+Return the entity name.
+
+
+---
+
 ## TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
 
 ```lua
@@ -2968,6 +3097,71 @@ Set the entity match criteria.
 #### `make() -> Entity`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance with the same client and
+options.
+
+#### `get_name() -> string`
+
+Return the entity name.
+
+
+---
+
+## TlsCertificatesAndHostnamesHostnameAssociationEntity
+
+```lua
+local tls_certificates_and_hostnames_hostname_association = client:TlsCertificatesAndHostnamesHostnameAssociation(nil)
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `hostnames` | `table` | No |  |
+| `mtls_certificate_id` | `string` | No | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `table` | No |  |
+
+### Operations
+
+#### `load(reqmatch, ctrl) -> any, err`
+
+Load a single entity matching the given criteria.
+
+```lua
+local result, err = client:TlsCertificatesAndHostnamesHostnameAssociation():load({ zone_id = "zone_id" })
+```
+
+#### `update(reqdata, ctrl) -> any, err`
+
+Update an existing entity. The data must include the entity `id`.
+
+```lua
+local result, err = client:TlsCertificatesAndHostnamesHostnameAssociation():update({
+  zone_id = "zone_id",
+  -- Fields to update
+})
+```
+
+### Common Methods
+
+#### `data_get() -> table`
+
+Get the entity data. Returns a copy of the current data.
+
+#### `data_set(data)`
+
+Set the entity data.
+
+#### `match_get() -> table`
+
+Get the entity match criteria.
+
+#### `match_set(match)`
+
+Set the entity match criteria.
+
+#### `make() -> Entity`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance with the same client and
 options.
 
 #### `get_name() -> string`

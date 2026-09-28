@@ -1,0 +1,51 @@
+# BasicTlsCertificatesAndHostnamesHostnameAssociationFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesHostnameAssociationFlow:
+{
+  entity: "tls_certificates_and_hostnames_hostname_association",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesHostnameAssociationFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_hostname_association_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_hostname_association_ref01_data",
+        suffix: "_up0",
+        textfield: "mtls_certificate_id"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_hostname_association_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_hostname_association_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_hostname_association_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_hostname_association01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_hostname_association_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesHostnameAssociationFlow"
+}

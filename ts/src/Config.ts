@@ -151,6 +151,9 @@ class Config {
         tls_certificates_and_hostnames_client_certificate_response_single: {
         },
   
+        tls_certificates_and_hostnames_ct_alerting_subscription_response: {
+        },
+  
         tls_certificates_and_hostnames_custom_csr_response_collection: {
         },
   
@@ -184,6 +187,9 @@ class Config {
         tls_certificates_and_hostnames_custom_trust_store_response_single: {
         },
   
+        tls_certificates_and_hostnames_dcv_delegation: {
+        },
+  
         tls_certificates_and_hostnames_delete_advanced_certificate_pack: {
         },
   
@@ -200,6 +206,9 @@ class Config {
         },
   
         tls_certificates_and_hostnames_hostname_assoc_response_collection: {
+        },
+  
+        tls_certificates_and_hostnames_hostname_association: {
         },
   
         tls_certificates_and_hostnames_keyless_response_collection: {
@@ -3743,6 +3752,143 @@ class Config {
         "ancestors": []
       }
     },
+    "tls_certificates_and_hostnames_ct_alerting_subscription_response": {
+      "fields": [
+        {
+          "name": "emails",
+          "title": "Emails",
+          "type": "`$ARRAY`",
+          "short": "Email addresses that receive CT alert notifications for the zone."
+        },
+        {
+          "name": "enabled",
+          "title": "Enabled",
+          "type": "`$BOOLEAN`",
+          "req": true,
+          "short": "Whether CT alerting is enabled for the zone."
+        },
+        {
+          "name": "result",
+          "title": "Result",
+          "type": "`$OBJECT`"
+        }
+      ],
+      "name": "tls_certificates_and_hostnames_ct_alerting_subscription_response",
+      "op": {
+        "load": {
+          "input": "data",
+          "name": "load",
+          "points": [
+            {
+              "kind": "http",
+              "method": "GET",
+              "orig": "/zones/{zone_id}/ct/alerting",
+              "segments": [
+                {
+                  "lit": "zones"
+                },
+                {
+                  "var": "zone_id"
+                },
+                {
+                  "lit": "ct"
+                },
+                {
+                  "lit": "alerting"
+                }
+              ],
+              "parts": [
+                "zones",
+                "{zone_id}",
+                "ct",
+                "alerting"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "params": [
+                  {
+                    "name": "zone_id",
+                    "orig": "zone_id",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "023e105f4ecef8ad9ca31a8372d0c353"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
+                  "zone_id"
+                ]
+              }
+            }
+          ]
+        },
+        "update": {
+          "input": "data",
+          "name": "update",
+          "points": [
+            {
+              "kind": "http",
+              "method": "PATCH",
+              "orig": "/zones/{zone_id}/ct/alerting",
+              "segments": [
+                {
+                  "lit": "zones"
+                },
+                {
+                  "var": "zone_id"
+                },
+                {
+                  "lit": "ct"
+                },
+                {
+                  "lit": "alerting"
+                }
+              ],
+              "parts": [
+                "zones",
+                "{zone_id}",
+                "ct",
+                "alerting"
+              ],
+              "rename": {},
+              "transform": {
+                "req": {
+                  "emails": "`reqdata.email`",
+                  "enabled": "`reqdata.enabled`"
+                },
+                "res": "`body`"
+              },
+              "args": {
+                "params": [
+                  {
+                    "name": "zone_id",
+                    "orig": "zone_id",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "023e105f4ecef8ad9ca31a8372d0c353"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
+                  "zone_id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "relations": {
+        "ancestors": []
+      }
+    },
     "tls_certificates_and_hostnames_custom_csr_response_collection": {
       "fields": [
         {
@@ -5288,6 +5434,74 @@ class Config {
         "ancestors": []
       }
     },
+    "tls_certificates_and_hostnames_dcv_delegation": {
+      "fields": [
+        {
+          "name": "result",
+          "title": "Result",
+          "type": "`$OBJECT`"
+        }
+      ],
+      "name": "tls_certificates_and_hostnames_dcv_delegation",
+      "op": {
+        "load": {
+          "input": "data",
+          "name": "load",
+          "points": [
+            {
+              "kind": "http",
+              "method": "GET",
+              "orig": "/zones/{zone_id}/dcv_delegation/uuid",
+              "segments": [
+                {
+                  "lit": "zones"
+                },
+                {
+                  "var": "zone_id"
+                },
+                {
+                  "lit": "dcv_delegation"
+                },
+                {
+                  "lit": "uuid"
+                }
+              ],
+              "parts": [
+                "zones",
+                "{zone_id}",
+                "dcv_delegation",
+                "uuid"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "params": [
+                  {
+                    "name": "zone_id",
+                    "orig": "zone_id",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "023e105f4ecef8ad9ca31a8372d0c353"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
+                  "zone_id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "relations": {
+        "ancestors": []
+      }
+    },
     "tls_certificates_and_hostnames_delete_advanced_certificate_pack": {
       "fields": [
         {
@@ -5924,6 +6138,148 @@ class Config {
                   "page",
                   "per_page",
                   "status",
+                  "zone_id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "relations": {
+        "ancestors": []
+      }
+    },
+    "tls_certificates_and_hostnames_hostname_association": {
+      "fields": [
+        {
+          "name": "hostnames",
+          "title": "Hostnames",
+          "type": "`$ARRAY`"
+        },
+        {
+          "name": "mtls_certificate_id",
+          "title": "Mtls Certificate Id",
+          "type": "`$STRING`",
+          "short": "The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint."
+        },
+        {
+          "name": "result",
+          "title": "Result",
+          "type": "`$OBJECT`"
+        }
+      ],
+      "name": "tls_certificates_and_hostnames_hostname_association",
+      "op": {
+        "load": {
+          "input": "data",
+          "name": "load",
+          "points": [
+            {
+              "kind": "http",
+              "method": "GET",
+              "orig": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+              "segments": [
+                {
+                  "lit": "zones"
+                },
+                {
+                  "var": "zone_id"
+                },
+                {
+                  "lit": "certificate_authorities"
+                },
+                {
+                  "lit": "hostname_associations"
+                }
+              ],
+              "parts": [
+                "zones",
+                "{zone_id}",
+                "certificate_authorities",
+                "hostname_associations"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "params": [
+                  {
+                    "name": "zone_id",
+                    "orig": "zone_id",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "023e105f4ecef8ad9ca31a8372d0c353"
+                  }
+                ],
+                "query": [
+                  {
+                    "name": "mtls_certificate_id",
+                    "orig": "mtls_certificate_id",
+                    "type": "`$STRING`",
+                    "kind": "query",
+                    "example": "b2134436-2555-4acf-be5b-26c48136575e"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
+                  "mtls_certificate_id",
+                  "zone_id"
+                ]
+              }
+            }
+          ]
+        },
+        "update": {
+          "input": "data",
+          "name": "update",
+          "points": [
+            {
+              "kind": "http",
+              "method": "PUT",
+              "orig": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+              "segments": [
+                {
+                  "lit": "zones"
+                },
+                {
+                  "var": "zone_id"
+                },
+                {
+                  "lit": "certificate_authorities"
+                },
+                {
+                  "lit": "hostname_associations"
+                }
+              ],
+              "parts": [
+                "zones",
+                "{zone_id}",
+                "certificate_authorities",
+                "hostname_associations"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "params": [
+                  {
+                    "name": "zone_id",
+                    "orig": "zone_id",
+                    "type": "`$STRING`",
+                    "kind": "param",
+                    "reqd": true,
+                    "example": "023e105f4ecef8ad9ca31a8372d0c353"
+                  }
+                ]
+              },
+              "select": {
+                "exist": [
                   "zone_id"
                 ]
               }

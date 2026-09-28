@@ -27,6 +27,7 @@ import { TlsCertificatesAndHostnamesCertificateResponseSinglePostEntity } from '
 import { TlsCertificatesAndHostnamesCertificateRevokeEntity } from './entity/TlsCertificatesAndHostnamesCertificateRevokeEntity'
 import { TlsCertificatesAndHostnamesClientCertificateResponseEntity } from './entity/TlsCertificatesAndHostnamesClientCertificateResponseEntity'
 import { TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity'
+import { TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity } from './entity/TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity'
 import { TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity'
 import { TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity'
 import { TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity'
@@ -38,12 +39,14 @@ import { TlsCertificatesAndHostnamesCustomHostnameResponseSingleEntity } from '.
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity'
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity'
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity'
+import { TlsCertificatesAndHostnamesDcvDelegationEntity } from './entity/TlsCertificatesAndHostnamesDcvDelegationEntity'
 import { TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity } from './entity/TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity'
 import { TlsCertificatesAndHostnamesEnabledEntity } from './entity/TlsCertificatesAndHostnamesEnabledEntity'
 import { TlsCertificatesAndHostnamesFallbackOriginEntity } from './entity/TlsCertificatesAndHostnamesFallbackOriginEntity'
 import { TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity'
 import { TlsCertificatesAndHostnamesHostnameAopSingleEntity } from './entity/TlsCertificatesAndHostnamesHostnameAopSingleEntity'
 import { TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity'
+import { TlsCertificatesAndHostnamesHostnameAssociationEntity } from './entity/TlsCertificatesAndHostnamesHostnameAssociationEntity'
 import { TlsCertificatesAndHostnamesKeylessResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseCollectionEntity'
 import { TlsCertificatesAndHostnamesKeylessResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseSingleEntity'
 import { TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity'
@@ -578,6 +581,15 @@ class CloudflareSslSDK {
   }
 
 
+  // Entity access: `client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().list()` / `client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({ id })`.
+  // The argument is the entity OPTIONS object (passed to the entity
+  // constructor as entopts), not initial entity data.
+  TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(entopts?: Record<string, any>) {
+    const self = this
+    return new TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity(self, entopts)
+  }
+
+
   // Entity access: `client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().list()` / `client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().load({ id })`.
   // The argument is the entity OPTIONS object (passed to the entity
   // constructor as entopts), not initial entity data.
@@ -677,6 +689,15 @@ class CloudflareSslSDK {
   }
 
 
+  // Entity access: `client.TlsCertificatesAndHostnamesDcvDelegation().list()` / `client.TlsCertificatesAndHostnamesDcvDelegation().load({ id })`.
+  // The argument is the entity OPTIONS object (passed to the entity
+  // constructor as entopts), not initial entity data.
+  TlsCertificatesAndHostnamesDcvDelegation(entopts?: Record<string, any>) {
+    const self = this
+    return new TlsCertificatesAndHostnamesDcvDelegationEntity(self, entopts)
+  }
+
+
   // Entity access: `client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().list()` / `client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().load({ id })`.
   // The argument is the entity OPTIONS object (passed to the entity
   // constructor as entopts), not initial entity data.
@@ -728,6 +749,15 @@ class CloudflareSslSDK {
   TlsCertificatesAndHostnamesHostnameAssocResponseCollection(entopts?: Record<string, any>) {
     const self = this
     return new TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity(self, entopts)
+  }
+
+
+  // Entity access: `client.TlsCertificatesAndHostnamesHostnameAssociation().list()` / `client.TlsCertificatesAndHostnamesHostnameAssociation().load({ id })`.
+  // The argument is the entity OPTIONS object (passed to the entity
+  // constructor as entopts), not initial entity data.
+  TlsCertificatesAndHostnamesHostnameAssociation(entopts?: Record<string, any>) {
+    const self = this
+    return new TlsCertificatesAndHostnamesHostnameAssociationEntity(self, entopts)
   }
 
 

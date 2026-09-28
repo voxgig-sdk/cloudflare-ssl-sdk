@@ -269,6 +269,7 @@ new CloudflareSslSDK(options?: {
 | `TlsCertificatesAndHostnamesCertificateRevoke(data?)` | `TlsCertificatesAndHostnamesCertificateRevokeEntity` | Create a TlsCertificatesAndHostnamesCertificateRevoke entity instance. |
 | `TlsCertificatesAndHostnamesClientCertificateResponse(data?)` | `TlsCertificatesAndHostnamesClientCertificateResponseEntity` | Create a TlsCertificatesAndHostnamesClientCertificateResponse entity instance. |
 | `TlsCertificatesAndHostnamesClientCertificateResponseSingle(data?)` | `TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity` | Create a TlsCertificatesAndHostnamesClientCertificateResponseSingle entity instance. |
+| `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data?)` | `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` | Create a TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse entity instance. |
 | `TlsCertificatesAndHostnamesCustomCsrResponseCollection(data?)` | `TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity` | Create a TlsCertificatesAndHostnamesCustomCsrResponseCollection entity instance. |
 | `TlsCertificatesAndHostnamesCustomCsrResponseCollection2(data?)` | `TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity` | Create a TlsCertificatesAndHostnamesCustomCsrResponseCollection2 entity instance. |
 | `TlsCertificatesAndHostnamesCustomCsrResponseIdOnly(data?)` | `TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity` | Create a TlsCertificatesAndHostnamesCustomCsrResponseIdOnly entity instance. |
@@ -280,12 +281,14 @@ new CloudflareSslSDK(options?: {
 | `TlsCertificatesAndHostnamesCustomTrustStoreResponse(data?)` | `TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity` | Create a TlsCertificatesAndHostnamesCustomTrustStoreResponse entity instance. |
 | `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly(data?)` | `TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity` | Create a TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly entity instance. |
 | `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle(data?)` | `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity` | Create a TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle entity instance. |
+| `TlsCertificatesAndHostnamesDcvDelegation(data?)` | `TlsCertificatesAndHostnamesDcvDelegationEntity` | Create a TlsCertificatesAndHostnamesDcvDelegation entity instance. |
 | `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data?)` | `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity` | Create a TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack entity instance. |
 | `TlsCertificatesAndHostnamesEnabled(data?)` | `TlsCertificatesAndHostnamesEnabledEntity` | Create a TlsCertificatesAndHostnamesEnabled entity instance. |
 | `TlsCertificatesAndHostnamesFallbackOrigin(data?)` | `TlsCertificatesAndHostnamesFallbackOriginEntity` | Create a TlsCertificatesAndHostnamesFallbackOrigin entity instance. |
 | `TlsCertificatesAndHostnamesHostnameAopResponseCollection(data?)` | `TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity` | Create a TlsCertificatesAndHostnamesHostnameAopResponseCollection entity instance. |
 | `TlsCertificatesAndHostnamesHostnameAopSingle(data?)` | `TlsCertificatesAndHostnamesHostnameAopSingleEntity` | Create a TlsCertificatesAndHostnamesHostnameAopSingle entity instance. |
 | `TlsCertificatesAndHostnamesHostnameAssocResponseCollection(data?)` | `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` | Create a TlsCertificatesAndHostnamesHostnameAssocResponseCollection entity instance. |
+| `TlsCertificatesAndHostnamesHostnameAssociation(data?)` | `TlsCertificatesAndHostnamesHostnameAssociationEntity` | Create a TlsCertificatesAndHostnamesHostnameAssociation entity instance. |
 | `TlsCertificatesAndHostnamesKeylessResponseCollection(data?)` | `TlsCertificatesAndHostnamesKeylessResponseCollectionEntity` | Create a TlsCertificatesAndHostnamesKeylessResponseCollection entity instance. |
 | `TlsCertificatesAndHostnamesKeylessResponseSingle(data?)` | `TlsCertificatesAndHostnamesKeylessResponseSingleEntity` | Create a TlsCertificatesAndHostnamesKeylessResponseSingle entity instance. |
 | `TlsCertificatesAndHostnamesKeylessResponseSingleId(data?)` | `TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity` | Create a TlsCertificatesAndHostnamesKeylessResponseSingleId entity instance. |
@@ -681,6 +684,18 @@ Operations: create, load, remove, update.
 
 API path: `/zones/{zone_id}/client_certificates`
 
+#### TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse
+
+| Field | Description |
+| --- | --- |
+| `emails` | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | Whether CT alerting is enabled for the zone. |
+| `result` |  |
+
+Operations: load, update.
+
+API path: `/zones/{zone_id}/ct/alerting`
+
 #### TlsCertificatesAndHostnamesCustomCsrResponseCollection
 
 | Field | Description |
@@ -823,6 +838,16 @@ Operations: create, load.
 
 API path: `/zones/{zone_id}/acm/custom_trust_store`
 
+#### TlsCertificatesAndHostnamesDcvDelegation
+
+| Field | Description |
+| --- | --- |
+| `result` |  |
+
+Operations: load.
+
+API path: `/zones/{zone_id}/dcv_delegation/uuid`
+
 #### TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack
 
 | Field | Description |
@@ -885,6 +910,18 @@ API path: `/zones/{zone_id}/origin_tls_client_auth/hostnames/{hostname}`
 Operations: list.
 
 API path: `/zones/{zone_id}/origin_tls_client_auth/hostnames`
+
+#### TlsCertificatesAndHostnamesHostnameAssociation
+
+| Field | Description |
+| --- | --- |
+| `hostnames` |  |
+| `mtls_certificate_id` | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` |  |
+
+Operations: load, update.
+
+API path: `/zones/{zone_id}/certificate_authorities/hostname_associations`
 
 #### TlsCertificatesAndHostnamesKeylessResponseCollection
 
@@ -1716,6 +1753,32 @@ const tls_certificates_and_hostnames_client_certificate_response_single = await 
 ```
 
 
+### TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse
+
+Create an instance: `const tls_certificates_and_hostnames_ct_alerting_subscription_response = client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()`
+
+#### Operations
+
+| Method | Description |
+| --- | --- |
+| `load(match)` | Load a single entity by match criteria. |
+| `update(data)` | Update an existing entity. |
+
+#### Fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `emails` | `any[]` | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `boolean` | Whether CT alerting is enabled for the zone. |
+| `result` | `Record<string, any>` |  |
+
+#### Example: Load
+
+```ts
+const tls_certificates_and_hostnames_ct_alerting_subscription_response = await client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({ zone_id: 'zone_id' })
+```
+
+
 ### TlsCertificatesAndHostnamesCustomCsrResponseCollection
 
 Create an instance: `const tls_certificates_and_hostnames_custom_csr_response_collection = client.TlsCertificatesAndHostnamesCustomCsrResponseCollection()`
@@ -2036,6 +2099,29 @@ const tls_certificates_and_hostnames_custom_trust_store_response_single = await 
 ```
 
 
+### TlsCertificatesAndHostnamesDcvDelegation
+
+Create an instance: `const tls_certificates_and_hostnames_dcv_delegation = client.TlsCertificatesAndHostnamesDcvDelegation()`
+
+#### Operations
+
+| Method | Description |
+| --- | --- |
+| `load(match)` | Load a single entity by match criteria. |
+
+#### Fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `result` | `Record<string, any>` |  |
+
+#### Example: Load
+
+```ts
+const tls_certificates_and_hostnames_dcv_delegation = await client.TlsCertificatesAndHostnamesDcvDelegation().load({ zone_id: 'zone_id' })
+```
+
+
 ### TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack
 
 Create an instance: `const tls_certificates_and_hostnames_delete_advanced_certificate_pack = client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack()`
@@ -2165,6 +2251,32 @@ Create an instance: `const tls_certificates_and_hostnames_hostname_assoc_respons
 
 ```ts
 const tls_certificates_and_hostnames_hostname_assoc_response_collections = await client.TlsCertificatesAndHostnamesHostnameAssocResponseCollection().list({ zone_id: "example" })
+```
+
+
+### TlsCertificatesAndHostnamesHostnameAssociation
+
+Create an instance: `const tls_certificates_and_hostnames_hostname_association = client.TlsCertificatesAndHostnamesHostnameAssociation()`
+
+#### Operations
+
+| Method | Description |
+| --- | --- |
+| `load(match)` | Load a single entity by match criteria. |
+| `update(data)` | Update an existing entity. |
+
+#### Fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `hostnames` | `any[]` |  |
+| `mtls_certificate_id` | `string` | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `Record<string, any>` |  |
+
+#### Example: Load
+
+```ts
+const tls_certificates_and_hostnames_hostname_association = await client.TlsCertificatesAndHostnamesHostnameAssociation().load({ zone_id: 'zone_id' })
 ```
 
 

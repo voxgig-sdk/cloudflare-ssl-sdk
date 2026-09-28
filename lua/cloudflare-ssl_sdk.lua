@@ -724,6 +724,20 @@ function CloudflareSslSDK:TlsCertificatesAndHostnamesClientCertificateResponseSi
 end
 
 
+-- Idiomatic facade: client:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse():list() / client:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function CloudflareSslSDK:TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data)
+  local EntityMod = require("entity.tls_certificates_and_hostnames_ct_alerting_subscription_response_entity")
+  if data == nil then
+    if self._tls_certificates_and_hostnames_ct_alerting_subscription_response == nil then
+      self._tls_certificates_and_hostnames_ct_alerting_subscription_response = EntityMod.new(self, nil)
+    end
+    return self._tls_certificates_and_hostnames_ct_alerting_subscription_response
+  end
+  return EntityMod.new(self, data)
+end
+
+
 -- Idiomatic facade: client:TlsCertificatesAndHostnamesCustomCsrResponseCollection():list() / client:TlsCertificatesAndHostnamesCustomCsrResponseCollection():load({ id = ... })
 -- Entity access is capitalised (PascalCase) for parity with the other SDKs.
 function CloudflareSslSDK:TlsCertificatesAndHostnamesCustomCsrResponseCollection(data)
@@ -878,6 +892,20 @@ function CloudflareSslSDK:TlsCertificatesAndHostnamesCustomTrustStoreResponseSin
 end
 
 
+-- Idiomatic facade: client:TlsCertificatesAndHostnamesDcvDelegation():list() / client:TlsCertificatesAndHostnamesDcvDelegation():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function CloudflareSslSDK:TlsCertificatesAndHostnamesDcvDelegation(data)
+  local EntityMod = require("entity.tls_certificates_and_hostnames_dcv_delegation_entity")
+  if data == nil then
+    if self._tls_certificates_and_hostnames_dcv_delegation == nil then
+      self._tls_certificates_and_hostnames_dcv_delegation = EntityMod.new(self, nil)
+    end
+    return self._tls_certificates_and_hostnames_dcv_delegation
+  end
+  return EntityMod.new(self, data)
+end
+
+
 -- Idiomatic facade: client:TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack():list() / client:TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack():load({ id = ... })
 -- Entity access is capitalised (PascalCase) for parity with the other SDKs.
 function CloudflareSslSDK:TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data)
@@ -957,6 +985,20 @@ function CloudflareSslSDK:TlsCertificatesAndHostnamesHostnameAssocResponseCollec
       self._tls_certificates_and_hostnames_hostname_assoc_response_collection = EntityMod.new(self, nil)
     end
     return self._tls_certificates_and_hostnames_hostname_assoc_response_collection
+  end
+  return EntityMod.new(self, data)
+end
+
+
+-- Idiomatic facade: client:TlsCertificatesAndHostnamesHostnameAssociation():list() / client:TlsCertificatesAndHostnamesHostnameAssociation():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function CloudflareSslSDK:TlsCertificatesAndHostnamesHostnameAssociation(data)
+  local EntityMod = require("entity.tls_certificates_and_hostnames_hostname_association_entity")
+  if data == nil then
+    if self._tls_certificates_and_hostnames_hostname_association == nil then
+      self._tls_certificates_and_hostnames_hostname_association = EntityMod.new(self, nil)
+    end
+    return self._tls_certificates_and_hostnames_hostname_association
   end
   return EntityMod.new(self, data)
 end

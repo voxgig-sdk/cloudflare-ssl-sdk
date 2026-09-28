@@ -18,7 +18,7 @@ Learn more about Voxgig SDKs at [voxgig.com/sdk](https://voxgig.com/sdk/).
 
 ## Entities, not endpoints
 
-This SDK exposes the API as **54 semantic entities** that you
+This SDK exposes the API as **57 semantic entities** that you
 call directly, instead of assembling URL paths and query strings. See the [Entities](#entities) table below for the full list. Entities are
 **Capitalised** to mark them as the primary surface, each with the operations they
 support (`list`, `load`, `create`, `update`, `remove`, `patch`):
@@ -168,7 +168,7 @@ Then add it to your agent's MCP config (Claude Desktop, Cursor, etc.):
 
 ## Entities
 
-The API exposes 54 entities:
+The API exposes 57 entities:
 
 | Entity | Description | API path |
 | --- | --- | --- |
@@ -199,6 +199,7 @@ The API exposes 54 entities:
 | **TlsCertificatesAndHostnamesCertificateRevoke** | The TlsCertificatesAndHostnamesCertificateRevoke entity (remove). | `/certificates/{certificate_id}` |
 | **TlsCertificatesAndHostnamesClientCertificateResponse** | The TlsCertificatesAndHostnamesClientCertificateResponse entity (list). | `/zones/{zone_id}/client_certificates` |
 | **TlsCertificatesAndHostnamesClientCertificateResponseSingle** | The TlsCertificatesAndHostnamesClientCertificateResponseSingle entity (create, load, remove, update). | `/zones/{zone_id}/client_certificates/{client_certificate_id}` |
+| **TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse** | The TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse entity (load, update). | `/zones/{zone_id}/ct/alerting` |
 | **TlsCertificatesAndHostnamesCustomCsrResponseCollection** | The TlsCertificatesAndHostnamesCustomCsrResponseCollection entity (list). | `/zones/{zone_id}/custom_csrs` |
 | **TlsCertificatesAndHostnamesCustomCsrResponseCollection2** | The TlsCertificatesAndHostnamesCustomCsrResponseCollection2 entity (list). | `/accounts/{account_id}/custom_csrs` |
 | **TlsCertificatesAndHostnamesCustomCsrResponseIdOnly** | The TlsCertificatesAndHostnamesCustomCsrResponseIdOnly entity (remove). | `/accounts/{account_id}/custom_csrs/{custom_csr_id}` |
@@ -210,12 +211,14 @@ The API exposes 54 entities:
 | **TlsCertificatesAndHostnamesCustomTrustStoreResponse** | The TlsCertificatesAndHostnamesCustomTrustStoreResponse entity (list). | `/zones/{zone_id}/acm/custom_trust_store` |
 | **TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly** | The TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly entity (remove). | `/zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}` |
 | **TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle** | The TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle entity (create, load). | `/zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}` |
+| **TlsCertificatesAndHostnamesDcvDelegation** | The TlsCertificatesAndHostnamesDcvDelegation entity (load). | `/zones/{zone_id}/dcv_delegation/uuid` |
 | **TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack** | The TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack entity (remove). | `/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}` |
 | **TlsCertificatesAndHostnamesEnabled** | The TlsCertificatesAndHostnamesEnabled entity (load, update). | `/zones/{zone_id}/origin_tls_client_auth/settings` |
 | **TlsCertificatesAndHostnamesFallbackOrigin** | The TlsCertificatesAndHostnamesFallbackOrigin entity (load, remove, update). | `/zones/{zone_id}/custom_hostnames/fallback_origin` |
 | **TlsCertificatesAndHostnamesHostnameAopResponseCollection** | The TlsCertificatesAndHostnamesHostnameAopResponseCollection entity (update). | `/zones/{zone_id}/origin_tls_client_auth/hostnames` |
 | **TlsCertificatesAndHostnamesHostnameAopSingle** | The TlsCertificatesAndHostnamesHostnameAopSingle entity (load). | `/zones/{zone_id}/origin_tls_client_auth/hostnames/{hostname}` |
 | **TlsCertificatesAndHostnamesHostnameAssocResponseCollection** | The TlsCertificatesAndHostnamesHostnameAssocResponseCollection entity (list). | `/zones/{zone_id}/origin_tls_client_auth/hostnames` |
+| **TlsCertificatesAndHostnamesHostnameAssociation** | The TlsCertificatesAndHostnamesHostnameAssociation entity (load, update). | `/zones/{zone_id}/certificate_authorities/hostname_associations` |
 | **TlsCertificatesAndHostnamesKeylessResponseCollection** | The TlsCertificatesAndHostnamesKeylessResponseCollection entity (list). | `/zones/{zone_id}/keyless_certificates` |
 | **TlsCertificatesAndHostnamesKeylessResponseSingle** | The TlsCertificatesAndHostnamesKeylessResponseSingle entity (create, load, update). | `/zones/{zone_id}/keyless_certificates/{keyless_certificate_id}` |
 | **TlsCertificatesAndHostnamesKeylessResponseSingleId** | The TlsCertificatesAndHostnamesKeylessResponseSingleId entity (remove). | `/zones/{zone_id}/keyless_certificates/{keyless_certificate_id}` |

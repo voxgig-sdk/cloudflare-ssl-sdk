@@ -1,0 +1,32 @@
+# BasicTlsCertificatesAndHostnamesDcvDelegationFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesDcvDelegationFlow:
+{
+  entity: "tls_certificates_and_hostnames_dcv_delegation",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesDcvDelegationFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_dcv_delegation_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_dcv_delegation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_dcv_delegation01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_dcv_delegation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesDcvDelegationFlow"
+}

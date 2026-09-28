@@ -59,6 +59,7 @@ declare class Config {
             tls_certificates_and_hostnames_certificate_revoke: {};
             tls_certificates_and_hostnames_client_certificate_response: {};
             tls_certificates_and_hostnames_client_certificate_response_single: {};
+            tls_certificates_and_hostnames_ct_alerting_subscription_response: {};
             tls_certificates_and_hostnames_custom_csr_response_collection: {};
             tls_certificates_and_hostnames_custom_csr_response_collection_2: {};
             tls_certificates_and_hostnames_custom_csr_response_id_only: {};
@@ -70,12 +71,14 @@ declare class Config {
             tls_certificates_and_hostnames_custom_trust_store_response: {};
             tls_certificates_and_hostnames_custom_trust_store_response_id_only: {};
             tls_certificates_and_hostnames_custom_trust_store_response_single: {};
+            tls_certificates_and_hostnames_dcv_delegation: {};
             tls_certificates_and_hostnames_delete_advanced_certificate_pack: {};
             tls_certificates_and_hostnames_enabled: {};
             tls_certificates_and_hostnames_fallback_origin: {};
             tls_certificates_and_hostnames_hostname_aop_response_collection: {};
             tls_certificates_and_hostnames_hostname_aop_single: {};
             tls_certificates_and_hostnames_hostname_assoc_response_collection: {};
+            tls_certificates_and_hostnames_hostname_association: {};
             tls_certificates_and_hostnames_keyless_response_collection: {};
             tls_certificates_and_hostnames_keyless_response_single: {};
             tls_certificates_and_hostnames_keyless_response_single_id: {};
@@ -2225,6 +2228,106 @@ declare class Config {
                 ancestors: never[];
             };
         };
+        tls_certificates_and_hostnames_ct_alerting_subscription_response: {
+            fields: ({
+                name: string;
+                title: string;
+                type: string;
+                short: string;
+                req?: undefined;
+            } | {
+                name: string;
+                title: string;
+                type: string;
+                req: boolean;
+                short: string;
+            } | {
+                name: string;
+                title: string;
+                type: string;
+                short?: undefined;
+                req?: undefined;
+            })[];
+            name: string;
+            op: {
+                load: {
+                    input: string;
+                    name: string;
+                    points: {
+                        kind: string;
+                        method: string;
+                        orig: string;
+                        segments: ({
+                            lit: string;
+                            var?: undefined;
+                        } | {
+                            var: string;
+                            lit?: undefined;
+                        })[];
+                        parts: string[];
+                        rename: {};
+                        transform: {
+                            req: string;
+                            res: string;
+                        };
+                        args: {
+                            params: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                reqd: boolean;
+                                example: string;
+                            }[];
+                        };
+                        select: {
+                            exist: string[];
+                        };
+                    }[];
+                };
+                update: {
+                    input: string;
+                    name: string;
+                    points: {
+                        kind: string;
+                        method: string;
+                        orig: string;
+                        segments: ({
+                            lit: string;
+                            var?: undefined;
+                        } | {
+                            var: string;
+                            lit?: undefined;
+                        })[];
+                        parts: string[];
+                        rename: {};
+                        transform: {
+                            req: {
+                                emails: string;
+                                enabled: string;
+                            };
+                            res: string;
+                        };
+                        args: {
+                            params: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                reqd: boolean;
+                                example: string;
+                            }[];
+                        };
+                        select: {
+                            exist: string[];
+                        };
+                    }[];
+                };
+            };
+            relations: {
+                ancestors: never[];
+            };
+        };
         tls_certificates_and_hostnames_custom_csr_response_collection: {
             fields: {
                 name: string;
@@ -3032,6 +3135,54 @@ declare class Config {
                 ancestors: never[];
             };
         };
+        tls_certificates_and_hostnames_dcv_delegation: {
+            fields: {
+                name: string;
+                title: string;
+                type: string;
+            }[];
+            name: string;
+            op: {
+                load: {
+                    input: string;
+                    name: string;
+                    points: {
+                        kind: string;
+                        method: string;
+                        orig: string;
+                        segments: ({
+                            lit: string;
+                            var?: undefined;
+                        } | {
+                            var: string;
+                            lit?: undefined;
+                        })[];
+                        parts: string[];
+                        rename: {};
+                        transform: {
+                            req: string;
+                            res: string;
+                        };
+                        args: {
+                            params: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                reqd: boolean;
+                                example: string;
+                            }[];
+                        };
+                        select: {
+                            exist: string[];
+                        };
+                    }[];
+                };
+            };
+            relations: {
+                ancestors: never[];
+            };
+        };
         tls_certificates_and_hostnames_delete_advanced_certificate_pack: {
             fields: {
                 name: string;
@@ -3452,6 +3603,102 @@ declare class Config {
                                 kind: string;
                                 example: string;
                             })[];
+                        };
+                        select: {
+                            exist: string[];
+                        };
+                    }[];
+                };
+            };
+            relations: {
+                ancestors: never[];
+            };
+        };
+        tls_certificates_and_hostnames_hostname_association: {
+            fields: ({
+                name: string;
+                title: string;
+                type: string;
+                short?: undefined;
+            } | {
+                name: string;
+                title: string;
+                type: string;
+                short: string;
+            })[];
+            name: string;
+            op: {
+                load: {
+                    input: string;
+                    name: string;
+                    points: {
+                        kind: string;
+                        method: string;
+                        orig: string;
+                        segments: ({
+                            lit: string;
+                            var?: undefined;
+                        } | {
+                            var: string;
+                            lit?: undefined;
+                        })[];
+                        parts: string[];
+                        rename: {};
+                        transform: {
+                            req: string;
+                            res: string;
+                        };
+                        args: {
+                            params: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                reqd: boolean;
+                                example: string;
+                            }[];
+                            query: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                example: string;
+                            }[];
+                        };
+                        select: {
+                            exist: string[];
+                        };
+                    }[];
+                };
+                update: {
+                    input: string;
+                    name: string;
+                    points: {
+                        kind: string;
+                        method: string;
+                        orig: string;
+                        segments: ({
+                            lit: string;
+                            var?: undefined;
+                        } | {
+                            var: string;
+                            lit?: undefined;
+                        })[];
+                        parts: string[];
+                        rename: {};
+                        transform: {
+                            req: string;
+                            res: string;
+                        };
+                        args: {
+                            params: {
+                                name: string;
+                                orig: string;
+                                type: string;
+                                kind: string;
+                                reqd: boolean;
+                                example: string;
+                            }[];
                         };
                         select: {
                             exist: string[];

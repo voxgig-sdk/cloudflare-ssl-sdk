@@ -550,6 +550,29 @@ class TlsCertificatesAndHostnamesClientCertificateResponseSingleRemoveMatch(Type
     zone_id: str
 
 
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseRequired(TypedDict):
+    enabled: bool
+
+
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseRequired, total=False):
+    emails: list
+    result: dict
+
+
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch(TypedDict):
+    zone_id: str
+
+
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateDataRequired(TypedDict):
+    zone_id: str
+
+
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData(TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateDataRequired, total=False):
+    emails: list
+    enabled: bool
+    result: dict
+
+
 class TlsCertificatesAndHostnamesCustomCsrResponseCollection(TypedDict, total=False):
     result: list
 
@@ -804,6 +827,14 @@ class TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleCreateData(TypedD
     result: dict
 
 
+class TlsCertificatesAndHostnamesDcvDelegation(TypedDict, total=False):
+    result: dict
+
+
+class TlsCertificatesAndHostnamesDcvDelegationLoadMatch(TypedDict):
+    zone_id: str
+
+
 class TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(TypedDict, total=False):
     id: str
 
@@ -893,6 +924,30 @@ class TlsCertificatesAndHostnamesHostnameAssocResponseCollectionListMatch(TlsCer
     page: float
     per_page: float
     status: str
+
+
+class TlsCertificatesAndHostnamesHostnameAssociation(TypedDict, total=False):
+    hostnames: list
+    mtls_certificate_id: str
+    result: dict
+
+
+class TlsCertificatesAndHostnamesHostnameAssociationLoadMatchRequired(TypedDict):
+    zone_id: str
+
+
+class TlsCertificatesAndHostnamesHostnameAssociationLoadMatch(TlsCertificatesAndHostnamesHostnameAssociationLoadMatchRequired, total=False):
+    mtls_certificate_id: str
+
+
+class TlsCertificatesAndHostnamesHostnameAssociationUpdateDataRequired(TypedDict):
+    zone_id: str
+
+
+class TlsCertificatesAndHostnamesHostnameAssociationUpdateData(TlsCertificatesAndHostnamesHostnameAssociationUpdateDataRequired, total=False):
+    hostnames: list
+    mtls_certificate_id: str
+    result: dict
 
 
 class TlsCertificatesAndHostnamesKeylessResponseCollection(TypedDict, total=False):

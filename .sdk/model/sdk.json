@@ -3932,6 +3932,154 @@
             "ancestors": []
           }
         },
+        "tls_certificates_and_hostnames_ct_alerting_subscription_response": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "emails": {
+              "a": true,
+              "h": "Emails",
+              "n": "emails",
+              "r": false,
+              "sh": "Email addresses that receive CT alert notifications for the zone.",
+              "t": "`$ARRAY`"
+            },
+            "enabled": {
+              "a": true,
+              "h": "Enabled",
+              "n": "enabled",
+              "r": true,
+              "sh": "Whether CT alerting is enabled for the zone.",
+              "t": "`$BOOLEAN`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$OBJECT`"
+            }
+          },
+          "name": "tls_certificates_and_hostnames_ct_alerting_subscription_response",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/ct/alerting",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/ct/alerting",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "ct"
+                    },
+                    {
+                      "lit": "alerting"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PATCH /zones/{zone_id}/ct/alerting",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PATCH",
+                  "o": "/zones/{zone_id}/ct/alerting",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "ct"
+                    },
+                    {
+                      "lit": "alerting"
+                    }
+                  ],
+                  "t": {
+                    "req": {
+                      "emails": "`reqdata.email`",
+                      "enabled": "`reqdata.enabled`"
+                    },
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
         "tls_certificates_and_hostnames_custom_csr_response_collection": {
           "active": true,
           "alias": {
@@ -5659,6 +5807,81 @@
             "ancestors": []
           }
         },
+        "tls_certificates_and_hostnames_dcv_delegation": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$OBJECT`"
+            }
+          },
+          "name": "tls_certificates_and_hostnames_dcv_delegation",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/dcv_delegation/uuid",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/dcv_delegation/uuid",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "dcv_delegation"
+                    },
+                    {
+                      "lit": "uuid"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
         "tls_certificates_and_hostnames_delete_advanced_certificate_pack": {
           "active": true,
           "alias": {
@@ -6346,6 +6569,162 @@
                     },
                     {
                       "lit": "hostnames"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "tls_certificates_and_hostnames_hostname_association": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "hostnames": {
+              "a": true,
+              "h": "Hostnames",
+              "n": "hostnames",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "mtls_certificate_id": {
+              "a": true,
+              "h": "Mtls Certificate Id",
+              "n": "mtls_certificate_id",
+              "r": false,
+              "sh": "The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint.",
+              "t": "`$STRING`"
+            },
+            "result": {
+              "a": true,
+              "h": "Result",
+              "n": "result",
+              "r": false,
+              "t": "`$OBJECT`"
+            }
+          },
+          "name": "tls_certificates_and_hostnames_hostname_association",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /zones/{zone_id}/certificate_authorities/hostname_associations",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "b2134436-2555-4acf-be5b-26c48136575e",
+                        "k": "query",
+                        "n": "mtls_certificate_id",
+                        "or": "mtls_certificate_id",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+                  "q": {
+                    "exist": [
+                      "mtls_certificate_id",
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "certificate_authorities"
+                    },
+                    {
+                      "lit": "hostname_associations"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /zones/{zone_id}/certificate_authorities/hostname_associations",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "023e105f4ecef8ad9ca31a8372d0c353",
+                        "k": "param",
+                        "n": "zone_id",
+                        "or": "zone_id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+                  "q": {
+                    "exist": [
+                      "zone_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "zones"
+                    },
+                    {
+                      "var": "zone_id"
+                    },
+                    {
+                      "lit": "certificate_authorities"
+                    },
+                    {
+                      "lit": "hostname_associations"
                     }
                   ],
                   "t": {
@@ -8765,6 +9144,58 @@
             }
           ]
         },
+        "BasicTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseFlow": {
+          "active": true,
+          "entity": "tls_certificates_and_hostnames_ct_alerting_subscription_response",
+          "key$": "BasicTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseFlow",
+          "kind": "basic",
+          "name": "BasicTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01",
+                "srcdatavar": "tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01_data",
+                "suffix": "_up0"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01"
+                  }
+                }
+              ],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01",
+                "srcdatavar": "tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "tls_certificates_and_hostnames_ct_alerting_subscription_response01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-tls_certificates_and_hostnames_ct_alerting_subscription_response_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
         "BasicTlsCertificatesAndHostnamesCustomCsrResponseCollection2Flow": {
           "active": true,
           "entity": "tls_certificates_and_hostnames_custom_csr_response_collection_2",
@@ -9130,6 +9561,38 @@
             }
           ]
         },
+        "BasicTlsCertificatesAndHostnamesDcvDelegationFlow": {
+          "active": true,
+          "entity": "tls_certificates_and_hostnames_dcv_delegation",
+          "key$": "BasicTlsCertificatesAndHostnamesDcvDelegationFlow",
+          "kind": "basic",
+          "name": "BasicTlsCertificatesAndHostnamesDcvDelegationFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "tls_certificates_and_hostnames_dcv_delegation_ref01",
+                "srcdatavar": "tls_certificates_and_hostnames_dcv_delegation_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "tls_certificates_and_hostnames_dcv_delegation01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-tls_certificates_and_hostnames_dcv_delegation_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
         "BasicTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackFlow": {
           "active": true,
           "entity": "tls_certificates_and_hostnames_delete_advanced_certificate_pack",
@@ -9329,6 +9792,59 @@
                   "apply": "ItemExists",
                   "def": {
                     "ref": "tls_certificates_and_hostnames_hostname_assoc_response_collection_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicTlsCertificatesAndHostnamesHostnameAssociationFlow": {
+          "active": true,
+          "entity": "tls_certificates_and_hostnames_hostname_association",
+          "key$": "BasicTlsCertificatesAndHostnamesHostnameAssociationFlow",
+          "kind": "basic",
+          "name": "BasicTlsCertificatesAndHostnamesHostnameAssociationFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "tls_certificates_and_hostnames_hostname_association_ref01",
+                "srcdatavar": "tls_certificates_and_hostnames_hostname_association_ref01_data",
+                "suffix": "_up0",
+                "textfield": "mtls_certificate_id"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-tls_certificates_and_hostnames_hostname_association_ref01"
+                  }
+                }
+              ],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "tls_certificates_and_hostnames_hostname_association_ref01",
+                "srcdatavar": "tls_certificates_and_hostnames_hostname_association_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "tls_certificates_and_hostnames_hostname_association01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-tls_certificates_and_hostnames_hostname_association_ref01"
                   }
                 }
               ]

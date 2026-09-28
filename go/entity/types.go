@@ -455,6 +455,23 @@ type TlsCertificatesAndHostnamesClientCertificateResponseSingleRemoveMatch struc
 	ZoneId string `json:"zone_id"`
 }
 
+// TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse is the typed data model for the tls_certificates_and_hostnames_ct_alerting_subscription_response entity.
+type TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse struct {
+}
+
+// TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch is the typed request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse.LoadTyped.
+type TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch struct {
+	ZoneId string `json:"zone_id"`
+}
+
+// TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData is the typed request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse.UpdateTyped.
+type TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData struct {
+	ZoneId string `json:"zone_id"`
+	Emails *[]any `json:"emails,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
+	Result *map[string]any `json:"result,omitempty"`
+}
+
 // TlsCertificatesAndHostnamesCustomCsrResponseCollection is the typed data model for the tls_certificates_and_hostnames_custom_csr_response_collection entity.
 type TlsCertificatesAndHostnamesCustomCsrResponseCollection struct {
 }
@@ -652,6 +669,15 @@ type TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleCreateData struct 
 	Result map[string]any `json:"result"`
 }
 
+// TlsCertificatesAndHostnamesDcvDelegation is the typed data model for the tls_certificates_and_hostnames_dcv_delegation entity.
+type TlsCertificatesAndHostnamesDcvDelegation struct {
+}
+
+// TlsCertificatesAndHostnamesDcvDelegationLoadMatch is the typed request payload for TlsCertificatesAndHostnamesDcvDelegation.LoadTyped.
+type TlsCertificatesAndHostnamesDcvDelegationLoadMatch struct {
+	ZoneId string `json:"zone_id"`
+}
+
 // TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack is the typed data model for the tls_certificates_and_hostnames_delete_advanced_certificate_pack entity.
 type TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack struct {
 }
@@ -729,6 +755,24 @@ type TlsCertificatesAndHostnamesHostnameAssocResponseCollectionListMatch struct 
 	Page *float64 `json:"page,omitempty"`
 	PerPage *float64 `json:"per_page,omitempty"`
 	Status *string `json:"status,omitempty"`
+}
+
+// TlsCertificatesAndHostnamesHostnameAssociation is the typed data model for the tls_certificates_and_hostnames_hostname_association entity.
+type TlsCertificatesAndHostnamesHostnameAssociation struct {
+}
+
+// TlsCertificatesAndHostnamesHostnameAssociationLoadMatch is the typed request payload for TlsCertificatesAndHostnamesHostnameAssociation.LoadTyped.
+type TlsCertificatesAndHostnamesHostnameAssociationLoadMatch struct {
+	ZoneId string `json:"zone_id"`
+	MtlsCertificateId *string `json:"mtls_certificate_id,omitempty"`
+}
+
+// TlsCertificatesAndHostnamesHostnameAssociationUpdateData is the typed request payload for TlsCertificatesAndHostnamesHostnameAssociation.UpdateTyped.
+type TlsCertificatesAndHostnamesHostnameAssociationUpdateData struct {
+	ZoneId string `json:"zone_id"`
+	Hostnames *[]any `json:"hostnames,omitempty"`
+	MtlsCertificateId *string `json:"mtls_certificate_id,omitempty"`
+	Result *map[string]any `json:"result,omitempty"`
 }
 
 // TlsCertificatesAndHostnamesKeylessResponseCollection is the typed data model for the tls_certificates_and_hostnames_keyless_response_collection entity.

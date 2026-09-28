@@ -447,6 +447,23 @@ export interface TlsCertificatesAndHostnamesClientCertificateResponseSingleRemov
   zone_id: string
 }
 
+export interface TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse {
+  emails?: any[]
+  enabled: boolean
+  result?: Record<string, any>
+}
+
+export interface TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch {
+  zone_id: string
+}
+
+export interface TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData {
+  zone_id: string
+  emails?: any[]
+  enabled?: boolean
+  result?: Record<string, any>
+}
+
 export interface TlsCertificatesAndHostnamesCustomCsrResponseCollection {
   result?: any[]
 }
@@ -660,6 +677,14 @@ export interface TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleCreate
   result: Record<string, any>
 }
 
+export interface TlsCertificatesAndHostnamesDcvDelegation {
+  result?: Record<string, any>
+}
+
+export interface TlsCertificatesAndHostnamesDcvDelegationLoadMatch {
+  zone_id: string
+}
+
 export interface TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack {
   id?: string
 }
@@ -731,6 +756,24 @@ export interface TlsCertificatesAndHostnamesHostnameAssocResponseCollectionListM
   page?: number
   per_page?: number
   status?: string
+}
+
+export interface TlsCertificatesAndHostnamesHostnameAssociation {
+  hostnames?: any[]
+  mtls_certificate_id?: string
+  result?: Record<string, any>
+}
+
+export interface TlsCertificatesAndHostnamesHostnameAssociationLoadMatch {
+  zone_id: string
+  mtls_certificate_id?: string
+}
+
+export interface TlsCertificatesAndHostnamesHostnameAssociationUpdateData {
+  zone_id: string
+  hostnames?: any[]
+  mtls_certificate_id?: string
+  result?: Record<string, any>
 }
 
 export interface TlsCertificatesAndHostnamesKeylessResponseCollection {

@@ -4,9 +4,9 @@
 #   guide.aontu
 
 guide: {
-  metrics: count: entity: 54
-  metrics: count: path: 45
-  metrics: count: method: 87
+  metrics: count: entity: 57
+  metrics: count: path: 48
+  metrics: count: method: 92
 
   entity: cache_api_response_single_id: {
     path: "/zones/{zone_id}/settings/ssl_automatic_mode": {
@@ -204,6 +204,15 @@ guide: {
     }
   }
 
+  entity: tls_certificates_and_hostnames_ct_alerting_subscription_response: {
+    path: "/zones/{zone_id}/ct/alerting": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: patch: transform: req: "emails": *("`reqdata.email`")|top
+      op: patch: transform: req: "enabled": *("`reqdata.enabled`")|top
+    }
+  }
+
   entity: tls_certificates_and_hostnames_custom_csr_response_collection: {
     path: "/zones/{zone_id}/custom_csrs": {
       op: list: method: *GET
@@ -286,6 +295,12 @@ guide: {
     }
   }
 
+  entity: tls_certificates_and_hostnames_dcv_delegation: {
+    path: "/zones/{zone_id}/dcv_delegation/uuid": {
+      op: load: method: *GET
+    }
+  }
+
   entity: tls_certificates_and_hostnames_delete_advanced_certificate_pack: {
     path: "/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
       rename: param: "certificate_pack_id": *"id"
@@ -323,6 +338,13 @@ guide: {
   entity: tls_certificates_and_hostnames_hostname_assoc_response_collection: {
     path: "/zones/{zone_id}/origin_tls_client_auth/hostnames": {
       op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_hostname_association: {
+    path: "/zones/{zone_id}/certificate_authorities/hostname_associations": {
+      op: load: method: *GET
+      op: update: method: *PUT
     }
   }
 

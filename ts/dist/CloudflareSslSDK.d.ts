@@ -25,6 +25,7 @@ import { TlsCertificatesAndHostnamesCertificateResponseSinglePostEntity } from '
 import { TlsCertificatesAndHostnamesCertificateRevokeEntity } from './entity/TlsCertificatesAndHostnamesCertificateRevokeEntity';
 import { TlsCertificatesAndHostnamesClientCertificateResponseEntity } from './entity/TlsCertificatesAndHostnamesClientCertificateResponseEntity';
 import { TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity';
+import { TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity } from './entity/TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity';
 import { TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity';
 import { TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity';
 import { TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity } from './entity/TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity';
@@ -36,12 +37,14 @@ import { TlsCertificatesAndHostnamesCustomHostnameResponseSingleEntity } from '.
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity';
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity';
 import { TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity';
+import { TlsCertificatesAndHostnamesDcvDelegationEntity } from './entity/TlsCertificatesAndHostnamesDcvDelegationEntity';
 import { TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity } from './entity/TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity';
 import { TlsCertificatesAndHostnamesEnabledEntity } from './entity/TlsCertificatesAndHostnamesEnabledEntity';
 import { TlsCertificatesAndHostnamesFallbackOriginEntity } from './entity/TlsCertificatesAndHostnamesFallbackOriginEntity';
 import { TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity';
 import { TlsCertificatesAndHostnamesHostnameAopSingleEntity } from './entity/TlsCertificatesAndHostnamesHostnameAopSingleEntity';
 import { TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity';
+import { TlsCertificatesAndHostnamesHostnameAssociationEntity } from './entity/TlsCertificatesAndHostnamesHostnameAssociationEntity';
 import { TlsCertificatesAndHostnamesKeylessResponseCollectionEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseCollectionEntity';
 import { TlsCertificatesAndHostnamesKeylessResponseSingleEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseSingleEntity';
 import { TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity } from './entity/TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity';
@@ -124,6 +127,7 @@ declare class CloudflareSslSDK {
     TlsCertificatesAndHostnamesCertificateRevoke(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCertificateRevokeEntity;
     TlsCertificatesAndHostnamesClientCertificateResponse(entopts?: Record<string, any>): TlsCertificatesAndHostnamesClientCertificateResponseEntity;
     TlsCertificatesAndHostnamesClientCertificateResponseSingle(entopts?: Record<string, any>): TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity;
+    TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity;
     TlsCertificatesAndHostnamesCustomCsrResponseCollection(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity;
     TlsCertificatesAndHostnamesCustomCsrResponseCollection2(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity;
     TlsCertificatesAndHostnamesCustomCsrResponseIdOnly(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity;
@@ -135,12 +139,14 @@ declare class CloudflareSslSDK {
     TlsCertificatesAndHostnamesCustomTrustStoreResponse(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity;
     TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity;
     TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle(entopts?: Record<string, any>): TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity;
+    TlsCertificatesAndHostnamesDcvDelegation(entopts?: Record<string, any>): TlsCertificatesAndHostnamesDcvDelegationEntity;
     TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(entopts?: Record<string, any>): TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity;
     TlsCertificatesAndHostnamesEnabled(entopts?: Record<string, any>): TlsCertificatesAndHostnamesEnabledEntity;
     TlsCertificatesAndHostnamesFallbackOrigin(entopts?: Record<string, any>): TlsCertificatesAndHostnamesFallbackOriginEntity;
     TlsCertificatesAndHostnamesHostnameAopResponseCollection(entopts?: Record<string, any>): TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity;
     TlsCertificatesAndHostnamesHostnameAopSingle(entopts?: Record<string, any>): TlsCertificatesAndHostnamesHostnameAopSingleEntity;
     TlsCertificatesAndHostnamesHostnameAssocResponseCollection(entopts?: Record<string, any>): TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity;
+    TlsCertificatesAndHostnamesHostnameAssociation(entopts?: Record<string, any>): TlsCertificatesAndHostnamesHostnameAssociationEntity;
     TlsCertificatesAndHostnamesKeylessResponseCollection(entopts?: Record<string, any>): TlsCertificatesAndHostnamesKeylessResponseCollectionEntity;
     TlsCertificatesAndHostnamesKeylessResponseSingle(entopts?: Record<string, any>): TlsCertificatesAndHostnamesKeylessResponseSingleEntity;
     TlsCertificatesAndHostnamesKeylessResponseSingleId(entopts?: Record<string, any>): TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity;

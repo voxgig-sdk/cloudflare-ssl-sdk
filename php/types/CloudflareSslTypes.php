@@ -598,6 +598,29 @@ class TlsCertificatesAndHostnamesClientCertificateResponseSingleRemoveMatch
     public string $zone_id;
 }
 
+/** TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse entity data model. */
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse
+{
+    public ?array $emails = null;
+    public bool $enabled;
+    public ?array $result = null;
+}
+
+/** Request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse#load. */
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseLoadMatch
+{
+    public string $zone_id;
+}
+
+/** Request payload for TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse#update. */
+class TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseUpdateData
+{
+    public string $zone_id;
+    public ?array $emails = null;
+    public ?bool $enabled = null;
+    public ?array $result = null;
+}
+
 /** TlsCertificatesAndHostnamesCustomCsrResponseCollection entity data model. */
 class TlsCertificatesAndHostnamesCustomCsrResponseCollection
 {
@@ -865,6 +888,18 @@ class TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleCreateData
     public array $result;
 }
 
+/** TlsCertificatesAndHostnamesDcvDelegation entity data model. */
+class TlsCertificatesAndHostnamesDcvDelegation
+{
+    public ?array $result = null;
+}
+
+/** Request payload for TlsCertificatesAndHostnamesDcvDelegation#load. */
+class TlsCertificatesAndHostnamesDcvDelegationLoadMatch
+{
+    public string $zone_id;
+}
+
 /** TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack entity data model. */
 class TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack
 {
@@ -966,6 +1001,30 @@ class TlsCertificatesAndHostnamesHostnameAssocResponseCollectionListMatch
     public ?float $page = null;
     public ?float $per_page = null;
     public ?string $status = null;
+}
+
+/** TlsCertificatesAndHostnamesHostnameAssociation entity data model. */
+class TlsCertificatesAndHostnamesHostnameAssociation
+{
+    public ?array $hostnames = null;
+    public ?string $mtls_certificate_id = null;
+    public ?array $result = null;
+}
+
+/** Request payload for TlsCertificatesAndHostnamesHostnameAssociation#load. */
+class TlsCertificatesAndHostnamesHostnameAssociationLoadMatch
+{
+    public string $zone_id;
+    public ?string $mtls_certificate_id = null;
+}
+
+/** Request payload for TlsCertificatesAndHostnamesHostnameAssociation#update. */
+class TlsCertificatesAndHostnamesHostnameAssociationUpdateData
+{
+    public string $zone_id;
+    public ?array $hostnames = null;
+    public ?string $mtls_certificate_id = null;
+    public ?array $result = null;
 }
 
 /** TlsCertificatesAndHostnamesKeylessResponseCollection entity data model. */

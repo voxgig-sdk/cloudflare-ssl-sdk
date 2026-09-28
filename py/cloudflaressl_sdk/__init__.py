@@ -469,6 +469,12 @@ class CloudflareSslSDK:
         return TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity(self, data)
 
 
+    def TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(self, data=None) -> "TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity":
+        """Entity factory: client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().list() / client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({"id": ...})."""
+        from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_ct_alerting_subscription_response_entity import TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+        return TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity(self, data)
+
+
     def TlsCertificatesAndHostnamesCustomCsrResponseCollection(self, data=None) -> "TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity":
         """Entity factory: client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().list() / client.TlsCertificatesAndHostnamesCustomCsrResponseCollection().load({"id": ...})."""
         from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_csr_response_collection_entity import TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
@@ -535,6 +541,12 @@ class CloudflareSslSDK:
         return TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity(self, data)
 
 
+    def TlsCertificatesAndHostnamesDcvDelegation(self, data=None) -> "TlsCertificatesAndHostnamesDcvDelegationEntity":
+        """Entity factory: client.TlsCertificatesAndHostnamesDcvDelegation().list() / client.TlsCertificatesAndHostnamesDcvDelegation().load({"id": ...})."""
+        from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_dcv_delegation_entity import TlsCertificatesAndHostnamesDcvDelegationEntity
+        return TlsCertificatesAndHostnamesDcvDelegationEntity(self, data)
+
+
     def TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(self, data=None) -> "TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity":
         """Entity factory: client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().list() / client.TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack().load({"id": ...})."""
         from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_delete_advanced_certificate_pack_entity import TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
@@ -569,6 +581,12 @@ class CloudflareSslSDK:
         """Entity factory: client.TlsCertificatesAndHostnamesHostnameAssocResponseCollection().list() / client.TlsCertificatesAndHostnamesHostnameAssocResponseCollection().load({"id": ...})."""
         from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_assoc_response_collection_entity import TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity
         return TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity(self, data)
+
+
+    def TlsCertificatesAndHostnamesHostnameAssociation(self, data=None) -> "TlsCertificatesAndHostnamesHostnameAssociationEntity":
+        """Entity factory: client.TlsCertificatesAndHostnamesHostnameAssociation().list() / client.TlsCertificatesAndHostnamesHostnameAssociation().load({"id": ...})."""
+        from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_association_entity import TlsCertificatesAndHostnamesHostnameAssociationEntity
+        return TlsCertificatesAndHostnamesHostnameAssociationEntity(self, data)
 
 
     def TlsCertificatesAndHostnamesKeylessResponseCollection(self, data=None) -> "TlsCertificatesAndHostnamesKeylessResponseCollectionEntity":
@@ -685,6 +703,7 @@ if TYPE_CHECKING:
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_certificate_revoke_entity import TlsCertificatesAndHostnamesCertificateRevokeEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_client_certificate_response_entity import TlsCertificatesAndHostnamesClientCertificateResponseEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_client_certificate_response_single_entity import TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity
+    from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_ct_alerting_subscription_response_entity import TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_csr_response_collection_entity import TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_csr_response_collection_2_entity import TlsCertificatesAndHostnamesCustomCsrResponseCollection2Entity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_csr_response_id_only_entity import TlsCertificatesAndHostnamesCustomCsrResponseIdOnlyEntity
@@ -696,12 +715,14 @@ if TYPE_CHECKING:
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_trust_store_response_entity import TlsCertificatesAndHostnamesCustomTrustStoreResponseEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_trust_store_response_id_only_entity import TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_custom_trust_store_response_single_entity import TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity
+    from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_dcv_delegation_entity import TlsCertificatesAndHostnamesDcvDelegationEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_delete_advanced_certificate_pack_entity import TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_enabled_entity import TlsCertificatesAndHostnamesEnabledEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_fallback_origin_entity import TlsCertificatesAndHostnamesFallbackOriginEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_aop_response_collection_entity import TlsCertificatesAndHostnamesHostnameAopResponseCollectionEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_aop_single_entity import TlsCertificatesAndHostnamesHostnameAopSingleEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_assoc_response_collection_entity import TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity
+    from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_hostname_association_entity import TlsCertificatesAndHostnamesHostnameAssociationEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_keyless_response_collection_entity import TlsCertificatesAndHostnamesKeylessResponseCollectionEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_keyless_response_single_entity import TlsCertificatesAndHostnamesKeylessResponseSingleEntity
     from cloudflaressl_sdk.entity.tls_certificates_and_hostnames_keyless_response_single_id_entity import TlsCertificatesAndHostnamesKeylessResponseSingleIdEntity

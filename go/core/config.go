@@ -65,6 +65,7 @@ func MakeConfig() map[string]any {
 				"tls_certificates_and_hostnames_certificate_revoke": map[string]any{},
 				"tls_certificates_and_hostnames_client_certificate_response": map[string]any{},
 				"tls_certificates_and_hostnames_client_certificate_response_single": map[string]any{},
+				"tls_certificates_and_hostnames_ct_alerting_subscription_response": map[string]any{},
 				"tls_certificates_and_hostnames_custom_csr_response_collection": map[string]any{},
 				"tls_certificates_and_hostnames_custom_csr_response_collection_2": map[string]any{},
 				"tls_certificates_and_hostnames_custom_csr_response_id_only": map[string]any{},
@@ -76,12 +77,14 @@ func MakeConfig() map[string]any {
 				"tls_certificates_and_hostnames_custom_trust_store_response": map[string]any{},
 				"tls_certificates_and_hostnames_custom_trust_store_response_id_only": map[string]any{},
 				"tls_certificates_and_hostnames_custom_trust_store_response_single": map[string]any{},
+				"tls_certificates_and_hostnames_dcv_delegation": map[string]any{},
 				"tls_certificates_and_hostnames_delete_advanced_certificate_pack": map[string]any{},
 				"tls_certificates_and_hostnames_enabled": map[string]any{},
 				"tls_certificates_and_hostnames_fallback_origin": map[string]any{},
 				"tls_certificates_and_hostnames_hostname_aop_response_collection": map[string]any{},
 				"tls_certificates_and_hostnames_hostname_aop_single": map[string]any{},
 				"tls_certificates_and_hostnames_hostname_assoc_response_collection": map[string]any{},
+				"tls_certificates_and_hostnames_hostname_association": map[string]any{},
 				"tls_certificates_and_hostnames_keyless_response_collection": map[string]any{},
 				"tls_certificates_and_hostnames_keyless_response_single": map[string]any{},
 				"tls_certificates_and_hostnames_keyless_response_single_id": map[string]any{},
@@ -3601,6 +3604,143 @@ func MakeConfig() map[string]any {
 					"ancestors": []any{},
 				},
 			},
+			"tls_certificates_and_hostnames_ct_alerting_subscription_response": map[string]any{
+				"fields": []any{
+					map[string]any{
+						"name": "emails",
+						"title": "Emails",
+						"type": "`$ARRAY`",
+						"short": "Email addresses that receive CT alert notifications for the zone.",
+					},
+					map[string]any{
+						"name": "enabled",
+						"title": "Enabled",
+						"type": "`$BOOLEAN`",
+						"req": true,
+						"short": "Whether CT alerting is enabled for the zone.",
+					},
+					map[string]any{
+						"name": "result",
+						"title": "Result",
+						"type": "`$OBJECT`",
+					},
+				},
+				"name": "tls_certificates_and_hostnames_ct_alerting_subscription_response",
+				"op": map[string]any{
+					"load": map[string]any{
+						"input": "data",
+						"name": "load",
+						"points": []any{
+							map[string]any{
+								"kind": "http",
+								"method": "GET",
+								"orig": "/zones/{zone_id}/ct/alerting",
+								"segments": []any{
+									map[string]any{
+										"lit": "zones",
+									},
+									map[string]any{
+										"var": "zone_id",
+									},
+									map[string]any{
+										"lit": "ct",
+									},
+									map[string]any{
+										"lit": "alerting",
+									},
+								},
+								"parts": []any{
+									"zones",
+									"{zone_id}",
+									"ct",
+									"alerting",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "zone_id",
+											"orig": "zone_id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "023e105f4ecef8ad9ca31a8372d0c353",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"zone_id",
+									},
+								},
+							},
+						},
+					},
+					"update": map[string]any{
+						"input": "data",
+						"name": "update",
+						"points": []any{
+							map[string]any{
+								"kind": "http",
+								"method": "PATCH",
+								"orig": "/zones/{zone_id}/ct/alerting",
+								"segments": []any{
+									map[string]any{
+										"lit": "zones",
+									},
+									map[string]any{
+										"var": "zone_id",
+									},
+									map[string]any{
+										"lit": "ct",
+									},
+									map[string]any{
+										"lit": "alerting",
+									},
+								},
+								"parts": []any{
+									"zones",
+									"{zone_id}",
+									"ct",
+									"alerting",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": map[string]any{
+										"emails": "`reqdata.email`",
+										"enabled": "`reqdata.enabled`",
+									},
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "zone_id",
+											"orig": "zone_id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "023e105f4ecef8ad9ca31a8372d0c353",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"zone_id",
+									},
+								},
+							},
+						},
+					},
+				},
+				"relations": map[string]any{
+					"ancestors": []any{},
+				},
+			},
 			"tls_certificates_and_hostnames_custom_csr_response_collection": map[string]any{
 				"fields": []any{
 					map[string]any{
@@ -5146,6 +5286,74 @@ func MakeConfig() map[string]any {
 					"ancestors": []any{},
 				},
 			},
+			"tls_certificates_and_hostnames_dcv_delegation": map[string]any{
+				"fields": []any{
+					map[string]any{
+						"name": "result",
+						"title": "Result",
+						"type": "`$OBJECT`",
+					},
+				},
+				"name": "tls_certificates_and_hostnames_dcv_delegation",
+				"op": map[string]any{
+					"load": map[string]any{
+						"input": "data",
+						"name": "load",
+						"points": []any{
+							map[string]any{
+								"kind": "http",
+								"method": "GET",
+								"orig": "/zones/{zone_id}/dcv_delegation/uuid",
+								"segments": []any{
+									map[string]any{
+										"lit": "zones",
+									},
+									map[string]any{
+										"var": "zone_id",
+									},
+									map[string]any{
+										"lit": "dcv_delegation",
+									},
+									map[string]any{
+										"lit": "uuid",
+									},
+								},
+								"parts": []any{
+									"zones",
+									"{zone_id}",
+									"dcv_delegation",
+									"uuid",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "zone_id",
+											"orig": "zone_id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "023e105f4ecef8ad9ca31a8372d0c353",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"zone_id",
+									},
+								},
+							},
+						},
+					},
+				},
+				"relations": map[string]any{
+					"ancestors": []any{},
+				},
+			},
 			"tls_certificates_and_hostnames_delete_advanced_certificate_pack": map[string]any{
 				"fields": []any{
 					map[string]any{
@@ -5782,6 +5990,148 @@ func MakeConfig() map[string]any {
 										"page",
 										"per_page",
 										"status",
+										"zone_id",
+									},
+								},
+							},
+						},
+					},
+				},
+				"relations": map[string]any{
+					"ancestors": []any{},
+				},
+			},
+			"tls_certificates_and_hostnames_hostname_association": map[string]any{
+				"fields": []any{
+					map[string]any{
+						"name": "hostnames",
+						"title": "Hostnames",
+						"type": "`$ARRAY`",
+					},
+					map[string]any{
+						"name": "mtls_certificate_id",
+						"title": "Mtls Certificate Id",
+						"type": "`$STRING`",
+						"short": "The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint.",
+					},
+					map[string]any{
+						"name": "result",
+						"title": "Result",
+						"type": "`$OBJECT`",
+					},
+				},
+				"name": "tls_certificates_and_hostnames_hostname_association",
+				"op": map[string]any{
+					"load": map[string]any{
+						"input": "data",
+						"name": "load",
+						"points": []any{
+							map[string]any{
+								"kind": "http",
+								"method": "GET",
+								"orig": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+								"segments": []any{
+									map[string]any{
+										"lit": "zones",
+									},
+									map[string]any{
+										"var": "zone_id",
+									},
+									map[string]any{
+										"lit": "certificate_authorities",
+									},
+									map[string]any{
+										"lit": "hostname_associations",
+									},
+								},
+								"parts": []any{
+									"zones",
+									"{zone_id}",
+									"certificate_authorities",
+									"hostname_associations",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "zone_id",
+											"orig": "zone_id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "023e105f4ecef8ad9ca31a8372d0c353",
+										},
+									},
+									"query": []any{
+										map[string]any{
+											"name": "mtls_certificate_id",
+											"orig": "mtls_certificate_id",
+											"type": "`$STRING`",
+											"kind": "query",
+											"example": "b2134436-2555-4acf-be5b-26c48136575e",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"mtls_certificate_id",
+										"zone_id",
+									},
+								},
+							},
+						},
+					},
+					"update": map[string]any{
+						"input": "data",
+						"name": "update",
+						"points": []any{
+							map[string]any{
+								"kind": "http",
+								"method": "PUT",
+								"orig": "/zones/{zone_id}/certificate_authorities/hostname_associations",
+								"segments": []any{
+									map[string]any{
+										"lit": "zones",
+									},
+									map[string]any{
+										"var": "zone_id",
+									},
+									map[string]any{
+										"lit": "certificate_authorities",
+									},
+									map[string]any{
+										"lit": "hostname_associations",
+									},
+								},
+								"parts": []any{
+									"zones",
+									"{zone_id}",
+									"certificate_authorities",
+									"hostname_associations",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "zone_id",
+											"orig": "zone_id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "023e105f4ecef8ad9ca31a8372d0c353",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
 										"zone_id",
 									},
 								},

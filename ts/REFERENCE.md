@@ -373,6 +373,18 @@ Create a new `TlsCertificatesAndHostnamesClientCertificateResponseSingle` entity
 
 **Returns:** `TlsCertificatesAndHostnamesClientCertificateResponseSingleEntity` instance.
 
+#### `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse(data?: object)`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse` entity instance.
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `data` | `object` | Initial entity data. |
+
+**Returns:** `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance.
+
 #### `TlsCertificatesAndHostnamesCustomCsrResponseCollection(data?: object)`
 
 Create a new `TlsCertificatesAndHostnamesCustomCsrResponseCollection` entity instance.
@@ -505,6 +517,18 @@ Create a new `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle` entity 
 
 **Returns:** `TlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity` instance.
 
+#### `TlsCertificatesAndHostnamesDcvDelegation(data?: object)`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegation` entity instance.
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `data` | `object` | Initial entity data. |
+
+**Returns:** `TlsCertificatesAndHostnamesDcvDelegationEntity` instance.
+
 #### `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack(data?: object)`
 
 Create a new `TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack` entity instance.
@@ -576,6 +600,18 @@ Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollection` entity
 | `data` | `object` | Initial entity data. |
 
 **Returns:** `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance.
+
+#### `TlsCertificatesAndHostnamesHostnameAssociation(data?: object)`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociation` entity instance.
+
+**Parameters:**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `data` | `object` | Initial entity data. |
+
+**Returns:** `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance.
 
 #### `TlsCertificatesAndHostnamesKeylessResponseCollection(data?: object)`
 
@@ -2359,6 +2395,69 @@ Return a copy of the entity options.
 
 ---
 
+## TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity
+
+```ts
+const tls_certificates_and_hostnames_ct_alerting_subscription_response = client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `emails` | `any[]` | No | Email addresses that receive CT alert notifications for the zone. |
+| `enabled` | `boolean` | Yes | Whether CT alerting is enabled for the zone. |
+| `result` | `Record<string, any>` | No |  |
+
+### Operations
+
+#### `load(match: object, ctrl?: object)`
+
+Load a single entity matching the given criteria.
+
+```ts
+const result = await client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().load({ zone_id: 'zone_id' })
+```
+
+#### `update(data: object, ctrl?: object)`
+
+Update an existing entity. The data must include the entity `id`.
+
+```ts
+const result = await client.TlsCertificatesAndHostnamesCtAlertingSubscriptionResponse().update({
+  zone_id: 'zone_id',
+  // Fields to update
+})
+```
+
+### Common Methods
+
+#### `data(data?: object)`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `match(match?: object)`
+
+Get or set the entity match criteria. Works the same as `data()`.
+
+#### `make()`
+
+Create a new `TlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity` instance with the same client and
+options.
+
+#### `client()`
+
+Return the parent `CloudflareSslSDK` instance.
+
+#### `entopts()`
+
+Return a copy of the entity options.
+
+
+---
+
 ## TlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity
 
 ```ts
@@ -3003,6 +3102,56 @@ Return a copy of the entity options.
 
 ---
 
+## TlsCertificatesAndHostnamesDcvDelegationEntity
+
+```ts
+const tls_certificates_and_hostnames_dcv_delegation = client.TlsCertificatesAndHostnamesDcvDelegation()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `result` | `Record<string, any>` | No |  |
+
+### Operations
+
+#### `load(match: object, ctrl?: object)`
+
+Load a single entity matching the given criteria.
+
+```ts
+const result = await client.TlsCertificatesAndHostnamesDcvDelegation().load({ zone_id: 'zone_id' })
+```
+
+### Common Methods
+
+#### `data(data?: object)`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `match(match?: object)`
+
+Get or set the entity match criteria. Works the same as `data()`.
+
+#### `make()`
+
+Create a new `TlsCertificatesAndHostnamesDcvDelegationEntity` instance with the same client and
+options.
+
+#### `client()`
+
+Return the parent `CloudflareSslSDK` instance.
+
+#### `entopts()`
+
+Return a copy of the entity options.
+
+
+---
+
 ## TlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity
 
 ```ts
@@ -3326,6 +3475,69 @@ Get or set the entity match criteria. Works the same as `data()`.
 #### `make()`
 
 Create a new `TlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity` instance with the same client and
+options.
+
+#### `client()`
+
+Return the parent `CloudflareSslSDK` instance.
+
+#### `entopts()`
+
+Return a copy of the entity options.
+
+
+---
+
+## TlsCertificatesAndHostnamesHostnameAssociationEntity
+
+```ts
+const tls_certificates_and_hostnames_hostname_association = client.TlsCertificatesAndHostnamesHostnameAssociation()
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `hostnames` | `any[]` | No |  |
+| `mtls_certificate_id` | `string` | No | The UUID for a certificate that was uploaded to the mTLS Certificate Management endpoint. |
+| `result` | `Record<string, any>` | No |  |
+
+### Operations
+
+#### `load(match: object, ctrl?: object)`
+
+Load a single entity matching the given criteria.
+
+```ts
+const result = await client.TlsCertificatesAndHostnamesHostnameAssociation().load({ zone_id: 'zone_id' })
+```
+
+#### `update(data: object, ctrl?: object)`
+
+Update an existing entity. The data must include the entity `id`.
+
+```ts
+const result = await client.TlsCertificatesAndHostnamesHostnameAssociation().update({
+  zone_id: 'zone_id',
+  // Fields to update
+})
+```
+
+### Common Methods
+
+#### `data(data?: object)`
+
+Get or set the entity data. When called with data, sets the entity's
+internal data and returns the current data. When called without
+arguments, returns a copy of the current data.
+
+#### `match(match?: object)`
+
+Get or set the entity match criteria. Works the same as `data()`.
+
+#### `make()`
+
+Create a new `TlsCertificatesAndHostnamesHostnameAssociationEntity` instance with the same client and
 options.
 
 #### `client()`

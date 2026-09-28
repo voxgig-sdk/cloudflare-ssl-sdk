@@ -113,6 +113,9 @@ func init() {
 	core.NewTlsCertificatesAndHostnamesClientCertificateResponseSingleEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesClientCertificateResponseSingleEntity(client, entopts)
 	}
+	core.NewTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
+		return entity.NewTlsCertificatesAndHostnamesCtAlertingSubscriptionResponseEntity(client, entopts)
+	}
 	core.NewTlsCertificatesAndHostnamesCustomCsrResponseCollectionEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesCustomCsrResponseCollectionEntity(client, entopts)
 	}
@@ -146,6 +149,9 @@ func init() {
 	core.NewTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleEntity(client, entopts)
 	}
+	core.NewTlsCertificatesAndHostnamesDcvDelegationEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
+		return entity.NewTlsCertificatesAndHostnamesDcvDelegationEntity(client, entopts)
+	}
 	core.NewTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackEntity(client, entopts)
 	}
@@ -163,6 +169,9 @@ func init() {
 	}
 	core.NewTlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesHostnameAssocResponseCollectionEntity(client, entopts)
+	}
+	core.NewTlsCertificatesAndHostnamesHostnameAssociationEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
+		return entity.NewTlsCertificatesAndHostnamesHostnameAssociationEntity(client, entopts)
 	}
 	core.NewTlsCertificatesAndHostnamesKeylessResponseCollectionEntityFunc = func(client *core.CloudflareSslSDK, entopts map[string]any) core.CloudflareSslEntity {
 		return entity.NewTlsCertificatesAndHostnamesKeylessResponseCollectionEntity(client, entopts)
