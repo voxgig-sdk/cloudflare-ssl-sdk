@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "custom_hostname": {
+      "CUSTOM_HOSTNAME00": {
+        "id": "CUSTOM_HOSTNAME00",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_HOSTNAME01": {
+        "id": "CUSTOM_HOSTNAME01",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_HOSTNAME02": {
+        "id": "CUSTOM_HOSTNAME02",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "custom_hostname": {
+      "custom_hostname_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/custom_hostnames/{custom_hostname_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

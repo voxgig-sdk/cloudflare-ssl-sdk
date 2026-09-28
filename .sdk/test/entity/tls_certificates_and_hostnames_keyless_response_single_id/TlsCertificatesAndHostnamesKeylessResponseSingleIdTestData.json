@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_keyless_response_single_id": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID00": {
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID01": {
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID02": {
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE_ID02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_keyless_response_single_id": {
+      "tls_certificates_and_hostnames_keyless_response_single_id_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/keyless_certificates/{keyless_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

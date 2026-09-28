@@ -1,0 +1,27 @@
+# BasicTlsCertificatesAndHostnamesAssociationResponseCollectionFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesAssociationResponseCollectionFlow:
+{
+  entity: "tls_certificates_and_hostnames_association_response_collection",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesAssociationResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        account_id: "account01",
+        mtls_certificate_id: "mtls_certificate01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_association_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesAssociationResponseCollectionFlow"
+}

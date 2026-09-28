@@ -1,0 +1,59 @@
+# Entity: tls_certificates_and_hostnames_certificate_revoke
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_revoke: {
+
+  alias: field: {}
+
+  name: "tls_certificates_and_hostnames_certificate_revoke"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "328578533902268680212849205732770752308931942346"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+            ]
+          }
+          s: [
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

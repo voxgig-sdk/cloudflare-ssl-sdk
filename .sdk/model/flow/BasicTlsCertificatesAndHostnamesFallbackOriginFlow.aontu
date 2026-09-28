@@ -1,0 +1,51 @@
+# BasicTlsCertificatesAndHostnamesFallbackOriginFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesFallbackOriginFlow:
+{
+  entity: "tls_certificates_and_hostnames_fallback_origin",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesFallbackOriginFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_fallback_origin_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_fallback_origin_ref01_data",
+        suffix: "_up0",
+        textfield: "origin"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_fallback_origin_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_fallback_origin_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_fallback_origin_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_fallback_origin01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_fallback_origin_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesFallbackOriginFlow"
+}

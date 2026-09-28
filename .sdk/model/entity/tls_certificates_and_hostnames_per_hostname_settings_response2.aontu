@@ -1,0 +1,104 @@
+# Entity: tls_certificates_and_hostnames_per_hostname_settings_response2
+
+main: kit: entity: tls_certificates_and_hostnames_per_hostname_settings_response2: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+    parts: [
+      "setting_id"
+      "hostname"
+    ]
+    sep: "/"
+  }
+
+  name: "tls_certificates_and_hostnames_per_hostname_settings_response2"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "app.example.com"
+                k: "param"
+                n: "hostname"
+                or: "hostname"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "setting_id"
+                or: "setting_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+          q: {
+            exist: [
+              "hostname"
+              "setting_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "settings"
+            }
+            {
+              var: "setting_id"
+            }
+            {
+              var: "hostname"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

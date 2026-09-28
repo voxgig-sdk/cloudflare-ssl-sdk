@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_csr_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE00": {
+        "common_name": "s5a",
+        "country": "s5b",
+        "key_type": "s5c",
+        "locality": "s5d",
+        "organization": "s5e",
+        "organizational_unit": "s5f",
+        "result": {},
+        "sans": [],
+        "state": "s62",
+        "zone_id": "ZONE01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE01": {
+        "common_name": "sb4",
+        "country": "sb5",
+        "key_type": "sb6",
+        "locality": "sb7",
+        "organization": "sb8",
+        "organizational_unit": "sb9",
+        "result": {},
+        "sans": [],
+        "state": "sbc",
+        "zone_id": "ZONE01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE02": {
+        "common_name": "s10e",
+        "country": "s10f",
+        "key_type": "s110",
+        "locality": "s111",
+        "organization": "s112",
+        "organizational_unit": "s113",
+        "result": {},
+        "sans": [],
+        "state": "s116",
+        "zone_id": "ZONE01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_csr_response_single": {
+      "tls_certificates_and_hostnames_custom_csr_response_single_ref01": {
+        "common_name": "s168",
+        "country": "s169",
+        "key_type": "s16a",
+        "locality": "s16b",
+        "organization": "s16c",
+        "organizational_unit": "s16d",
+        "result": {},
+        "sans": [],
+        "state": "s170"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/custom_csrs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_csrs/{custom_csr_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

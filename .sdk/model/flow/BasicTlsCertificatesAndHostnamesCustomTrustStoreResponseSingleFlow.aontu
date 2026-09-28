@@ -1,0 +1,45 @@
+# BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleFlow:
+{
+  entity: "tls_certificates_and_hostnames_custom_trust_store_response_single",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_custom_trust_store_response_single_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_custom_trust_store_response_single_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_custom_trust_store_response_single_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_custom_trust_store_response_single01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_custom_trust_store_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseSingleFlow"
+}

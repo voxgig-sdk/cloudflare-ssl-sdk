@@ -1,0 +1,63 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_advanced_certificate_pack_response": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE00": {
+        "certificate_authority": "s3c",
+        "cloudflare_branding": false,
+        "hosts": [],
+        "type": "s3f",
+        "validation_method": "s40",
+        "validity_days": 65,
+        "zone_id": "ZONE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE01": {
+        "certificate_authority": "s78",
+        "cloudflare_branding": false,
+        "hosts": [],
+        "type": "s7b",
+        "validation_method": "s7c",
+        "validity_days": 125,
+        "zone_id": "ZONE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE02": {
+        "certificate_authority": "sb4",
+        "cloudflare_branding": false,
+        "hosts": [],
+        "type": "sb7",
+        "validation_method": "sb8",
+        "validity_days": 185,
+        "zone_id": "ZONE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ADVANCED_CERTIFICATE_PACK_RESPONSE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_advanced_certificate_pack_response": {
+      "tls_certificates_and_hostnames_advanced_certificate_pack_response_ref01": {
+        "certificate_authority": "sf0",
+        "cloudflare_branding": false,
+        "hosts": [],
+        "type": "sf3",
+        "validation_method": "sf4",
+        "validity_days": 245
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/ssl/certificate_packs/order": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

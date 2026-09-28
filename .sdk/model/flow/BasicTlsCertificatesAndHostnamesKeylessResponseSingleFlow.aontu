@@ -1,0 +1,68 @@
+# BasicTlsCertificatesAndHostnamesKeylessResponseSingleFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesKeylessResponseSingleFlow:
+{
+  entity: "tls_certificates_and_hostnames_keyless_response_single",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesKeylessResponseSingleFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_keyless_response_single_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      d: {
+        zone_id: "zone01"
+      }
+
+      i: {
+        ref: "tls_certificates_and_hostnames_keyless_response_single_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_keyless_response_single_ref01_data",
+        suffix: "_up0",
+        textfield: "bundle_method"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_keyless_response_single_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_keyless_response_single_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_keyless_response_single_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_keyless_response_single01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_keyless_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesKeylessResponseSingleFlow"
+}

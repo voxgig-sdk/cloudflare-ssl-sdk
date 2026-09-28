@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesCustomHostnameResponseCollectionFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomHostnameResponseCollectionFlow:
+{
+  entity: "tls_certificates_and_hostnames_custom_hostname_response_collection",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomHostnameResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_custom_hostname_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCustomHostnameResponseCollectionFlow"
+}

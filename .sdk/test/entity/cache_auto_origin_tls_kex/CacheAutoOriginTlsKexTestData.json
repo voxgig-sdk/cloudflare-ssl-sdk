@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "cache_auto_origin_tls_kex": {
+      "CACHE_AUTO_ORIGIN_TLS_KEX00": {
+        "enabled": true,
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "id": "CACHE_AUTO_ORIGIN_TLS_KEX00"
+      },
+      "CACHE_AUTO_ORIGIN_TLS_KEX01": {
+        "enabled": true,
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "id": "CACHE_AUTO_ORIGIN_TLS_KEX01"
+      },
+      "CACHE_AUTO_ORIGIN_TLS_KEX02": {
+        "enabled": true,
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "id": "CACHE_AUTO_ORIGIN_TLS_KEX02"
+      }
+    }
+  },
+  "new": {
+    "cache_auto_origin_tls_kex": {
+      "cache_auto_origin_tls_kex_ref01": {
+        "enabled": true,
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/auto_origin_tls_kex": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/auto_origin_tls_kex": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

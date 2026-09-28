@@ -1,0 +1,38 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_pack_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE00": {
+        "result": {},
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE01": {
+        "result": {},
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE02": {
+        "result": {},
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_PACK_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_pack_response_single": {
+      "tls_certificates_and_hostnames_certificate_pack_response_single_ref01": {
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

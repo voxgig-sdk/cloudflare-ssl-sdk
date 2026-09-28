@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesCustomCsrResponseCollection2Flow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomCsrResponseCollection2Flow:
+{
+  entity: "tls_certificates_and_hostnames_custom_csr_response_collection_2",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomCsrResponseCollection2Flow",
+  step: [
+    {
+      m: {
+        account_id: "account01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_custom_csr_response_collection_2_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCustomCsrResponseCollection2Flow"
+}

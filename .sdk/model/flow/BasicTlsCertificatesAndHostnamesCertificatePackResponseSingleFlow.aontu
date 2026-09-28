@@ -1,0 +1,33 @@
+# BasicTlsCertificatesAndHostnamesCertificatePackResponseSingleFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCertificatePackResponseSingleFlow:
+{
+  entity: "tls_certificates_and_hostnames_certificate_pack_response_single",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCertificatePackResponseSingleFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_certificate_pack_response_single_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_certificate_pack_response_single_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_certificate_pack_response_single01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_certificate_pack_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCertificatePackResponseSingleFlow"
+}

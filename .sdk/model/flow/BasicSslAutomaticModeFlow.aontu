@@ -1,0 +1,26 @@
+# BasicSslAutomaticModeFlow
+
+main: kit: flow: BasicSslAutomaticModeFlow:
+{
+  entity: "ssl_automatic_mode",
+  kind: "basic",
+  name: "BasicSslAutomaticModeFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "ssl_automatic_mode_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSslAutomaticModeFlow"
+}

@@ -1,0 +1,202 @@
+# Entity: tls_certificates_and_hostnames_per_hostname_setting
+
+main: kit: entity: tls_certificates_and_hostnames_per_hostname_setting: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+      union: {
+        branches: 3
+        count: 1
+        depth: 4
+      }
+    }
+    value: {
+      h: "Value"
+      n: "value"
+      r: true
+      sh: "The TLS setting value."
+      t: "`$ANY`"
+      union: {
+        branches: 3
+        count: 1
+        depth: 0
+      }
+    }
+  }
+
+  id: {
+    field: "id"
+    from: {
+      hostname: "hostname"
+    }
+    name: "id"
+    parts: [
+      "setting_id"
+      "hostname"
+    ]
+    sep: "/"
+  }
+
+  name: "tls_certificates_and_hostnames_per_hostname_setting"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "app.example.com"
+                k: "param"
+                n: "hostname"
+                or: "hostname"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "setting_id"
+                or: "setting_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+          q: {
+            exist: [
+              "hostname"
+              "setting_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "settings"
+            }
+            {
+              var: "setting_id"
+            }
+            {
+              var: "hostname"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "app.example.com"
+                k: "param"
+                n: "hostname"
+                or: "hostname"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "setting_id"
+                or: "setting_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}"
+          q: {
+            exist: [
+              "hostname"
+              "setting_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "settings"
+            }
+            {
+              var: "setting_id"
+            }
+            {
+              var: "hostname"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

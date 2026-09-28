@@ -1,0 +1,216 @@
+# Entity: tls_certificates_and_hostnames_certificate_response_single_4
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_response_single_4: {
+
+  alias: field: {}
+
+  fields: {
+    certificate: {
+      h: "Certificate"
+      n: "certificate"
+      r: true
+      sh: "The hostname certificate."
+      t: "`$STRING`"
+    }
+    private_key: {
+      h: "Private Key"
+      n: "private_key"
+      r: true
+      sh: "The hostname certificate's private key."
+      t: "`$STRING`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_certificate_response_single_4"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates"
+          q: {
+            exist: [
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "origin_tls_client_auth"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "certificates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "2458ce5a-0c35-4c7f-82c7-8e9487d3ff60"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "origin_tls_client_auth"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "2458ce5a-0c35-4c7f-82c7-8e9487d3ff60"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "origin_tls_client_auth"
+            }
+            {
+              lit: "hostnames"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

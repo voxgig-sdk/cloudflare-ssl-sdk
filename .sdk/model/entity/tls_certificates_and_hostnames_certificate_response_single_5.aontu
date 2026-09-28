@@ -1,0 +1,138 @@
+# Entity: tls_certificates_and_hostnames_certificate_response_single_5
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_response_single_5: {
+
+  alias: field: {}
+
+  fields: {
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_certificate_response_single_5"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /accounts/{account_id}/mtls_certificates/{mtls_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2458ce5a-0c35-4c7f-82c7-8e9487d3ff60"
+                k: "param"
+                n: "mtls_certificate_id"
+                or: "mtls_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/accounts/{account_id}/mtls_certificates/{mtls_certificate_id}"
+          q: {
+            exist: [
+              "account_id"
+              "mtls_certificate_id"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "mtls_certificates"
+            }
+            {
+              var: "mtls_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /accounts/{account_id}/mtls_certificates/{mtls_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2458ce5a-0c35-4c7f-82c7-8e9487d3ff60"
+                k: "param"
+                n: "mtls_certificate_id"
+                or: "mtls_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/accounts/{account_id}/mtls_certificates/{mtls_certificate_id}"
+          q: {
+            exist: [
+              "account_id"
+              "mtls_certificate_id"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "mtls_certificates"
+            }
+            {
+              var: "mtls_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

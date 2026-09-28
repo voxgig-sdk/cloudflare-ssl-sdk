@@ -1,0 +1,35 @@
+# BasicCustomHostnameForAZoneFlow
+
+main: kit: flow: BasicCustomHostnameForAZoneFlow:
+{
+  entity: "custom_hostname_for_a_zone",
+  kind: "basic",
+  name: "BasicCustomHostnameForAZoneFlow",
+  step: [
+    {
+      d: {
+        certificate_pack_id: "certificate_pack01",
+        custom_hostname_id: "custom_hostname01",
+        zone_id: "zone01"
+      }
+
+      i: {
+        ref: "custom_hostname_for_a_zone_ref01",
+        srcdatavar: "custom_hostname_for_a_zone_ref01_data",
+        suffix: "_up0",
+        textfield: "custom_certificate"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-custom_hostname_for_a_zone_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCustomHostnameForAZoneFlow"
+}

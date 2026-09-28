@@ -1,0 +1,127 @@
+# Entity: tls_certificates_and_hostnames_custom_csr_response_id_only
+
+main: kit: entity: tls_certificates_and_hostnames_custom_csr_response_id_only: {
+
+  alias: field: {}
+
+  name: "tls_certificates_and_hostnames_custom_csr_response_id_only"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /accounts/{account_id}/custom_csrs/{custom_csr_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "7b163417-1d2b-4c84-a38a-2fb7a0cd7752"
+                k: "param"
+                n: "custom_csr_id"
+                or: "custom_csr_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/accounts/{account_id}/custom_csrs/{custom_csr_id}"
+          q: {
+            exist: [
+              "account_id"
+              "custom_csr_id"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "custom_csrs"
+            }
+            {
+              var: "custom_csr_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/custom_csrs/{custom_csr_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "7b163417-1d2b-4c84-a38a-2fb7a0cd7752"
+                k: "param"
+                n: "custom_csr_id"
+                or: "custom_csr_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/custom_csrs/{custom_csr_id}"
+          q: {
+            exist: [
+              "custom_csr_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "custom_csrs"
+            }
+            {
+              var: "custom_csr_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

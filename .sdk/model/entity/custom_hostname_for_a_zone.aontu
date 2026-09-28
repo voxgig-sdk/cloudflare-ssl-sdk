@@ -1,0 +1,209 @@
+# Entity: custom_hostname_for_a_zone
+
+main: kit: entity: custom_hostname_for_a_zone: {
+
+  alias: field: {}
+
+  fields: {
+    custom_certificate: {
+      h: "Custom Certificate"
+      n: "custom_certificate"
+      r: true
+      sh: "If a custom uploaded certificate is used."
+      t: "`$STRING`"
+    }
+    custom_key: {
+      h: "Custom Key"
+      n: "custom_key"
+      r: true
+      sh: "The key for a custom uploaded certificate."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "custom_hostname_for_a_zone"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "certificate_pack_id"
+                or: "certificate_pack_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "custom_hostname_id"
+                or: "custom_hostname_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+              "certificate_pack_id"
+              "custom_hostname_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "custom_hostnames"
+            }
+            {
+              var: "custom_hostname_id"
+            }
+            {
+              lit: "certificate_pack"
+            }
+            {
+              var: "certificate_pack_id"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "certificate_pack_id"
+                or: "certificate_pack_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "custom_hostname_id"
+                or: "custom_hostname_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+              "certificate_pack_id"
+              "custom_hostname_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "custom_hostnames"
+            }
+            {
+              var: "custom_hostname_id"
+            }
+            {
+              lit: "certificate_pack"
+            }
+            {
+              var: "certificate_pack_id"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.custom_hostname")]
+  ]
+
+}

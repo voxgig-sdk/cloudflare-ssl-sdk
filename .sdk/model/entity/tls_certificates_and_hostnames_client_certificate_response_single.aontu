@@ -1,0 +1,262 @@
+# Entity: tls_certificates_and_hostnames_client_certificate_response_single
+
+main: kit: entity: tls_certificates_and_hostnames_client_certificate_response_single: {
+
+  alias: field: {}
+
+  fields: {
+    csr: {
+      h: "Csr"
+      n: "csr"
+      r: true
+      sh: "The Certificate Signing Request (CSR)."
+      t: "`$STRING`"
+    }
+    reactivate: {
+      h: "Reactivate"
+      n: "reactivate"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+    }
+    validity_days: {
+      h: "Validity Days"
+      n: "validity_days"
+      r: true
+      sh: "The number of days the Client Certificate will be valid after the issued_on date."
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_client_certificate_response_single"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /zones/{zone_id}/client_certificates"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/zones/{zone_id}/client_certificates"
+          q: {
+            exist: [
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "client_certificates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/client_certificates/{client_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "client_certificate_id"
+                or: "client_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/client_certificates/{client_certificate_id}"
+          q: {
+            exist: [
+              "client_certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "client_certificates"
+            }
+            {
+              var: "client_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/client_certificates/{client_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "client_certificate_id"
+                or: "client_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/client_certificates/{client_certificate_id}"
+          q: {
+            exist: [
+              "client_certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "client_certificates"
+            }
+            {
+              var: "client_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /zones/{zone_id}/client_certificates/{client_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "0d89c70d-ad9f-4843-b99f-6cc0252067e9"
+                k: "param"
+                n: "client_certificate_id"
+                or: "client_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/zones/{zone_id}/client_certificates/{client_certificate_id}"
+          q: {
+            exist: [
+              "client_certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "client_certificates"
+            }
+            {
+              var: "client_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

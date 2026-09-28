@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TlsCertificatesAndHostnamesCertificateRevoke | Cloudflare SSL/TLS</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><a class="site-title" href="../index.html">Cloudflare SSL/TLS<span>SDK documentation</span></a><div class="site-links"><a class="repo-link" href="https://github.com/voxgig-sdk/cloudflare-ssl-sdk">voxgig-sdk/cloudflare-ssl-sdk</a></div></header>
+<div class="site-notice" role="note"></div>
+<div class="shell"><nav class="site-nav" aria-label="Documentation"><div class="search"><label for="search">Search documentation</label><input id="search" type="search" data-base="../" placeholder="Find a guide or reference"><div id="results" aria-live="polite"></div></div><details><summary>Overview</summary><a href="../index.html">Cloudflare SSL/TLS</a></details>
+<details open><summary>API</summary><a href="../api/index.html">API overview</a>
+<a href="../api/cache_api_response_single_id.html">CacheApiResponseSingleId</a>
+<a href="../api/cache_auto_origin_tls_kex.html">CacheAutoOriginTlsKex</a>
+<a href="../api/custom_hostname.html">CustomHostname</a>
+<a href="../api/custom_hostname_for_a_zone.html">CustomHostnameForAZone</a>
+<a href="../api/origin_tl.html">OriginTl</a>
+<a href="../api/recommendation.html">Recommendation</a>
+<a href="../api/ssl_automatic_mode.html">SslAutomaticMode</a>
+<a href="../api/tls_certificates_and_hostnames_advanced_certificate_pack_response.html">TlsCertificatesAndHostnamesAdvancedCertificatePackResponse</a>
+<a href="../api/tls_certificates_and_hostnames_association_response_collection.html">TlsCertificatesAndHostnamesAssociationResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_analyze.html">TlsCertificatesAndHostnamesCertificateAnalyze</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_pack_quota.html">TlsCertificatesAndHostnamesCertificatePackQuota</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_pack_response_collection.html">TlsCertificatesAndHostnamesCertificatePackResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_pack_response_single.html">TlsCertificatesAndHostnamesCertificatePackResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_collection.html">TlsCertificatesAndHostnamesCertificateResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_collection_3.html">TlsCertificatesAndHostnamesCertificateResponseCollection3</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_collection_4.html">TlsCertificatesAndHostnamesCertificateResponseCollection4</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_collection_5.html">TlsCertificatesAndHostnamesCertificateResponseCollection5</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_id_only.html">TlsCertificatesAndHostnamesCertificateResponseIdOnly</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single.html">TlsCertificatesAndHostnamesCertificateResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single_2.html">TlsCertificatesAndHostnamesCertificateResponseSingle2</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single_3.html">TlsCertificatesAndHostnamesCertificateResponseSingle3</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single_4.html">TlsCertificatesAndHostnamesCertificateResponseSingle4</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single_5.html">TlsCertificatesAndHostnamesCertificateResponseSingle5</a>
+<a href="../api/tls_certificates_and_hostnames_certificate_response_single_post.html">TlsCertificatesAndHostnamesCertificateResponseSinglePost</a>
+<a aria-current="page" href="../api/tls_certificates_and_hostnames_certificate_revoke.html">TlsCertificatesAndHostnamesCertificateRevoke</a><div class="nav-sections"><a class="nav-section" href="#delete-certificatescertificate_id">DELETE /certificates/{certificate_id}</a></div>
+<a href="../api/tls_certificates_and_hostnames_client_certificate_response.html">TlsCertificatesAndHostnamesClientCertificateResponse</a>
+<a href="../api/tls_certificates_and_hostnames_client_certificate_response_single.html">TlsCertificatesAndHostnamesClientCertificateResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_custom_csr_response_collection.html">TlsCertificatesAndHostnamesCustomCsrResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_custom_csr_response_collection_2.html">TlsCertificatesAndHostnamesCustomCsrResponseCollection2</a>
+<a href="../api/tls_certificates_and_hostnames_custom_csr_response_id_only.html">TlsCertificatesAndHostnamesCustomCsrResponseIdOnly</a>
+<a href="../api/tls_certificates_and_hostnames_custom_csr_response_single.html">TlsCertificatesAndHostnamesCustomCsrResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_custom_csr_response_single_2.html">TlsCertificatesAndHostnamesCustomCsrResponseSingle2</a>
+<a href="../api/tls_certificates_and_hostnames_custom_hostname_quota.html">TlsCertificatesAndHostnamesCustomHostnameQuota</a>
+<a href="../api/tls_certificates_and_hostnames_custom_hostname_response_collection.html">TlsCertificatesAndHostnamesCustomHostnameResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_custom_hostname_response_single.html">TlsCertificatesAndHostnamesCustomHostnameResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_custom_trust_store_response.html">TlsCertificatesAndHostnamesCustomTrustStoreResponse</a>
+<a href="../api/tls_certificates_and_hostnames_custom_trust_store_response_id_only.html">TlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnly</a>
+<a href="../api/tls_certificates_and_hostnames_custom_trust_store_response_single.html">TlsCertificatesAndHostnamesCustomTrustStoreResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_delete_advanced_certificate_pack.html">TlsCertificatesAndHostnamesDeleteAdvancedCertificatePack</a>
+<a href="../api/tls_certificates_and_hostnames_enabled.html">TlsCertificatesAndHostnamesEnabled</a>
+<a href="../api/tls_certificates_and_hostnames_fallback_origin.html">TlsCertificatesAndHostnamesFallbackOrigin</a>
+<a href="../api/tls_certificates_and_hostnames_hostname_aop_response_collection.html">TlsCertificatesAndHostnamesHostnameAopResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_hostname_aop_single.html">TlsCertificatesAndHostnamesHostnameAopSingle</a>
+<a href="../api/tls_certificates_and_hostnames_hostname_assoc_response_collection.html">TlsCertificatesAndHostnamesHostnameAssocResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_keyless_response_collection.html">TlsCertificatesAndHostnamesKeylessResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_keyless_response_single.html">TlsCertificatesAndHostnamesKeylessResponseSingle</a>
+<a href="../api/tls_certificates_and_hostnames_keyless_response_single_id.html">TlsCertificatesAndHostnamesKeylessResponseSingleId</a>
+<a href="../api/tls_certificates_and_hostnames_per_hostname_setting.html">TlsCertificatesAndHostnamesPerHostnameSetting</a>
+<a href="../api/tls_certificates_and_hostnames_per_hostname_settings_response.html">TlsCertificatesAndHostnamesPerHostnameSettingsResponse</a>
+<a href="../api/tls_certificates_and_hostnames_per_hostname_settings_response2.html">TlsCertificatesAndHostnamesPerHostnameSettingsResponse2</a>
+<a href="../api/tls_certificates_and_hostnames_ssl_universal_setting.html">TlsCertificatesAndHostnamesSslUniversalSetting</a>
+<a href="../api/tls_certificates_and_hostnames_ssl_validation_method_response.html">TlsCertificatesAndHostnamesSslValidationMethodResponse</a>
+<a href="../api/tls_certificates_and_hostnames_ssl_verification_response_collection.html">TlsCertificatesAndHostnamesSslVerificationResponseCollection</a>
+<a href="../api/tls_certificates_and_hostnames_total_tls_setting.html">TlsCertificatesAndHostnamesTotalTlsSetting</a></details>
+<details><summary>Guides</summary><a href="../guides/authentication.html">Authentication</a>
+<a href="../guides/first-call.html">Make your first API call</a>
+<a href="../guides/errors.html">Handle errors</a>
+<a href="../guides/concepts.html">Entities, SDKs, and tools</a></details>
+<details><summary>SDKs</summary><a href="../sdks/go.html">Golang</a>
+<a href="../sdks/lua.html">Lua</a>
+<a href="../sdks/php.html">PHP</a>
+<a href="../sdks/py.html">Python</a>
+<a href="../sdks/rb.html">Ruby</a>
+<a href="../sdks/ts.html">TypeScript</a></details>
+<details><summary>Tools</summary><a href="../tools/go-cli.html">Go CLI</a>
+<a href="../tools/go-mcp.html">Go MCP server</a></details>
+<details><summary>Features</summary><a href="../features/test.html">Test transport</a></details></nav><main id="content"><div class="page-context"><span class="section-dot" aria-hidden="true"></span>API</div><h1 id="tlscertificatesandhostnamescertificaterevoke">TlsCertificatesAndHostnamesCertificateRevoke</h1>
+<h2 id="operations">Operations</h2>
+<p>Every route this entity exposes. Each route links to its own reference on this page.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>SDK operation</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-certificatescertificate_id"><code>/certificates/{certificate_id}</code></a></td>
+<td><code>remove</code></td>
+<td>Revoke Certificate response</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>One example per SDK, generated from the API model. The argument names are the parameters and fields of this entity, and the values are placeholders. The examples are not compiled or executed.</p>
+<h3 id="golang">Golang</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/go.html#set-up-the-client">Golang setup</a>, then call the operations:</p>
+<pre><code class="language-go">removed, err := client.TlsCertificatesAndHostnamesCertificateRevoke(nil).Remove(map[string]any{&quot;certificate_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(removed)
+</code></pre>
+<h3 id="lua">Lua</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/lua.html#set-up-the-client">Lua setup</a>, then call the operations:</p>
+<pre><code class="language-lua">local removed, err = client:TlsCertificatesAndHostnamesCertificateRevoke():remove({ certificate_id = &quot;example&quot; })
+</code></pre>
+<h3 id="php">PHP</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/php.html#set-up-the-client">PHP setup</a>, then call the operations:</p>
+<pre><code class="language-php">$client-&gt;TlsCertificatesAndHostnamesCertificateRevoke()-&gt;remove([&quot;certificate_id&quot; =&gt; &quot;example&quot;]);
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/py.html#set-up-the-client">Python setup</a>, then call the operations:</p>
+<pre><code class="language-py">client.TlsCertificatesAndHostnamesCertificateRevoke().remove({&quot;certificate_id&quot;: &quot;example&quot;})
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/rb.html#set-up-the-client">Ruby setup</a>, then call the operations:</p>
+<pre><code class="language-rb">client.TlsCertificatesAndHostnamesCertificateRevoke.remove({ &quot;certificate_id&quot; =&gt; &quot;example&quot; })
+</code></pre>
+<h3 id="typescript">TypeScript</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/ts.html#set-up-the-client">TypeScript setup</a>, then call the operations:</p>
+<pre><code class="language-ts">await client.TlsCertificatesAndHostnamesCertificateRevoke().remove({ certificate_id: &quot;example&quot; })
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<h2 id="remove">remove</h2>
+<h3 id="delete-certificatescertificate_id" class="operation" data-method="delete"><code>DELETE</code> /certificates/{certificate_id}</h3>
+<p>Operation ID: <code>origin-ca-revoke-certificate</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>user_service_key</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>certificate_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses">Responses</h4>
+<h5 id="200-revoke-certificate-response" class="status" data-status="2xx">200: Revoke Certificate response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object</code>.</p>
+<h5 id="4xx-revoke-certificate-response-failure">4XX: Revoke Certificate response failure</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+</main></div>
+<script src="../assets/search.js" defer></script></body></html>

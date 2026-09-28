@@ -1,0 +1,22 @@
+# BasicTlsCertificatesAndHostnamesCertificateAnalyzeFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCertificateAnalyzeFlow:
+{
+  entity: "tls_certificates_and_hostnames_certificate_analyze",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCertificateAnalyzeFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_certificate_analyze_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCertificateAnalyzeFlow"
+}

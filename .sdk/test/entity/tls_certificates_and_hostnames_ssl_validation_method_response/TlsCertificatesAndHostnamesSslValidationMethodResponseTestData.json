@@ -1,0 +1,38 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_ssl_validation_method_response": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE00": {
+        "validation_method": "sa",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE01": {
+        "validation_method": "s14",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE02": {
+        "validation_method": "s1e",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_VALIDATION_METHOD_RESPONSE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_ssl_validation_method_response": {
+      "tls_certificates_and_hostnames_ssl_validation_method_response_ref01": {
+        "validation_method": "s28"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /zones/{zone_id}/ssl/verification/{certificate_pack_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

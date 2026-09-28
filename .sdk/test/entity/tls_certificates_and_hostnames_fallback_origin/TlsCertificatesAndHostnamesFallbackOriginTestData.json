@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_fallback_origin": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN00": {
+        "origin": "s14",
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN01": {
+        "origin": "s28",
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN02": {
+        "origin": "s3c",
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_FALLBACK_ORIGIN02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_fallback_origin": {
+      "tls_certificates_and_hostnames_fallback_origin_ref01": {
+        "origin": "s50",
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/custom_hostnames/fallback_origin": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/custom_hostnames/fallback_origin": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/custom_hostnames/fallback_origin": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# BasicTlsCertificatesAndHostnamesHostnameAopResponseCollectionFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesHostnameAopResponseCollectionFlow:
+{
+  entity: "tls_certificates_and_hostnames_hostname_aop_response_collection",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesHostnameAopResponseCollectionFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_hostname_aop_response_collection_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_hostname_aop_response_collection_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_hostname_aop_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesHostnameAopResponseCollectionFlow"
+}

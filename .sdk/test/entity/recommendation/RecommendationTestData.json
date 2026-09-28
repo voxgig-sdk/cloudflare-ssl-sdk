@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "recommendation": {
+      "RECOMMENDATION00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "RECOMMENDATION01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "RECOMMENDATION02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "recommendation": {
+      "recommendation_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/ssl/recommendation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

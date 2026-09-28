@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "ssl_automatic_mode": {
+      "SSL_AUTOMATIC_MODE00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "SSL_AUTOMATIC_MODE01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      },
+      "SSL_AUTOMATIC_MODE02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "ssl_automatic_mode": {
+      "ssl_automatic_mode_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/ssl_automatic_mode": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

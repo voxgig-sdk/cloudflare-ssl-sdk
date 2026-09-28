@@ -1,0 +1,396 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 54
+  metrics: count: path: 45
+  metrics: count: method: 87
+
+  entity: cache_api_response_single_id: {
+    path: "/zones/{zone_id}/settings/ssl_automatic_mode": {
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: cache_auto_origin_tls_kex: {
+    path: "/zones/{zone_id}/settings/auto_origin_tls_kex": {
+      op: list: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: custom_hostname: {
+    path: "/zones/{zone_id}/custom_hostnames/{custom_hostname_id}": {
+      rename: param: "custom_hostname_id": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: custom_hostname_for_a_zone: {
+    path: "/zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}": {
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: origin_tl: {
+    path: "/zones/{zone_id}/settings/origin_tls_compliance_modes": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: recommendation: {
+    path: "/zones/{zone_id}/ssl/recommendation": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: ssl_automatic_mode: {
+    path: "/zones/{zone_id}/settings/ssl_automatic_mode": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_advanced_certificate_pack_response: {
+    path: "/zones/{zone_id}/ssl/certificate_packs/order": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_association_response_collection: {
+    path: "/accounts/{account_id}/mtls_certificates/{mtls_certificate_id}/associations": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_analyze: {
+    path: "/zones/{zone_id}/ssl/analyze": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_pack_quota: {
+    path: "/zones/{zone_id}/ssl/certificate_packs/quota": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_pack_response_collection: {
+    path: "/zones/{zone_id}/ssl/certificate_packs": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_pack_response_single: {
+    path: "/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_collection: {
+    path: "/zones/{zone_id}/custom_certificates": {
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/custom_certificates/prioritize": {
+      op: update: method: *PUT
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_collection_3: {
+    path: "/zones/{zone_id}/origin_tls_client_auth": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_collection_4: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_collection_5: {
+    path: "/accounts/{account_id}/mtls_certificates": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_id_only: {
+    path: "/zones/{zone_id}/custom_certificates/{custom_certificate_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single: {
+    path: "/zones/{zone_id}/custom_certificates": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/custom_certificates/{custom_certificate_id}": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single_2: {
+    path: "/certificates": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/certificates/{certificate_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single_3: {
+    path: "/zones/{zone_id}/origin_tls_client_auth": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/origin_tls_client_auth/{certificate_id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single_4: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single_5: {
+    path: "/accounts/{account_id}/mtls_certificates/{mtls_certificate_id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_response_single_post: {
+    path: "/accounts/{account_id}/mtls_certificates": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_certificate_revoke: {
+    path: "/certificates/{certificate_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_client_certificate_response: {
+    path: "/zones/{zone_id}/client_certificates": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_client_certificate_response_single: {
+    path: "/zones/{zone_id}/client_certificates": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/client_certificates/{client_certificate_id}": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_csr_response_collection: {
+    path: "/zones/{zone_id}/custom_csrs": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_csr_response_collection_2: {
+    path: "/accounts/{account_id}/custom_csrs": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_csr_response_id_only: {
+    path: "/accounts/{account_id}/custom_csrs/{custom_csr_id}": {
+      op: remove: method: *DELETE
+    }
+    path: "/zones/{zone_id}/custom_csrs/{custom_csr_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_csr_response_single: {
+    path: "/zones/{zone_id}/custom_csrs": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/custom_csrs/{custom_csr_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_csr_response_single_2: {
+    path: "/accounts/{account_id}/custom_csrs": {
+      op: create: method: *POST
+    }
+    path: "/accounts/{account_id}/custom_csrs/{custom_csr_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_hostname_quota: {
+    path: "/zones/{zone_id}/custom_hostnames/quota": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_hostname_response_collection: {
+    path: "/zones/{zone_id}/custom_hostnames": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_hostname_response_single: {
+    path: "/zones/{zone_id}/custom_hostnames": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/custom_hostnames/{custom_hostname_id}": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_trust_store_response: {
+    path: "/zones/{zone_id}/acm/custom_trust_store": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_trust_store_response_id_only: {
+    path: "/zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_custom_trust_store_response_single: {
+    path: "/zones/{zone_id}/acm/custom_trust_store": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_delete_advanced_certificate_pack: {
+    path: "/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      rename: param: "certificate_pack_id": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_enabled: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/settings": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_fallback_origin: {
+    path: "/zones/{zone_id}/custom_hostnames/fallback_origin": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_hostname_aop_response_collection: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames": {
+      op: update: method: *PUT
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_hostname_aop_single: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames/{hostname}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_hostname_assoc_response_collection: {
+    path: "/zones/{zone_id}/origin_tls_client_auth/hostnames": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_keyless_response_collection: {
+    path: "/zones/{zone_id}/keyless_certificates": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_keyless_response_single: {
+    path: "/zones/{zone_id}/keyless_certificates": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/keyless_certificates/{keyless_certificate_id}": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_keyless_response_single_id: {
+    path: "/zones/{zone_id}/keyless_certificates/{keyless_certificate_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_per_hostname_setting: {
+    path: "/zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_per_hostname_settings_response: {
+    path: "/zones/{zone_id}/hostnames/settings/{setting_id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_per_hostname_settings_response2: {
+    path: "/zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_ssl_universal_setting: {
+    path: "/zones/{zone_id}/ssl/universal/settings": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_ssl_validation_method_response: {
+    path: "/zones/{zone_id}/ssl/verification/{certificate_pack_id}": {
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_ssl_verification_response_collection: {
+    path: "/zones/{zone_id}/ssl/verification": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: tls_certificates_and_hostnames_total_tls_setting: {
+    path: "/zones/{zone_id}/acm/total_tls": {
+      op: create: method: *POST
+      op: load: method: *GET
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+# BasicCacheAutoOriginTlsKexFlow
+
+main: kit: flow: BasicCacheAutoOriginTlsKexFlow:
+{
+  entity: "cache_auto_origin_tls_kex",
+  kind: "basic",
+  name: "BasicCacheAutoOriginTlsKexFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "cache_auto_origin_tls_kex_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "cache_auto_origin_tls_kex_ref01",
+        srcdatavar: "cache_auto_origin_tls_kex_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-cache_auto_origin_tls_kex_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCacheAutoOriginTlsKexFlow"
+}

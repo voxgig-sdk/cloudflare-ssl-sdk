@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_delete_advanced_certificate_pack": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK00": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK00",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK01": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK01",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK02": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_DELETE_ADVANCED_CERTIFICATE_PACK02",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_delete_advanced_certificate_pack": {
+      "tls_certificates_and_hostnames_delete_advanced_certificate_pack_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

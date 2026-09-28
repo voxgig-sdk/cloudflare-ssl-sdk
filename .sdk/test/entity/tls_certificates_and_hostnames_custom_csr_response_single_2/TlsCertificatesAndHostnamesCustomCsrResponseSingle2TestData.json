@@ -1,0 +1,83 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_csr_response_single_2": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_200": {
+        "common_name": "s6e",
+        "country": "s6f",
+        "description": "s70",
+        "key_type": "s71",
+        "locality": "s72",
+        "name": "s73",
+        "organization": "s74",
+        "organizational_unit": "s75",
+        "result": {},
+        "sans": [],
+        "state": "s78",
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_200"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_201": {
+        "common_name": "sdc",
+        "country": "sdd",
+        "description": "sde",
+        "key_type": "sdf",
+        "locality": "se0",
+        "name": "se1",
+        "organization": "se2",
+        "organizational_unit": "se3",
+        "result": {},
+        "sans": [],
+        "state": "se6",
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_201"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_202": {
+        "common_name": "s14a",
+        "country": "s14b",
+        "description": "s14c",
+        "key_type": "s14d",
+        "locality": "s14e",
+        "name": "s14f",
+        "organization": "s150",
+        "organizational_unit": "s151",
+        "result": {},
+        "sans": [],
+        "state": "s154",
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_SINGLE_202"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_csr_response_single_2": {
+      "tls_certificates_and_hostnames_custom_csr_response_single_2_ref01": {
+        "common_name": "s1b8",
+        "country": "s1b9",
+        "description": "s1ba",
+        "key_type": "s1bb",
+        "locality": "s1bc",
+        "name": "s1bd",
+        "organization": "s1be",
+        "organizational_unit": "s1bf",
+        "result": {},
+        "sans": [],
+        "state": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "POST /accounts/{account_id}/custom_csrs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /accounts/{account_id}/custom_csrs/{custom_csr_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

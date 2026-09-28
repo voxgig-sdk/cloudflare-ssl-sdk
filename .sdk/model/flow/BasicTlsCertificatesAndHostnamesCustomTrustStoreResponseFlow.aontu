@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseFlow:
+{
+  entity: "tls_certificates_and_hostnames_custom_trust_store_response",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_custom_trust_store_response_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseFlow"
+}

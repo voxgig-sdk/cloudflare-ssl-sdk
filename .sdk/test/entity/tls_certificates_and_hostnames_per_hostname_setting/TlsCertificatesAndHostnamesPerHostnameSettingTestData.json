@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_per_hostname_setting": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING00": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING00",
+        "result": {},
+        "value": "s20",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING01": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING01",
+        "result": {},
+        "value": "s3e",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING02": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTING02",
+        "result": {},
+        "value": "s5c",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_per_hostname_setting": {
+      "tls_certificates_and_hostnames_per_hostname_setting_ref01": {
+        "result": {},
+        "value": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

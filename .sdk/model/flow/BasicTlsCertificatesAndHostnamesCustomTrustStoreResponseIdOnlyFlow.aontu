@@ -1,0 +1,9 @@
+# BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyFlow:
+{
+  entity: "tls_certificates_and_hostnames_custom_trust_store_response_id_only",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyFlow",
+  "key$": "BasicTlsCertificatesAndHostnamesCustomTrustStoreResponseIdOnlyFlow"
+}

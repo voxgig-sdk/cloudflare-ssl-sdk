@@ -1,0 +1,57 @@
+# BasicTlsCertificatesAndHostnamesPerHostnameSettingFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesPerHostnameSettingFlow:
+{
+  entity: "tls_certificates_and_hostnames_per_hostname_setting",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesPerHostnameSettingFlow",
+  step: [
+    {
+      d: {
+        setting_id: "setting01",
+        zone_id: "zone01"
+      }
+
+      i: {
+        ref: "tls_certificates_and_hostnames_per_hostname_setting_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_per_hostname_setting_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_per_hostname_setting_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_per_hostname_setting_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_per_hostname_setting_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_per_hostname_setting01",
+        setting_id: "setting01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_per_hostname_setting_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesPerHostnameSettingFlow"
+}

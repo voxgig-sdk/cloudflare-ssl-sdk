@@ -1,0 +1,79 @@
+# Entity: tls_certificates_and_hostnames_certificate_analyze
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_analyze: {
+
+  alias: field: {}
+
+  fields: {
+    bundle_method: {
+      h: "Bundle Method"
+      n: "bundle_method"
+      r: false
+      sh: "A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores."
+      t: "`$STRING`"
+    }
+    certificate: {
+      h: "Certificate"
+      n: "certificate"
+      r: false
+      sh: "The zone's SSL certificate or certificate and the intermediate(s)."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_certificate_analyze"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /zones/{zone_id}/ssl/analyze"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/zones/{zone_id}/ssl/analyze"
+          q: {
+            exist: [
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "ssl"
+            }
+            {
+              lit: "analyze"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

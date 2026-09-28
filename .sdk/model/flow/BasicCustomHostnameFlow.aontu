@@ -1,0 +1,9 @@
+# BasicCustomHostnameFlow
+
+main: kit: flow: BasicCustomHostnameFlow:
+{
+  entity: "custom_hostname",
+  kind: "basic",
+  name: "BasicCustomHostnameFlow",
+  "key$": "BasicCustomHostnameFlow"
+}

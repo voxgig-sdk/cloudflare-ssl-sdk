@@ -1,0 +1,198 @@
+# Entity: tls_certificates_and_hostnames_certificate_response_single_2
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_response_single_2: {
+
+  alias: field: {}
+
+  fields: {
+    csr: {
+      h: "Csr"
+      n: "csr"
+      r: true
+      sh: "The Certificate Signing Request (CSR)."
+      t: "`$STRING`"
+    }
+    hostnames: {
+      h: "Hostnames"
+      n: "hostnames"
+      r: true
+      sh: "Array of hostnames or wildcard names bound to the certificate."
+      t: "`$ARRAY`"
+    }
+    request_type: {
+      h: "Request Type"
+      n: "request_type"
+      r: true
+      sh: "Signature type desired on certificate (\"origin-rsa\" (rsa), \"origin-ecc\" (ecdsa), or \"keyless-certificate\" (for Keyless SSL servers)."
+      t: "`$STRING`"
+    }
+    requested_validity: {
+      h: "Requested Validity"
+      n: "requested_validity"
+      r: false
+      sh: "The number of days for which the certificate should be valid."
+      t: "`$NUMBER`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      op: {
+        list: {
+          req: false
+          type: "`$ARRAY`"
+        }
+      }
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_certificate_response_single_2"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /certificates"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/certificates"
+          s: [
+            {
+              lit: "certificates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /certificates"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 10
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 10
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "per_page"
+                or: "per_page"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "query"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/certificates"
+          q: {
+            exist: [
+              "limit"
+              "offset"
+              "page"
+              "per_page"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "certificates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /certificates/{certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "328578533902268680212849205732770752308931942346"
+                k: "param"
+                n: "certificate_id"
+                or: "certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/certificates/{certificate_id}"
+          q: {
+            exist: [
+              "certificate_id"
+            ]
+          }
+          s: [
+            {
+              lit: "certificates"
+            }
+            {
+              var: "certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

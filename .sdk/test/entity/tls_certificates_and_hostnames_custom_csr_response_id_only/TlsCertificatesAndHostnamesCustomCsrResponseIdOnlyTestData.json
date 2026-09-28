@@ -1,0 +1,41 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_csr_response_id_only": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY00": {
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY01": {
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY02": {
+        "account_id": "ACCOUNT01",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_CSR_RESPONSE_ID_ONLY02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_csr_response_id_only": {
+      "tls_certificates_and_hostnames_custom_csr_response_id_only_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /accounts/{account_id}/custom_csrs/{custom_csr_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/custom_csrs/{custom_csr_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

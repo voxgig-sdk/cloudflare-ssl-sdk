@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_revoke": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE00": {
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE01": {
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE02": {
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_REVOKE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_revoke": {
+      "tls_certificates_and_hostnames_certificate_revoke_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

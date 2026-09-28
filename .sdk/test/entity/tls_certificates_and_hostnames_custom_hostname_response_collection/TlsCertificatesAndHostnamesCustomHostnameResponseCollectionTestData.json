@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_hostname_response_collection": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_COLLECTION00": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "result_info": {},
+        "success": true,
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_COLLECTION01": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "result_info": {},
+        "success": true,
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_COLLECTION02": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "result_info": {},
+        "success": true,
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_hostname_response_collection": {
+      "tls_certificates_and_hostnames_custom_hostname_response_collection_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": [],
+        "result_info": {},
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/custom_hostnames": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

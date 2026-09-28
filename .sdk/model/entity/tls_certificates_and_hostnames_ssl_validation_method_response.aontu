@@ -1,0 +1,84 @@
+# Entity: tls_certificates_and_hostnames_ssl_validation_method_response
+
+main: kit: entity: tls_certificates_and_hostnames_ssl_validation_method_response: {
+
+  alias: field: {}
+
+  fields: {
+    validation_method: {
+      h: "Validation Method"
+      n: "validation_method"
+      r: true
+      sh: "Desired validation method."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_ssl_validation_method_response"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /zones/{zone_id}/ssl/verification/{certificate_pack_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "a77f8bd7-3b47-46b4-a6f1-75cf98109948"
+                k: "param"
+                n: "certificate_pack_id"
+                or: "certificate_pack_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/zones/{zone_id}/ssl/verification/{certificate_pack_id}"
+          q: {
+            exist: [
+              "certificate_pack_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "ssl"
+            }
+            {
+              lit: "verification"
+            }
+            {
+              var: "certificate_pack_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

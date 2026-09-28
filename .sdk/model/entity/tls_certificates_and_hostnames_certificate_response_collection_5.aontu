@@ -1,0 +1,87 @@
+# Entity: tls_certificates_and_hostnames_certificate_response_collection_5
+
+main: kit: entity: tls_certificates_and_hostnames_certificate_response_collection_5: {
+
+  alias: field: {}
+
+  fields: {
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$ARRAY`"
+    }
+    result_info: {
+      h: "Result Info"
+      n: "result_info"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_certificate_response_collection_5"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /accounts/{account_id}/mtls_certificates"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: [
+                  "custom"
+                ]
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$ARRAY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/accounts/{account_id}/mtls_certificates"
+          q: {
+            exist: [
+              "account_id"
+              "type"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "mtls_certificates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

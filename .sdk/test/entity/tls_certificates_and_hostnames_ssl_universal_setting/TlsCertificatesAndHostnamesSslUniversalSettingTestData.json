@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_ssl_universal_setting": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING00": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING01": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING02": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_SSL_UNIVERSAL_SETTING02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_ssl_universal_setting": {
+      "tls_certificates_and_hostnames_ssl_universal_setting_ref01": {
+        "enabled": true,
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/ssl/universal/settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/ssl/universal/settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

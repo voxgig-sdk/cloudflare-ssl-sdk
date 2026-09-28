@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "cache_api_response_single_id": {
+      "CACHE_API_RESPONSE_SINGLE_ID00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s36",
+        "zone_id": "ZONE01",
+        "id": "CACHE_API_RESPONSE_SINGLE_ID00"
+      },
+      "CACHE_API_RESPONSE_SINGLE_ID01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s68",
+        "zone_id": "ZONE01",
+        "id": "CACHE_API_RESPONSE_SINGLE_ID01"
+      },
+      "CACHE_API_RESPONSE_SINGLE_ID02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s9a",
+        "zone_id": "ZONE01",
+        "id": "CACHE_API_RESPONSE_SINGLE_ID02"
+      }
+    }
+  },
+  "new": {
+    "cache_api_response_single_id": {
+      "cache_api_response_single_id_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "scc"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /zones/{zone_id}/settings/ssl_automatic_mode": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

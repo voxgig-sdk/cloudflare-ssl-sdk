@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_total_tls_setting": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING00": {
+        "certificate_authority": "s1e",
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING01": {
+        "certificate_authority": "s3c",
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING02": {
+        "certificate_authority": "s5a",
+        "enabled": false,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_TOTAL_TLS_SETTING02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_total_tls_setting": {
+      "tls_certificates_and_hostnames_total_tls_setting_ref01": {
+        "certificate_authority": "s78",
+        "enabled": false,
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/acm/total_tls": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/acm/total_tls": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+# Entity: tls_certificates_and_hostnames_keyless_response_single_id
+
+main: kit: entity: tls_certificates_and_hostnames_keyless_response_single_id: {
+
+  alias: field: {}
+
+  name: "tls_certificates_and_hostnames_keyless_response_single_id"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/keyless_certificates/{keyless_certificate_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "4d2844d2ce78891c34d0b6c0535a291e"
+                k: "param"
+                n: "keyless_certificate_id"
+                or: "keyless_certificate_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/keyless_certificates/{keyless_certificate_id}"
+          q: {
+            exist: [
+              "keyless_certificate_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "keyless_certificates"
+            }
+            {
+              var: "keyless_certificate_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

@@ -1,0 +1,197 @@
+# Entity: tls_certificates_and_hostnames_custom_csr_response_single_2
+
+main: kit: entity: tls_certificates_and_hostnames_custom_csr_response_single_2: {
+
+  alias: field: {}
+
+  fields: {
+    common_name: {
+      h: "Common Name"
+      n: "common_name"
+      r: true
+      sh: "The common name (domain) for the CSR."
+      t: "`$STRING`"
+    }
+    country: {
+      h: "Country"
+      n: "country"
+      r: true
+      sh: "Two-letter ISO 3166-1 alpha-2 country code."
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      sh: "Optional description for the CSR."
+      t: "`$STRING`"
+    }
+    key_type: {
+      h: "Key Type"
+      n: "key_type"
+      r: false
+      sh: "Key algorithm to use for the CSR."
+      t: "`$STRING`"
+    }
+    locality: {
+      h: "Locality"
+      n: "locality"
+      r: true
+      sh: "City or locality name."
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Human-readable name for the CSR."
+      t: "`$STRING`"
+    }
+    organization: {
+      h: "Organization"
+      n: "organization"
+      r: true
+      sh: "Organization name."
+      t: "`$STRING`"
+    }
+    organizational_unit: {
+      h: "Organizational Unit"
+      n: "organizational_unit"
+      r: false
+      sh: "Organizational unit name."
+      t: "`$STRING`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: true
+      sh: "A custom Certificate Signing Request (CSR)."
+      t: "`$OBJECT`"
+    }
+    sans: {
+      h: "Sans"
+      n: "sans"
+      r: true
+      sh: "Subject Alternative Names for the CSR."
+      t: "`$ARRAY`"
+    }
+    state: {
+      h: "State"
+      n: "state"
+      r: true
+      sh: "State or province name."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_custom_csr_response_single_2"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /accounts/{account_id}/custom_csrs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/accounts/{account_id}/custom_csrs"
+          q: {
+            exist: [
+              "account_id"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "custom_csrs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /accounts/{account_id}/custom_csrs/{custom_csr_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "7b163417-1d2b-4c84-a38a-2fb7a0cd7752"
+                k: "param"
+                n: "custom_csr_id"
+                or: "custom_csr_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/accounts/{account_id}/custom_csrs/{custom_csr_id}"
+          q: {
+            exist: [
+              "account_id"
+              "custom_csr_id"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "custom_csrs"
+            }
+            {
+              var: "custom_csr_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

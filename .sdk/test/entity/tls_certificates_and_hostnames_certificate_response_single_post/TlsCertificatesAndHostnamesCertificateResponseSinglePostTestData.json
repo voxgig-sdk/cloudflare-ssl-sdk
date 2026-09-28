@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_response_single_post": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST00": {
+        "ca": true,
+        "certificates": "s29",
+        "name": "s2a",
+        "private_key": "s2b",
+        "account_id": "ACCOUNT01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST01": {
+        "ca": true,
+        "certificates": "s51",
+        "name": "s52",
+        "private_key": "s53",
+        "account_id": "ACCOUNT01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST02": {
+        "ca": true,
+        "certificates": "s79",
+        "name": "s7a",
+        "private_key": "s7b",
+        "account_id": "ACCOUNT01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_POST02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_response_single_post": {
+      "tls_certificates_and_hostnames_certificate_response_single_post_ref01": {
+        "ca": true,
+        "certificates": "sa1",
+        "name": "sa2",
+        "private_key": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "POST /accounts/{account_id}/mtls_certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

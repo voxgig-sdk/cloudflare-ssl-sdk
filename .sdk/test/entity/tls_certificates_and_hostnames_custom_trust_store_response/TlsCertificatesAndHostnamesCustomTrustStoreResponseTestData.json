@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_trust_store_response": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE00": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE01": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE02": {
+        "result": [],
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_trust_store_response": {
+      "tls_certificates_and_hostnames_custom_trust_store_response_ref01": {
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/acm/custom_trust_store": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

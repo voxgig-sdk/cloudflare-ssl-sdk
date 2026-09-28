@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesKeylessResponseCollectionFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesKeylessResponseCollectionFlow:
+{
+  entity: "tls_certificates_and_hostnames_keyless_response_collection",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesKeylessResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_keyless_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesKeylessResponseCollectionFlow"
+}

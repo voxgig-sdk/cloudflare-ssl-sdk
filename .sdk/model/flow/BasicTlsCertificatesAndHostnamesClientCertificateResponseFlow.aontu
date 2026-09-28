@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesClientCertificateResponseFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesClientCertificateResponseFlow:
+{
+  entity: "tls_certificates_and_hostnames_client_certificate_response",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesClientCertificateResponseFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_client_certificate_response_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesClientCertificateResponseFlow"
+}

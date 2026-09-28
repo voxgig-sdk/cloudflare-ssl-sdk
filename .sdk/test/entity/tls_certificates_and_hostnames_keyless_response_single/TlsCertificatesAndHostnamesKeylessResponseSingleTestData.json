@@ -1,0 +1,76 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_keyless_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE00": {
+        "bundle_method": "s50",
+        "certificate": "s51",
+        "enabled": true,
+        "host": "s53",
+        "name": "s54",
+        "port": 85,
+        "result": {},
+        "tunnel": {},
+        "zone_id": "ZONE01",
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE01": {
+        "bundle_method": "sa0",
+        "certificate": "sa1",
+        "enabled": true,
+        "host": "sa3",
+        "name": "sa4",
+        "port": 165,
+        "result": {},
+        "tunnel": {},
+        "zone_id": "ZONE01",
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE02": {
+        "bundle_method": "sf0",
+        "certificate": "sf1",
+        "enabled": true,
+        "host": "sf3",
+        "name": "sf4",
+        "port": 245,
+        "result": {},
+        "tunnel": {},
+        "zone_id": "ZONE01",
+        "keyless_certificate_id": "KEYLESS_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_KEYLESS_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_keyless_response_single": {
+      "tls_certificates_and_hostnames_keyless_response_single_ref01": {
+        "bundle_method": "s140",
+        "certificate": "s141",
+        "enabled": true,
+        "host": "s143",
+        "name": "s144",
+        "port": 325,
+        "result": {},
+        "tunnel": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/keyless_certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/keyless_certificates/{keyless_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/keyless_certificates/{keyless_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

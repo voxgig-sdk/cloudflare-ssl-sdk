@@ -1,0 +1,77 @@
+# Entity: tls_certificates_and_hostnames_custom_trust_store_response_id_only
+
+main: kit: entity: tls_certificates_and_hostnames_custom_trust_store_response_id_only: {
+
+  alias: field: {}
+
+  name: "tls_certificates_and_hostnames_custom_trust_store_response_id_only"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "2458ce5a-0c35-4c7f-82c7-8e9487d3ff60"
+                k: "param"
+                n: "custom_origin_trust_store_id"
+                or: "custom_origin_trust_store_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}"
+          q: {
+            exist: [
+              "custom_origin_trust_store_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "acm"
+            }
+            {
+              lit: "custom_trust_store"
+            }
+            {
+              var: "custom_origin_trust_store_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

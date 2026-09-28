@@ -1,0 +1,9 @@
+# BasicTlsCertificatesAndHostnamesCertificateRevokeFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCertificateRevokeFlow:
+{
+  entity: "tls_certificates_and_hostnames_certificate_revoke",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCertificateRevokeFlow",
+  "key$": "BasicTlsCertificatesAndHostnamesCertificateRevokeFlow"
+}

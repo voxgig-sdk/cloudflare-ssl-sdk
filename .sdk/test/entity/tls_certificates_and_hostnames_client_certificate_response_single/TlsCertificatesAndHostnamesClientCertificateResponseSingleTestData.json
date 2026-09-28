@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_client_certificate_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE00": {
+        "csr": "s28",
+        "reactivate": false,
+        "result": {},
+        "validity_days": 43,
+        "zone_id": "ZONE01",
+        "client_certificate_id": "CLIENT_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE01": {
+        "csr": "s50",
+        "reactivate": false,
+        "result": {},
+        "validity_days": 83,
+        "zone_id": "ZONE01",
+        "client_certificate_id": "CLIENT_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE02": {
+        "csr": "s78",
+        "reactivate": false,
+        "result": {},
+        "validity_days": 123,
+        "zone_id": "ZONE01",
+        "client_certificate_id": "CLIENT_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CLIENT_CERTIFICATE_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_client_certificate_response_single": {
+      "tls_certificates_and_hostnames_client_certificate_response_single_ref01": {
+        "csr": "sa0",
+        "reactivate": false,
+        "result": {},
+        "validity_days": 163
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/client_certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/client_certificates/{client_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/client_certificates/{client_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/client_certificates/{client_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

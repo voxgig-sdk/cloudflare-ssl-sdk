@@ -1,0 +1,26 @@
+# BasicRecommendationFlow
+
+main: kit: flow: BasicRecommendationFlow:
+{
+  entity: "recommendation",
+  kind: "basic",
+  name: "BasicRecommendationFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "recommendation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRecommendationFlow"
+}

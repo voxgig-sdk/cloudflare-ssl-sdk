@@ -1,0 +1,9 @@
+# BasicTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackFlow:
+{
+  entity: "tls_certificates_and_hostnames_delete_advanced_certificate_pack",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackFlow",
+  "key$": "BasicTlsCertificatesAndHostnamesDeleteAdvancedCertificatePackFlow"
+}

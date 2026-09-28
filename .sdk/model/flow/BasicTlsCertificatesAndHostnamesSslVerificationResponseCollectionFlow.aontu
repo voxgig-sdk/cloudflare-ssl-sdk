@@ -1,0 +1,26 @@
+# BasicTlsCertificatesAndHostnamesSslVerificationResponseCollectionFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesSslVerificationResponseCollectionFlow:
+{
+  entity: "tls_certificates_and_hostnames_ssl_verification_response_collection",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesSslVerificationResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_ssl_verification_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesSslVerificationResponseCollectionFlow"
+}

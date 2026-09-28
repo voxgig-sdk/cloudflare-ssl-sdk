@@ -1,0 +1,54 @@
+{
+  "existing": {
+    "origin_tl": {
+      "ORIGIN_TL00": {
+        "result": {},
+        "value": [],
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_TL00"
+      },
+      "ORIGIN_TL01": {
+        "result": {},
+        "value": [],
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_TL01"
+      },
+      "ORIGIN_TL02": {
+        "result": {},
+        "value": [],
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_TL02"
+      }
+    }
+  },
+  "new": {
+    "origin_tl": {
+      "origin_tl_ref01": {
+        "result": {},
+        "value": []
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/settings/origin_tls_compliance_modes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/settings/origin_tls_compliance_modes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/settings/origin_tls_compliance_modes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/settings/origin_tls_compliance_modes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

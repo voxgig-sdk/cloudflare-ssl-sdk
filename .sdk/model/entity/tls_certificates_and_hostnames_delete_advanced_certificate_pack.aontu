@@ -1,0 +1,93 @@
+# Entity: tls_certificates_and_hostnames_delete_advanced_certificate_pack
+
+main: kit: entity: tls_certificates_and_hostnames_delete_advanced_certificate_pack: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "tls_certificates_and_hostnames_delete_advanced_certificate_pack"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "3822ff90-ea29-44df-9e55-21300bb9419b"
+                k: "param"
+                n: "id"
+                or: "certificate_pack_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/ssl/certificate_packs/{certificate_pack_id}"
+          q: {
+            exist: [
+              "id"
+              "zone_id"
+            ]
+          }
+          r: {
+            param: {
+              certificate_pack_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "ssl"
+            }
+            {
+              lit: "certificate_packs"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

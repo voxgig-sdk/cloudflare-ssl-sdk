@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE00": {
+        "bundle_method": "s5a",
+        "certificate": "s5b",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "deploy": "s5d",
+        "geo_restrictions": {},
+        "policy": "s5f",
+        "private_key": "s60",
+        "result": {},
+        "type": "s62",
+        "zone_id": "ZONE01",
+        "custom_certificate_id": "CUSTOM_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE01": {
+        "bundle_method": "sb4",
+        "certificate": "sb5",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "deploy": "sb7",
+        "geo_restrictions": {},
+        "policy": "sb9",
+        "private_key": "sba",
+        "result": {},
+        "type": "sbc",
+        "zone_id": "ZONE01",
+        "custom_certificate_id": "CUSTOM_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE02": {
+        "bundle_method": "s10e",
+        "certificate": "s10f",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "deploy": "s111",
+        "geo_restrictions": {},
+        "policy": "s113",
+        "private_key": "s114",
+        "result": {},
+        "type": "s116",
+        "zone_id": "ZONE01",
+        "custom_certificate_id": "CUSTOM_CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_response_single": {
+      "tls_certificates_and_hostnames_certificate_response_single_ref01": {
+        "bundle_method": "s168",
+        "certificate": "s169",
+        "custom_csr_id": "CUSTOM_CSR01",
+        "deploy": "s16b",
+        "geo_restrictions": {},
+        "policy": "s16d",
+        "private_key": "s16e",
+        "result": {},
+        "type": "s170"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/custom_certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_certificates/{custom_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/custom_certificates/{custom_certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

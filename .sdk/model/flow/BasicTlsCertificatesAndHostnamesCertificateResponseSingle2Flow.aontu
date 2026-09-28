@@ -1,0 +1,52 @@
+# BasicTlsCertificatesAndHostnamesCertificateResponseSingle2Flow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCertificateResponseSingle2Flow:
+{
+  entity: "tls_certificates_and_hostnames_certificate_response_single_2",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCertificateResponseSingle2Flow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_certificate_response_single_2_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "tls_certificates_and_hostnames_certificate_response_single_2_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_certificate_response_single_2_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_certificate_response_single_2_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_certificate_response_single_201"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_certificate_response_single_2_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCertificateResponseSingle2Flow"
+}

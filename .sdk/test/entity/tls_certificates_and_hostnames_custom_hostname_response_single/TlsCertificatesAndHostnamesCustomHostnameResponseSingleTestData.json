@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_hostname_response_single": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE00": {
+        "custom_metadata": {},
+        "custom_origin_server": "s5b",
+        "custom_origin_sni": "s5c",
+        "errors": [],
+        "hostname": "s5e",
+        "messages": [],
+        "result": {},
+        "ssl": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE01": {
+        "custom_metadata": {},
+        "custom_origin_server": "sb5",
+        "custom_origin_sni": "sb6",
+        "errors": [],
+        "hostname": "sb8",
+        "messages": [],
+        "result": {},
+        "ssl": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE02": {
+        "custom_metadata": {},
+        "custom_origin_server": "s10f",
+        "custom_origin_sni": "s110",
+        "errors": [],
+        "hostname": "s112",
+        "messages": [],
+        "result": {},
+        "ssl": {},
+        "success": true,
+        "zone_id": "ZONE01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_HOSTNAME_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_hostname_response_single": {
+      "tls_certificates_and_hostnames_custom_hostname_response_single_ref01": {
+        "custom_metadata": {},
+        "custom_origin_server": "s169",
+        "custom_origin_sni": "s16a",
+        "errors": [],
+        "hostname": "s16c",
+        "messages": [],
+        "result": {},
+        "ssl": {},
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/custom_hostnames": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_hostnames/{custom_hostname_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/custom_hostnames/{custom_hostname_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

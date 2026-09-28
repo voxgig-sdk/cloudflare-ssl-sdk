@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_custom_trust_store_response_id_only": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY00": {
+        "custom_origin_trust_store_id": "CUSTOM_ORIGIN_TRUST_STORE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY01": {
+        "custom_origin_trust_store_id": "CUSTOM_ORIGIN_TRUST_STORE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY02": {
+        "custom_origin_trust_store_id": "CUSTOM_ORIGIN_TRUST_STORE01",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CUSTOM_TRUST_STORE_RESPONSE_ID_ONLY02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_custom_trust_store_response_id_only": {
+      "tls_certificates_and_hostnames_custom_trust_store_response_id_only_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/acm/custom_trust_store/{custom_origin_trust_store_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_association_response_collection": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ASSOCIATION_RESPONSE_COLLECTION00": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "mtls_certificate_id": "MTLS_CERTIFICATE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ASSOCIATION_RESPONSE_COLLECTION01": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "mtls_certificate_id": "MTLS_CERTIFICATE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ASSOCIATION_RESPONSE_COLLECTION02": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "mtls_certificate_id": "MTLS_CERTIFICATE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_association_response_collection": {
+      "tls_certificates_and_hostnames_association_response_collection_ref01": {
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /accounts/{account_id}/mtls_certificates/{mtls_certificate_id}/associations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

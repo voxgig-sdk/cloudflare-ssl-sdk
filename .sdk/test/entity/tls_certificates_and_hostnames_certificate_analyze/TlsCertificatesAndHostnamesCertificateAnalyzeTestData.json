@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_analyze": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE00": {
+        "bundle_method": "s14",
+        "certificate": "s15",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE01": {
+        "bundle_method": "s28",
+        "certificate": "s29",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE02": {
+        "bundle_method": "s3c",
+        "certificate": "s3d",
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_ANALYZE02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_analyze": {
+      "tls_certificates_and_hostnames_certificate_analyze_ref01": {
+        "bundle_method": "s50",
+        "certificate": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/ssl/analyze": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

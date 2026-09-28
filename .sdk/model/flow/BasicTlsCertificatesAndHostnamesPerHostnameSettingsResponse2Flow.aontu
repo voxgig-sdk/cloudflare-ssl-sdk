@@ -1,0 +1,9 @@
+# BasicTlsCertificatesAndHostnamesPerHostnameSettingsResponse2Flow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesPerHostnameSettingsResponse2Flow:
+{
+  entity: "tls_certificates_and_hostnames_per_hostname_settings_response2",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesPerHostnameSettingsResponse2Flow",
+  "key$": "BasicTlsCertificatesAndHostnamesPerHostnameSettingsResponse2Flow"
+}

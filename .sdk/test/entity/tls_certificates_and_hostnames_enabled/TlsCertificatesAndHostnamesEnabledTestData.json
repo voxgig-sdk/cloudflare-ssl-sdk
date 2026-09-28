@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_enabled": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED00": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED01": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED02": {
+        "enabled": true,
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_ENABLED02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_enabled": {
+      "tls_certificates_and_hostnames_enabled_ref01": {
+        "enabled": true,
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/origin_tls_client_auth/settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/origin_tls_client_auth/settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

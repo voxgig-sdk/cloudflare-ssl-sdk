@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_response_single_2": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_200": {
+        "csr": "s32",
+        "hostnames": [],
+        "request_type": "s34",
+        "requested_validity": 53,
+        "result": {},
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_200"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_201": {
+        "csr": "s64",
+        "hostnames": [],
+        "request_type": "s66",
+        "requested_validity": 103,
+        "result": {},
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_201"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_202": {
+        "csr": "s96",
+        "hostnames": [],
+        "request_type": "s98",
+        "requested_validity": 153,
+        "result": {},
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_202"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_response_single_2": {
+      "tls_certificates_and_hostnames_certificate_response_single_2_ref01": {
+        "csr": "sc8",
+        "hostnames": [],
+        "request_type": "sca",
+        "requested_validity": 203,
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# BasicTlsCertificatesAndHostnamesCustomCsrResponseSingle2Flow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCustomCsrResponseSingle2Flow:
+{
+  entity: "tls_certificates_and_hostnames_custom_csr_response_single_2",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCustomCsrResponseSingle2Flow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_custom_csr_response_single_2_ref01"
+      }
+
+      m: {
+        account_id: "account01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_custom_csr_response_single_2_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_custom_csr_response_single_2_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        account_id: "account01",
+        id: "tls_certificates_and_hostnames_custom_csr_response_single_201"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_custom_csr_response_single_2_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCustomCsrResponseSingle2Flow"
+}

@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_response_collection": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION00": {
+        "certificates": [],
+        "result": [],
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION00"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION01": {
+        "certificates": [],
+        "result": [],
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION02": {
+        "certificates": [],
+        "result": [],
+        "zone_id": "ZONE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_COLLECTION02"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_response_collection": {
+      "tls_certificates_and_hostnames_certificate_response_collection_ref01": {
+        "certificates": [],
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/custom_certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/custom_certificates/prioritize": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

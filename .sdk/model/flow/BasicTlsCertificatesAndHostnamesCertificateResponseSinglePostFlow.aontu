@@ -1,0 +1,22 @@
+# BasicTlsCertificatesAndHostnamesCertificateResponseSinglePostFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesCertificateResponseSinglePostFlow:
+{
+  entity: "tls_certificates_and_hostnames_certificate_response_single_post",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesCertificateResponseSinglePostFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_certificate_response_single_post_ref01"
+      }
+
+      m: {
+        account_id: "account01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesCertificateResponseSinglePostFlow"
+}

@@ -1,0 +1,29 @@
+# BasicCacheApiResponseSingleIdFlow
+
+main: kit: flow: BasicCacheApiResponseSingleIdFlow:
+{
+  entity: "cache_api_response_single_id",
+  kind: "basic",
+  name: "BasicCacheApiResponseSingleIdFlow",
+  step: [
+    {
+      i: {
+        ref: "cache_api_response_single_id_ref01",
+        srcdatavar: "cache_api_response_single_id_ref01_data",
+        suffix: "_up0",
+        textfield: "value"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-cache_api_response_single_id_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCacheApiResponseSingleIdFlow"
+}

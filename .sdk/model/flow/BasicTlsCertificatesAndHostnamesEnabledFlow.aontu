@@ -1,0 +1,50 @@
+# BasicTlsCertificatesAndHostnamesEnabledFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesEnabledFlow:
+{
+  entity: "tls_certificates_and_hostnames_enabled",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesEnabledFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_enabled_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_enabled_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_enabled_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_enabled_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_enabled_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tls_certificates_and_hostnames_enabled01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_enabled_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesEnabledFlow"
+}

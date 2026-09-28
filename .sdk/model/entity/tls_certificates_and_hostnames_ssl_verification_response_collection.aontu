@@ -1,0 +1,82 @@
+# Entity: tls_certificates_and_hostnames_ssl_verification_response_collection
+
+main: kit: entity: tls_certificates_and_hostnames_ssl_verification_response_collection: {
+
+  alias: field: {}
+
+  fields: {
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "tls_certificates_and_hostnames_ssl_verification_response_collection"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/ssl/verification"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: true
+                k: "query"
+                n: "retry"
+                or: "retry"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/ssl/verification"
+          q: {
+            exist: [
+              "retry"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "ssl"
+            }
+            {
+              lit: "verification"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

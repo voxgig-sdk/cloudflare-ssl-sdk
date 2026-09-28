@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_certificate_response_single_4": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_400": {
+        "certificate": "s1e",
+        "private_key": "s1f",
+        "result": {},
+        "zone_id": "ZONE01",
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_400"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_401": {
+        "certificate": "s3c",
+        "private_key": "s3d",
+        "result": {},
+        "zone_id": "ZONE01",
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_401"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_402": {
+        "certificate": "s5a",
+        "private_key": "s5b",
+        "result": {},
+        "zone_id": "ZONE01",
+        "certificate_id": "CERTIFICATE01",
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_CERTIFICATE_RESPONSE_SINGLE_402"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_certificate_response_single_4": {
+      "tls_certificates_and_hostnames_certificate_response_single_4_ref01": {
+        "certificate": "s78",
+        "private_key": "s79",
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/origin_tls_client_auth/hostnames/certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# BasicTlsCertificatesAndHostnamesAdvancedCertificatePackResponseFlow
+
+main: kit: flow: BasicTlsCertificatesAndHostnamesAdvancedCertificatePackResponseFlow:
+{
+  entity: "tls_certificates_and_hostnames_advanced_certificate_pack_response",
+  kind: "basic",
+  name: "BasicTlsCertificatesAndHostnamesAdvancedCertificatePackResponseFlow",
+  step: [
+    {
+      i: {
+        ref: "tls_certificates_and_hostnames_advanced_certificate_pack_response_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      d: {
+        zone_id: "zone01"
+      }
+
+      i: {
+        ref: "tls_certificates_and_hostnames_advanced_certificate_pack_response_ref01",
+        srcdatavar: "tls_certificates_and_hostnames_advanced_certificate_pack_response_ref01_data",
+        suffix: "_up0",
+        textfield: "certificate_authority"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tls_certificates_and_hostnames_advanced_certificate_pack_response_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTlsCertificatesAndHostnamesAdvancedCertificatePackResponseFlow"
+}

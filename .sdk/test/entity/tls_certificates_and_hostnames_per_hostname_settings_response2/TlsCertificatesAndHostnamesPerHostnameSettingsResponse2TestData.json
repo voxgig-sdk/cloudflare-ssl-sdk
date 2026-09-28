@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "tls_certificates_and_hostnames_per_hostname_settings_response2": {
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE200": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE200",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE201": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE201",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      },
+      "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE202": {
+        "id": "TLS_CERTIFICATES_AND_HOSTNAMES_PER_HOSTNAME_SETTINGS_RESPONSE202",
+        "hostname": "HOSTNAME01",
+        "setting_id": "SETTING01",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "tls_certificates_and_hostnames_per_hostname_settings_response2": {
+      "tls_certificates_and_hostnames_per_hostname_settings_response2_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/hostnames/settings/{setting_id}/{hostname}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

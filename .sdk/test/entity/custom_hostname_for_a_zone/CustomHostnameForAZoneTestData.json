@@ -1,0 +1,53 @@
+{
+  "existing": {
+    "custom_hostname_for_a_zone": {
+      "CUSTOM_HOSTNAME_FOR_A_ZONE00": {
+        "custom_certificate": "s14",
+        "custom_key": "s15",
+        "certificate_id": "CERTIFICATE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_HOSTNAME_FOR_A_ZONE00"
+      },
+      "CUSTOM_HOSTNAME_FOR_A_ZONE01": {
+        "custom_certificate": "s28",
+        "custom_key": "s29",
+        "certificate_id": "CERTIFICATE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_HOSTNAME_FOR_A_ZONE01"
+      },
+      "CUSTOM_HOSTNAME_FOR_A_ZONE02": {
+        "custom_certificate": "s3c",
+        "custom_key": "s3d",
+        "certificate_id": "CERTIFICATE01",
+        "certificate_pack_id": "CERTIFICATE_PACK01",
+        "custom_hostname_id": "CUSTOM_HOSTNAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_HOSTNAME_FOR_A_ZONE02"
+      }
+    }
+  },
+  "new": {
+    "custom_hostname_for_a_zone": {
+      "custom_hostname_for_a_zone_ref01": {
+        "custom_certificate": "s50",
+        "custom_key": "s51"
+      }
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/custom_hostnames/{custom_hostname_id}/certificate_pack/{certificate_pack_id}/certificates/{certificate_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
